@@ -12,6 +12,7 @@ import { Eye, LogOut, ArrowLeft } from 'lucide-react';
 const ROLE_TO_PROFILE = {
   host: 'equipo', equipo: 'equipo', confidente: 'equipo',
   vip: 'investor', guest: 'producer', kids: 'child',
+  educadores: 'producer'
 };
 
 const VIEW_AS_ROLES = [
@@ -21,6 +22,7 @@ const VIEW_AS_ROLES = [
   { id: 'confidente', profileKey: 'equipo', label: 'Confidente', color: 'bg-sky-500', bannerColor: '#0EA5E9' },
   { id: 'guest', profileKey: 'producer', label: 'Guest', color: 'bg-emerald-500', bannerColor: '#10B981' },
   { id: 'kids', profileKey: 'child', label: 'Kids', color: 'bg-rose-400', bannerColor: '#FB7185' },
+  { id: 'educadores', profileKey: 'producer', label: 'Educador', color: 'bg-sky-400', bannerColor: '#38BDF8' },
 ];
 
 // ── 6 Module Sections ──
@@ -41,15 +43,15 @@ function ProgressBars({ progress, dimmed }) {
     { label: 'Arte', value: progress.arte ?? 0 },
     { label: 'HD', value: progress.hd ?? 0 },
   ];
-  const labelCls = dimmed ? 'text-white/20' : 'text-white/35';
-  const numCls = dimmed ? 'text-white/15' : 'text-white/25';
-  const fillCls = dimmed ? 'bg-white/20' : 'bg-white/55';
+  const labelCls = dimmed ? 'text-[var(--text-dim)]' : 'text-[var(--text-secondary)]';
+  const numCls = dimmed ? 'opacity-30' : 'opacity-60';
+  const fillCls = dimmed ? 'bg-[var(--text-dim)]' : 'bg-[var(--text-secondary)]';
   return (
     <div className="flex gap-4 mt-3">
       {bars.map(b => (
         <div key={b.label}>
           <p className={`font-mono text-[8px] uppercase tracking-widest mb-1 ${labelCls}`}>{b.label}</p>
-          <div className="w-16 h-[2px] bg-white/10 rounded-full overflow-hidden">
+          <div className="w-16 h-[2px] bg-[var(--border-primary)] rounded-full overflow-hidden">
             {b.value > 0 && <div className={`h-full rounded-full ${fillCls}`} style={{ width: `${b.value}%` }} />}
           </div>
           <p className={`font-mono text-[8px] mt-0.5 ${numCls}`}>{b.value}%</p>
@@ -110,8 +112,8 @@ function Portal() {
   const [viewAsProfileKey, setViewAsProfileKey] = useState(null);
 
   if (loading) return (
-    <div className="min-h-screen bg-[#050505] flex items-center justify-center">
-      <div className="w-8 h-8 border-2 border-white/20 border-t-white/80 rounded-full animate-spin" />
+    <div className="min-h-screen bg-[var(--bg-primary)] flex items-center justify-center transition-colors duration-500">
+      <div className="w-8 h-8 border-2 border-[var(--border-primary)] border-t-[var(--text-primary)] rounded-full animate-spin" />
     </div>
   );
 
@@ -123,6 +125,7 @@ function Portal() {
   const activeViewId = viewAsId || 'host';
   const activeRole = VIEW_AS_ROLES.find(r => r.id === activeViewId);
   const stripeColor = activeRole?.bannerColor || null;
+  const isLightMode = activeViewId === 'kids' || activeViewId === 'educadores';
 
   const isCharAccessible = (char) => {
     const p = PROFILE_REGISTRY[activeProfileKey];
@@ -137,13 +140,13 @@ function Portal() {
 
   const FilterStrip = ({ label, options, active, onChange }) => (
     <div className="flex items-center gap-3 flex-wrap">
-      <span className="text-white/20 font-mono text-[9px] uppercase tracking-widest w-20 flex-shrink-0">{label}</span>
+      <span className="text-[var(--text-dim)] font-mono text-[9px] uppercase tracking-widest w-20 flex-shrink-0">{label}</span>
       <div className="flex gap-2 flex-wrap">
         {options.map(opt => (
           <button key={opt} onClick={() => onChange(opt)}
             className={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest transition-all ${active === opt
-              ? 'bg-white text-black'
-              : 'bg-white/5 hover:bg-white/10 border border-white/10 text-white/40 hover:text-white/70'
+              ? 'bg-[var(--accent-primary)] text-[var(--accent-invert)]'
+              : 'bg-[var(--surface-card)] hover:bg-[var(--border-primary)] border border-[var(--border-secondary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
               }`}>
             {opt}
           </button>
@@ -159,7 +162,7 @@ function Portal() {
   });
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white">
+    <div className={`min-h-screen transition-colors duration-500 ${isLightMode ? 'theme-light bg-white' : 'bg-[#050505]'} text-white`}>
 
       {/* ── Role stripe ── */}
       <AnimatePresence>

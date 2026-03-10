@@ -220,10 +220,10 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                 {lightboxSrc && <Lightbox src={lightboxSrc} alt={char.name} onClose={() => setLightboxSrc(null)} />}
             </AnimatePresence>
 
-            <div className="min-h-screen bg-[#050505] text-white">
+            <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500">
 
                 {/* ── HERO ZONE ── */}
-                <div className="relative overflow-hidden bg-[#050505]" style={{ minHeight: '65vh' }}>
+                <div className="relative overflow-hidden bg-[var(--bg-primary)]" style={{ minHeight: '65vh' }}>
                     {/* Background Blueprint or Concept Art */}
                     {char.assets?.hero_bg ? (
                         <div className="absolute inset-0 z-0">
@@ -243,8 +243,8 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                     )}
 
                     {/* Dark gradient overlays for readability and blending */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/30" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-primary)] via-[var(--bg-primary)]/80 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-transparent to-[var(--bg-primary)]/30" />
 
                     {/* Content */}
                     <div className="relative z-10 flex flex-col justify-between h-full p-8 md:p-12" style={{ minHeight: '65vh' }}>
@@ -280,13 +280,13 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                 </div>
 
                 {/* ── TAB BAR ── */}
-                <div className="sticky top-0 z-20 bg-[#050505]/95 backdrop-blur-sm border-b border-white/[0.06]">
+                <div className="sticky top-0 z-20 bg-[var(--bg-primary)]/95 backdrop-blur-sm border-b border-[var(--border-primary)]">
                     <div className="max-w-7xl mx-auto px-8 md:px-12 flex gap-8">
                         {TABS.map(tab => (
                             <button key={tab} onClick={() => setActiveTab(tab)}
                                 className={`py-4 text-[11px] font-mono uppercase tracking-widest transition-all border-b-2 -mb-px ${activeTab === tab
-                                    ? 'text-white border-white'
-                                    : 'text-white/25 border-transparent hover:text-white/50'
+                                    ? 'text-[var(--text-primary)] border-[var(--text-primary)]'
+                                    : 'text-[var(--text-secondary)] border-transparent hover:text-[var(--text-primary)]'
                                     }`}>
                                 {tab}
                             </button>
