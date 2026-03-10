@@ -35,7 +35,7 @@ const SECTIONS = [
   { id: 'mysteries', label: 'Misterios', sublabel: 'Enigmas · Secretos · Revelaciones', emoji: '🔮', gradient: 'from-rose-950 via-pink-900 to-red-900', status: 'coming_soon' },
 ];
 
-// ── Progress bars — used on ALL character card types ──
+// ── Progress bars ──
 function ProgressBars({ progress, dimmed }) {
   if (!progress) return null;
   const bars = [
@@ -64,14 +64,14 @@ function ProgressBars({ progress, dimmed }) {
 // ── Floating Host Chrome ──
 function HostChrome({ viewAsId, setViewAsId, setViewAsProfileKey, signOut, isLightMode, onToggleTheme }) {
   const [open, setOpen] = useState(false);
-  const active = VIEW_AS_ROLES.find(r => r.id === viewAsId) || VIEW_AS_ROLES[0];
+  const active = VIEW_AS_ROLES.find(r => r.id === (viewAsId || 'host')) || VIEW_AS_ROLES[0];
   return (
-    <div className="fixed top-4 right-4 z-50 flex items-center gap-2">
+    <div className="fixed top-4 right-4 z-[100] flex items-center gap-2">
       <div className="relative">
         <button onClick={() => setOpen(!open)}
-          className="flex items-center gap-2 bg-[var(--bg-primary)]/60 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] px-3 py-1.5 rounded-full text-xs transition-all shadow-xl">
+          className="flex items-center gap-2 bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] px-3 py-1.5 rounded-full text-xs transition-all shadow-xl">
           <Eye size={11} className="text-[var(--text-dim)]" />
-          <span className="text-[var(--text-dim)] font-mono uppercase tracking-widest">Ver como:</span>
+          <span className="text-[var(--text-dim)] font-mono uppercase tracking-widest text-[9px]">Ver como:</span>
           <span className={`w-2 h-2 rounded-full flex-shrink-0 ${active.color}`} />
           <span className="text-[var(--text-primary)] font-bold uppercase tracking-wider text-[10px]">{active.label}</span>
         </button>
@@ -94,11 +94,11 @@ function HostChrome({ viewAsId, setViewAsId, setViewAsProfileKey, signOut, isLig
         </AnimatePresence>
       </div>
       <button onClick={onToggleTheme}
-        className="bg-[var(--bg-primary)]/60 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title="Cambiar tema">
+        className="bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title="Cambiar tema">
         {isLightMode ? <Moon size={13} className="text-[var(--text-dim)]" /> : <Sun size={13} className="text-[var(--text-dim)]" />}
       </button>
       <button onClick={() => { posthog.capture('sign_out'); signOut(); }}
-        className="bg-[var(--bg-primary)]/60 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title="Cerrar sesión">
+        className="bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title="Cerrar sesión">
         <LogOut size={13} className="text-[var(--text-dim)]" />
       </button>
     </div>
@@ -114,12 +114,15 @@ function Portal() {
   const [filterMorality, setFilterMorality] = useState('Todos');
   const [viewAsId, setViewAsId] = useState(null);
   const [viewAsProfileKey, setViewAsProfileKey] = useState(null);
+  const [themeOverride, setThemeOverride] = useState(null);
 
-  const [themeOverride, setThemeOverride] = useState(null); // 'light' or 'dark'
+  useEffect(() => {
+    setThemeOverride(null);
+  }, [viewAsId]);
 
   if (loading) return (
-    <div className="min-h-screen bg-[var(--bg-primary)] flex items-center justify-center transition-colors duration-500">
-      <div className="w-8 h-8 border-2 border-[var(--border-primary)] border-t-[var(--text-primary)] rounded-full animate-spin" />
+    <div className="min-h-screen bg-[#050505] flex items-center justify-center">
+      <div className="w-8 h-8 border-2 border-white/10 border-t-white rounded-full animate-spin" />
     </div>
   );
 
@@ -129,17 +132,11 @@ function Portal() {
   const realProfileKey = profile?.rol ? ROLE_TO_PROFILE[profile.rol] || 'producer' : 'producer';
   const activeProfileKey = isHost && viewAsProfileKey ? viewAsProfileKey : realProfileKey;
   const activeViewId = viewAsId || 'host';
-  const activeRole = VIEW_AS_ROLES.find(r => r.id === activeViewId);
-  const stripeColor = activeRole?.bannerColor || null;
+  const activeRole = VIEW_AS_ROLES.find(r => r.id === activeViewId) || VIEW_AS_ROLES[0];
+  const stripeColor = activeRole.bannerColor;
 
-  // Manual theme override logic
   const defaultIsLight = activeViewId === 'kids' || activeViewId === 'educadores';
   const isLightMode = themeOverride === null ? defaultIsLight : themeOverride === 'light';
-
-  // Reset override when role changes
-  useEffect(() => {
-    setThemeOverride(null);
-  }, [activeViewId]);
 
   const isCharAccessible = (char) => {
     const p = PROFILE_REGISTRY[activeProfileKey];
@@ -152,23 +149,6 @@ function Portal() {
   const TYPE_FILTERS = ['Todos', 'Principal', 'Secundario', 'NPC'];
   const MORALITY_FILTERS = ['Todos', 'Positivo', 'Negativo', 'Neutral'];
 
-  const FilterStrip = ({ label, options, active, onChange }) => (
-    <div className="flex items-center gap-3 flex-wrap">
-      <span className="text-[var(--text-dim)] font-mono text-[9px] uppercase tracking-widest w-20 flex-shrink-0">{label}</span>
-      <div className="flex gap-2 flex-wrap">
-        {options.map(opt => (
-          <button key={opt} onClick={() => onChange(opt)}
-            className={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest transition-all ${active === opt
-              ? 'bg-[var(--accent-primary)] text-[var(--accent-invert)]'
-              : 'bg-[var(--surface-card)] hover:bg-[var(--border-primary)] border border-[var(--border-secondary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-              }`}>
-            {opt}
-          </button>
-        ))}
-      </div>
-    </div>
-  );
-
   const filteredChars = Object.values(MODULE_REGISTRY).filter(char => {
     const typeMatch = filterType === 'Todos' || char.type === filterType;
     const moralMatch = filterMorality === 'Todos' || char.morality === filterMorality.toLowerCase();
@@ -176,182 +156,84 @@ function Portal() {
   });
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${isLightMode ? 'theme-light' : ''}`}>
-      <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen transition-colors duration-500">
-
-      {/* ── Role stripe ── */}
-      <AnimatePresence>
-        {stripeColor && (
-          <motion.div key={activeViewId}
-            initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} exit={{ scaleX: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: 'easeOut' }}
-            style={{ backgroundColor: stripeColor, transformOrigin: 'left' }}
-            className="fixed top-0 left-0 right-0 z-50 h-[3px]"
-          />
-        )}
-      </AnimatePresence>
-
-      {/* ── Host chrome ── */}
-      {isHost && (
-        <HostChrome 
-          viewAsId={activeViewId} 
-          setViewAsId={setViewAsId} 
-          setViewAsProfileKey={setViewAsProfileKey} 
-          signOut={signOut} 
-          isLightMode={isLightMode}
-          onToggleTheme={() => {
-            const next = isLightMode ? 'dark' : 'light';
-            setThemeOverride(next);
-            posthog.capture('manual_theme_toggle', { theme: next });
-          }}
+    <div className={`min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500 ${isLightMode ? 'theme-light' : ''}`}>
+      
+      {stripeColor && (
+        <motion.div key={activeViewId}
+          initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
+          transition={{ duration: 0.35 }}
+          style={{ backgroundColor: stripeColor, transformOrigin: 'left' }}
+          className="fixed top-0 left-0 right-0 z-[110] h-[3px]"
         />
       )}
 
-      {/* ── Content ── */}
+      {isHost && (
+        <HostChrome 
+          viewAsId={activeViewId} setViewAsId={setViewAsId} 
+          setViewAsProfileKey={setViewAsProfileKey} signOut={signOut} 
+          isLightMode={isLightMode} 
+          onToggleTheme={() => setThemeOverride(isLightMode ? 'dark' : 'light')} 
+        />
+      )}
+
       <AnimatePresence mode="wait">
-
-        {/* CHARACTER DETAIL */}
         {selectedCharId ? (
-          <motion.div key="char-view" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -24 }} transition={{ duration: 0.3 }}>
-            <CharacterView charId={selectedCharId} activeProfile={activeProfileKey} roleLabel={activeRole?.label} onBack={() => setSelectedCharId(null)} />
+          <motion.div key="char-view" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="pt-8">
+            <CharacterView charId={selectedCharId} activeProfile={activeProfileKey} roleLabel={activeRole.label} onBack={() => setSelectedCharId(null)} />
           </motion.div>
-
-          /* PERSONAJES SECTION */
         ) : activeSection === 'characters' ? (
-          <motion.div key="characters-panel" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="p-12">
-
-            <div className="max-w-7xl mx-auto mb-12">
-              <button onClick={goHome}
-                className="flex items-center gap-2 text-[var(--text-dim)] hover:text-[var(--text-primary)] transition-colors mb-8 group text-xs font-mono uppercase tracking-widest">
+          <motion.div key="characters" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="p-8 md:p-12 max-w-7xl mx-auto">
+            <div className="mb-12">
+              <button onClick={goHome} className="flex items-center gap-2 text-[var(--text-dim)] hover:text-[var(--text-primary)] transition-colors mb-6 group text-xs font-mono uppercase tracking-widest">
                 <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
                 Portal
               </button>
-              <h1 className="text-5xl font-black uppercase tracking-tighter text-[var(--text-primary)]">Personajes</h1>
+              <h1 className="text-5xl font-black uppercase tracking-tighter">Personajes</h1>
               <p className="text-[var(--text-dim)] font-mono text-xs mt-1 uppercase tracking-widest">Principales · Secundarios · NPC</p>
             </div>
 
-            {/* Filter strips */}
-            <div className="max-w-7xl mx-auto mb-8 flex flex-col gap-3">
-              <FilterStrip label="Importancia" options={TYPE_FILTERS} active={filterType} onChange={setFilterType} />
-              <FilterStrip label="Moralidad" options={MORALITY_FILTERS} active={filterMorality} onChange={setFilterMorality} />
-            </div>
-
-            {/* Character grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
-              {filteredChars.map((char) => {
-                const isComingSoon = char.status === 'coming_soon';
-                const accessible = !isComingSoon && isCharAccessible(char);
-                const conceptUrl = !isComingSoon && char.assets?.concept
-                  ? resolveAssetUrl(char.assets.concept, char.name, 'SD')
-                  : null;
-
-                /* ── COMING SOON ── */
-                if (isComingSoon) return (
-                  <motion.div key={char.id}
-                    initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-                    className="relative h-72 rounded-3xl overflow-hidden border border-[var(--border-secondary)] cursor-default">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${char.gradient || 'from-stone-900 to-stone-800'} opacity-40`} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)]/85 via-[var(--bg-primary)]/20 to-transparent" />
-                    <div className="absolute top-4 right-4 bg-[var(--bg-primary)]/40 border border-[var(--border-primary)] px-2.5 py-1 rounded-full">
-                      <span className="text-[9px] font-mono text-[var(--text-dim)] uppercase tracking-widest">En desarrollo</span>
-                    </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h2 className="text-3xl font-black uppercase tracking-tighter text-[var(--text-primary)] opacity-25">{char.name}</h2>
-                      <p className="text-[var(--text-dim)] font-mono text-[10px] uppercase tracking-widest mt-0.5">{char.type} · {char.id}</p>
-                      <ProgressBars progress={char.progress} dimmed />
-                    </div>
-                  </motion.div>
-                );
-
-                /* ── ACTIVE (accessible or restricted) ── */
-                return (
-                  <motion.div key={char.id}
-                    whileHover={{ scale: accessible ? 1.015 : 1.005 }} whileTap={{ scale: 0.99 }}
-                    onClick={() => { posthog.capture(accessible ? 'open_character' : 'open_restricted', { character: char.name, profile: activeProfileKey, accessible }); setSelectedCharId(char.id); }}
-                    className="relative h-72 rounded-3xl overflow-hidden cursor-pointer border transition-all duration-500 group shadow-xl"
-                    style={{ borderColor: accessible ? 'var(--border-primary)' : 'var(--border-secondary)' }}>
-
-                    {conceptUrl
-                      ? <img src={conceptUrl} alt={char.name} className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 ${accessible ? 'group-hover:scale-105' : 'grayscale opacity-40'}`} />
-                      : <div className="absolute inset-0 bg-[var(--surface-card)]" />}
-
-                    <div className={`absolute inset-0 bg-gradient-to-t ${accessible ? 'from-[var(--bg-primary)]/90 via-[var(--bg-primary)]/40 to-transparent' : 'from-[var(--bg-primary)]/95 via-[var(--bg-primary)]/60 to-[var(--bg-primary)]/20'} transition-all duration-500`} />
-
-                    {!accessible && (
-                      <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[var(--surface-card)] border border-[var(--border-primary)] flex items-center justify-center">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-[var(--text-dim)]">
-                          <rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0110 0v4" />
-                        </svg>
-                      </div>
-                    )}
-
-                    <div className="absolute bottom-0 left-0 right-0 p-6 flex justify-between items-end">
-                      <div className="flex-1 min-w-0">
-                        <h2 className={`text-3xl font-black uppercase tracking-tighter drop-shadow-lg ${accessible ? 'text-[var(--text-primary)]' : 'text-[var(--text-dim)]'}`}>{char.name}</h2>
-                        <p className="text-[var(--text-secondary)] font-mono text-[10px] uppercase tracking-widest mt-0.5 opacity-60">
-                          {char.type} · {char.id}{!accessible && <span className="ml-2 opacity-30">· Acceso restringido</span>}
-                        </p>
-                        <ProgressBars progress={char.progress} dimmed={!accessible} />
-                      </div>
-                      <div className={`ml-4 w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 flex-shrink-0 ${accessible ? 'bg-[var(--surface-card)] border-[var(--border-primary)] group-hover:bg-[var(--accent-primary)] group-hover:text-[var(--accent-invert)] text-[var(--text-primary)]' : 'bg-[var(--surface-card)] border-[var(--border-secondary)] text-[var(--text-dim)] opacity-40'}`}>
-                        <span className="text-sm">{accessible ? '→' : '🔒'}</span>
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </motion.div>
-
-          /* HOME — 6 section cards */
-        ) : (
-          <motion.div key="home" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="p-12">
-
-            <header className="flex justify-between items-start mb-16 max-w-7xl mx-auto">
-              <div>
-                <h1 className="text-4xl font-black uppercase tracking-tighter text-[var(--text-primary)]">{profile?.nombre_display || 'Portal Unificado'}</h1>
-                <p className="text-[var(--text-secondary)] font-mono text-xs mt-1 uppercase tracking-widest">{profile?.rol?.toUpperCase() || 'HOST'} · Sistema Modular ID 04.02</p>
+            <div className="flex flex-col gap-4 mb-10">
+              <div className="flex items-center gap-4">
+                <span className="text-[var(--text-dim)] font-mono text-[9px] uppercase tracking-widest w-20">Importancia</span>
+                <div className="flex gap-2">
+                  {TYPE_FILTERS.map(f => (
+                    <button key={f} onClick={() => setFilterType(f)} className={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest transition-all ${filterType === f ? 'bg-[var(--accent-primary)] text-[var(--accent-invert)]' : 'border border-[var(--border-secondary)] text-[var(--text-dim)] hover:text-[var(--text-primary)]'}`}>{f}</button>
+                  ))}
+                </div>
               </div>
-              {!isHost && (
-                <button onClick={() => { posthog.capture('sign_out'); signOut(); }}
-                  className="bg-[var(--surface-card)] hover:bg-[var(--border-primary)] border border-[var(--border-secondary)] px-6 py-2 rounded-full text-xs transition-all uppercase tracking-widest text-[var(--text-primary)]">
-                  Salir
-                </button>
-              )}
-            </header>
+              <div className="flex items-center gap-4">
+                <span className="text-[var(--text-dim)] font-mono text-[9px] uppercase tracking-widest w-20">Moralidad</span>
+                <div className="flex gap-2">
+                  {MORALITY_FILTERS.map(f => (
+                    <button key={f} onClick={() => setFilterMorality(f)} className={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest transition-all ${filterMorality === f ? 'bg-[var(--accent-primary)] text-[var(--accent-invert)]' : 'border border-[var(--border-secondary)] text-[var(--text-dim)] hover:text-[var(--text-primary)]'}`}>{f}</button>
+                  ))}
+                </div>
+              </div>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto">
-              {SECTIONS.map((section, i) => {
-                const isActive = section.status === 'active';
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {filteredChars.map(char => {
+                const isSoon = char.status === 'coming_soon';
+                const accessible = !isSoon && isCharAccessible(char);
+                const concept = !isSoon && char.assets?.concept ? resolveAssetUrl(char.assets.concept, char.name, 'SD') : null;
+                
                 return (
-                  <motion.div key={section.id}
-                    initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.06 }}
-                    whileHover={{ scale: isActive ? 1.02 : 1.005, y: isActive ? -3 : 0 }} whileTap={{ scale: 0.98 }}
-                    onClick={() => { if (isActive) { posthog.capture('open_section', { section: section.id }); setActiveSection(section.id); } }}
-                    className={`relative h-52 rounded-3xl overflow-hidden border transition-all duration-500 group shadow-lg ${isActive ? 'cursor-pointer border-[var(--border-primary)] hover:border-[var(--accent-primary)]' : 'cursor-default border-[var(--border-secondary)]'}`}>
-
-                    <div className={`absolute inset-0 bg-gradient-to-br ${section.gradient} ${isActive ? 'opacity-80 group-hover:opacity-100' : 'opacity-40'} transition-opacity duration-500`} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)]/60 to-transparent" />
-                    <div className={`absolute -right-4 -top-4 text-9xl transition-transform duration-500 ${isActive ? 'group-hover:scale-110 group-hover:rotate-6' : ''}`}
-                      style={{ opacity: isActive ? 0.15 : 0.08 }}>
-                      {section.emoji}
-                    </div>
-
-                    {!isActive && (
-                      <div className="absolute top-4 right-4 bg-[var(--bg-primary)]/40 border border-[var(--border-primary)] px-2.5 py-1 rounded-full">
-                        <span className="text-[9px] font-mono text-[var(--text-dim)] uppercase tracking-widest">En desarrollo</span>
-                      </div>
-                    )}
-
+                  <motion.div key={char.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+                    whileHover={{ scale: accessible ? 1.015 : 1 }} onClick={() => accessible && setSelectedCharId(char.id)}
+                    className={`relative h-64 rounded-3xl overflow-hidden border transition-all duration-500 group shadow-xl ${accessible ? 'cursor-pointer border-[var(--border-primary)] hover:border-[var(--accent-primary)]' : 'border-[var(--border-secondary)]'}`}>
+                    <div className={`absolute inset-0 bg-gradient-to-br ${char.gradient || 'from-stone-900 to-stone-800'} opacity-40`} />
+                    {concept && <img src={concept} className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-[var(--bg-primary)]/40 to-transparent" />
+                    
                     <div className="absolute bottom-0 left-0 right-0 p-6 flex justify-between items-end">
                       <div>
-                        <div className="text-2xl mb-1.5">{section.emoji}</div>
-                        <h2 className={`text-xl font-black uppercase tracking-tight leading-tight ${isActive ? 'text-[var(--text-primary)]' : 'text-[var(--text-dim)]'}`}>{section.label}</h2>
-                        <p className={`font-mono text-[9px] uppercase tracking-widest mt-1 ${isActive ? 'text-[var(--text-secondary)] opacity-60' : 'text-[var(--text-dim)]'}`}>{section.sublabel}</p>
+                        <h2 className={`text-3xl font-black uppercase tracking-tighter ${accessible ? 'text-[var(--text-primary)]' : 'text-[var(--text-dim)]'}`}>{char.name}</h2>
+                        <p className="text-[var(--text-dim)] font-mono text-[10px] uppercase tracking-widest mt-0.5">{char.type} · {char.id}</p>
+                        <ProgressBars progress={char.progress} dimmed={!accessible} />
                       </div>
-                      {isActive && (
-                        <div className="w-10 h-10 rounded-full bg-[var(--surface-card)] border border-[var(--border-primary)] flex items-center justify-center flex-shrink-0 text-[var(--text-primary)] group-hover:bg-[var(--accent-primary)] group-hover:text-[var(--accent-invert)] transition-all duration-300 shadow-md">
-                          <span className="text-sm">→</span>
+                      {accessible && (
+                        <div className="w-10 h-10 rounded-full border border-[var(--border-primary)] flex items-center justify-center group-hover:bg-[var(--accent-primary)] group-hover:text-[var(--accent-invert)] transition-all">
+                          <ChevronRight size={18} />
                         </div>
                       )}
                     </div>
@@ -360,9 +242,37 @@ function Portal() {
               })}
             </div>
           </motion.div>
+        ) : (
+          <motion.div key="home" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="p-8 md:p-12 max-w-7xl mx-auto">
+            <header className="mb-16 flex justify-between items-start">
+              <div>
+                <h1 className="text-4xl font-black uppercase tracking-tighter">{profile?.nombre_display || 'Portal Unificado'}</h1>
+                <p className="text-[var(--text-dim)] font-mono text-xs mt-1 uppercase tracking-widest">{profile?.rol?.toUpperCase() || 'HOST'} · ID 04.02</p>
+              </div>
+              {!isHost && <button onClick={signOut} className="bg-[var(--surface-card)] px-6 py-2 rounded-full text-xs font-mono uppercase tracking-widest border border-[var(--border-primary)]">Salir</button>}
+            </header>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {SECTIONS.map((s, i) => {
+                const active = s.status === 'active';
+                return (
+                  <motion.div key={s.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}
+                    onClick={() => active && setActiveSection(s.id)}
+                    className={`relative h-56 rounded-3xl overflow-hidden border transition-all duration-500 group shadow-lg ${active ? 'cursor-pointer border-[var(--border-primary)] hover:border-[var(--accent-primary)]' : 'border-[var(--border-secondary)] grayscale'}`}>
+                    <div className={`absolute inset-0 bg-gradient-to-br ${s.gradient} ${active ? 'opacity-80' : 'opacity-30'}`} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)]/80 to-transparent" />
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                      <span className="text-3xl mb-2">{s.emoji}</span>
+                      <h2 className="text-xl font-black uppercase tracking-tight">{s.label}</h2>
+                      <p className="text-[var(--text-dim)] text-[9px] font-mono uppercase tracking-widest mt-1">{s.sublabel}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
-      </div>
     </div>
   );
 }

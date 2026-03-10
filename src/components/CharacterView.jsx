@@ -153,7 +153,9 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
         const now = Date.now();
         const prevTap = lastTapRef.current;
         if (prevTap.url === url && (now - prevTap.time) < 300) {
-            if (e.cancelable) e.preventDefault();
+            if (e && typeof e.preventDefault === 'function' && e.cancelable) {
+                e.preventDefault();
+            }
             openLightbox(url);
             lastTapRef.current = { time: 0, url: null };
             return;
