@@ -228,7 +228,7 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                     {char.assets?.hero_bg ? (
                         <div className="absolute inset-0 z-0">
                             <img src={resolveAssetUrl(char.assets.hero_bg, char.name, 'SD')} alt=""
-                                className="w-full h-full object-cover opacity-50 transition-opacity duration-1000"
+                                className="w-full h-full object-cover opacity-100 transition-opacity duration-1000"
                                 style={{
                                     maskImage: 'linear-gradient(to left, black 30%, transparent 90%)',
                                     WebkitMaskImage: 'linear-gradient(to left, black 30%, transparent 90%)'
