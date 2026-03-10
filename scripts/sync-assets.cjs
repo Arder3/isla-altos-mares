@@ -13,24 +13,32 @@ cloudinary.config({
 const BASE_PROJECT_PATH = 'c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0';
 const TARGET_CHARACTERS = ['Mita', 'Cito'];
 
-const syncFolder = async (localPath, cloudinaryFolder, rootFolder = null) => {
+const galleryManifest = {};
+
+const syncFolder = async (localPath, cloudinaryFolder, charName, type, rootFolder = null) => {
     if (!fs.existsSync(localPath)) return;
+
+    if (!galleryManifest[charName]) galleryManifest[charName] = { SD: [], HD: [] };
 
     const files = fs.readdirSync(localPath);
     for (const file of files) {
         const fullPath = path.join(localPath, file);
         if (fs.lstatSync(fullPath).isDirectory()) {
-            // Pass the root cloudinaryFolder to keep it flat
-            await syncFolder(fullPath, rootFolder || cloudinaryFolder, rootFolder || cloudinaryFolder);
+            await syncFolder(fullPath, rootFolder || cloudinaryFolder, charName, type, rootFolder || cloudinaryFolder);
         } else if (file.match(/\.(png|jpg|jpeg|webp)$/i)) {
+            const publicId = path.parse(file).name;
             console.log(`🚀 Syncing: ${file} -> ${rootFolder || cloudinaryFolder}`);
             try {
                 await cloudinary.uploader.upload(fullPath, {
-                    public_id: path.parse(file).name,
+                    public_id: publicId,
                     folder: rootFolder || cloudinaryFolder,
                     overwrite: true,
                     resource_type: 'image'
                 });
+                // Add to manifest
+                if (!galleryManifest[charName][type].includes(publicId)) {
+                    galleryManifest[charName][type].push(publicId);
+                }
             } catch (err) {
                 console.error(`❌ Error syncing ${file}:`, err.message);
             }
@@ -57,25 +65,31 @@ const runSync = async () => {
 
         console.log(`📂 Processing: ${char} (Path: ${charPath})`);
 
-        // Sync Aprobados (look for a folder starting with ID + .03_Aprobados or similar)
+        // Sync Aprobados -> SD
         const approvedSub = fs.readdirSync(charPath).find(f => f.includes('_Aprobados'));
         if (approvedSub) {
-            await syncFolder(path.join(charPath, approvedSub), `AltosMares/${char}/SD`);
+            await syncFolder(path.join(charPath, approvedSub), `AltosMares/${char}/SD`, char, 'SD');
         }
 
-        // Sync HD (look for a folder starting with ID + .04_Material_HD or similar)
+        // Sync HD -> HD
         const hdSub = fs.readdirSync(charPath).find(f => f.includes('_Material_HD'));
         if (hdSub) {
-            await syncFolder(path.join(charPath, hdSub), `AltosMares/${char}/HD`);
+            await syncFolder(path.join(charPath, hdSub), `AltosMares/${char}/HD`, char, 'HD');
         }
 
-        // Sync WEB (look for a folder starting with ID + .05_Material_Web or similar)
+        // Sync WEB -> SD
         const webSub = fs.readdirSync(charPath).find(f => f.includes('_Material_Web'));
         if (webSub) {
             // Web portal assets are synced to SD folder
-            await syncFolder(path.join(charPath, webSub), `AltosMares/${char}/SD`);
+            await syncFolder(path.join(charPath, webSub), `AltosMares/${char}/SD`, char, 'SD');
         }
     }
+
+    // Write manifest
+    const manifestPath = path.join(__dirname, '../src/core/gallery_manifest.json');
+    fs.writeFileSync(manifestPath, JSON.stringify(galleryManifest, null, 2));
+    console.log(`✅ Gallery manifest generated at: ${manifestPath}`);
+
     console.log('--- Sync Completed ---');
 };
 

@@ -2,7 +2,8 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { resolveAssetUrl } from '../core/AssetResolver';
 import { MODULE_REGISTRY, PROFILE_REGISTRY, LORE_ACCESS } from '../core/registry';
-import { ArrowLeft, Lock, X, ZoomIn, ZoomOut } from 'lucide-react';
+import galleryManifest from '../core/gallery_manifest.json';
+import { ArrowLeft, Lock, X, ZoomIn, ZoomOut, Image as ImageIcon } from 'lucide-react';
 
 // ─────────────────────────────────────────────
 // LIGHTBOX — zoom-to-pointer / zoom-to-pinch
@@ -124,7 +125,7 @@ function Lightbox({ src, alt, onClose }) {
 // ─────────────────────────────────────────────
 // TABS
 // ─────────────────────────────────────────────
-const TABS = ['Visual', 'Narrativa', 'Datos'];
+const TABS = ['Visual', 'Narrativa', 'Datos', 'Galería'];
 const MORALITY_LABEL = { positivo: '✦ Positivo', negativo: '✦ Negativo', neutral: '✦ Neutral' };
 const MORALITY_COLOR = { positivo: 'text-emerald-400', negativo: 'text-rose-400', neutral: 'text-amber-400' };
 
@@ -179,11 +180,11 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
 
     // ── PRESENTATION ASSETS ──
     const presentationAssets = [
-        ...(char.assets.concept ? [{ id: char.assets.concept, label: 'Concepto', assetType: 'concept' }] : []),
-        ...(char.assets.acting || []).map(id => ({ id, label: 'Acting', assetType: 'acting' })),
-        ...(char.assets.acting_hd || []).map(id => ({ id, label: 'Acting HD', assetType: 'acting_hd', hd: true })),
+        ...(char.assets?.concept ? [{ id: char.assets.concept, label: 'Concepto', assetType: 'concept' }] : []),
+        ...(char.assets?.acting || []).map(id => ({ id, label: 'Acting', assetType: 'acting' })),
+        ...(char.assets?.acting_hd || []).map(id => ({ id, label: 'Acting HD', assetType: 'acting_hd', hd: true })),
     ];
-    const turnaroundAssets = (char.assets.turnaround || []).map(id => ({ id, label: 'Turnaround', assetType: 'turnaround' }));
+    const turnaroundAssets = (char.assets?.turnaround || []).map(id => ({ id, label: 'Turnaround', assetType: 'turnaround' }));
 
     // ── LORE ACCESS ──
     const canSee = (tier) => LORE_ACCESS[tier]?.includes(activeProfile);
@@ -412,6 +413,60 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                                         </div>
                                     ))}
                                 </div>
+                            </motion.div>
+                        )}
+
+                        {/* ── GALERÍA TAB ── */}
+                        {activeTab === 'Galería' && (
+                            <motion.div key="galeria" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
+                                <div className="mb-8">
+                                    <h3 className="text-sm font-bold mb-1">Archivo de Producción</h3>
+                                    <p className="text-white/30 text-[10px] font-mono uppercase tracking-widest">
+                                        Vista automatizada de todos los assets sincronizados en Cloudinary
+                                    </p>
+                                </div>
+
+                                {galleryManifest[char.name] ? (
+                                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                                        {[
+                                            ...galleryManifest[char.name].SD.map(id => ({ id, type: 'SD' })),
+                                            ...galleryManifest[char.name].HD.map(id => ({ id, type: 'HD' }))
+                                        ].map((asset, i) => {
+                                            const url = resolveAssetUrl(asset.id, char.name, asset.type);
+                                            return (
+                                                <motion.div
+                                                    key={`${asset.id}-${i}`}
+                                                    initial={{ opacity: 0, scale: 0.9 }}
+                                                    animate={{ opacity: 1, scale: 1 }}
+                                                    transition={{ delay: i * 0.02 }}
+                                                    onDoubleClick={() => openOnDblClick(url)}
+                                                    onTouchEnd={(e) => openOnDblTap(e, url)}
+                                                    className="group relative aspect-square bg-white/[0.02] border border-white/5 rounded-xl overflow-hidden cursor-zoom-in"
+                                                >
+                                                    <img
+                                                        src={url}
+                                                        alt={asset.id}
+                                                        className="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                                                        loading="lazy"
+                                                    />
+                                                    <div className="absolute inset-x-0 bottom-0 p-2 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                                                        <p className="text-[8px] font-mono whitespace-nowrap overflow-hidden text-ellipsis text-white/70">
+                                                            {asset.id}
+                                                        </p>
+                                                        {asset.type === 'HD' && (
+                                                            <span className="text-[7px] bg-amber-500/20 text-amber-400 px-1 rounded font-bold">HD</span>
+                                                        )}
+                                                    </div>
+                                                </motion.div>
+                                            );
+                                        })}
+                                    </div>
+                                ) : (
+                                    <div className="text-center py-24 text-white/20">
+                                        <ImageIcon className="mx-auto mb-4 opacity-20" size={48} />
+                                        <p className="font-mono text-xs uppercase tracking-widest text-center">No hay assets sincronizados para este personaje</p>
+                                    </div>
+                                )}
                             </motion.div>
                         )}
 
