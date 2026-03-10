@@ -143,13 +143,20 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
 
     const [activeTab, setActiveTab] = useState('Visual');
     const [lightboxSrc, setLightboxSrc] = useState(null);
-    const lastTapRef = useRef(0);
+    const lastTapRef = useRef({ time: 0, url: null });
 
     const conceptUrl = char.assets?.concept ? resolveAssetUrl(char.assets.concept, char.name, 'SD') : null;
 
     const openLightbox = (url) => setLightboxSrc(url);
     const openOnDblClick = (url) => openLightbox(url);
-    const openOnDblTap = (e, url) => { e.preventDefault(); const now = Date.now(); if (now - lastTapRef.current < 300) openLightbox(url); lastTapRef.current = now; };
+    const openOnDblTap = (e, url) => {
+        const now = Date.now();
+        const prevTap = lastTapRef.current;
+        if (prevTap.url === url && (now - prevTap.time) < 300) {
+            openLightbox(url);
+        }
+        lastTapRef.current = { time: now, url };
+    };
 
     // ── ACCESS RESTRICTED ──
     if (!charIsAccessible) {
@@ -446,7 +453,7 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                                                     <img
                                                         src={url}
                                                         alt={asset.id}
-                                                        className="w-full h-full object-cover opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                                                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
                                                         loading="lazy"
                                                     />
                                                     <div className="absolute inset-x-0 bottom-0 p-2 bg-gradient-to-t from-[var(--bg-primary)]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
