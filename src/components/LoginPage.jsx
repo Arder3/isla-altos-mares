@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
-import { Eye, EyeOff, Anchor, Loader2, AlertCircle } from 'lucide-react';
+import { Eye, EyeOff, Anchor, Loader2, AlertCircle, Languages, Sun, Moon } from 'lucide-react';
+import { getTranslation as t } from '../core/i18n';
 
-export default function LoginPage() {
+export default function LoginPage({ lang, setLang, themeOverride, setThemeOverride, isLightMode, onToggleTheme }) {
     const { signIn } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -16,6 +17,19 @@ export default function LoginPage() {
             {/* Ambient glows */}
             <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[50%] bg-indigo-600/10 blur-[180px] rounded-full pointer-events-none" />
             <div className="absolute bottom-[-20%] left-[-10%] w-[40%] h-[40%] bg-purple-600/10 blur-[180px] rounded-full pointer-events-none" />
+
+            {/* Global Settings Toggle (Pre-login) */}
+            <div className="absolute top-6 right-6 z-20 flex gap-2">
+                <button onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
+                    className="flex items-center gap-2 bg-[var(--bg-primary)]/40 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] px-4 py-2 rounded-full text-xs transition-all shadow-xl group">
+                    <Languages size={14} className="text-[var(--text-dim)] group-hover:text-[var(--text-primary)] transition-colors" />
+                    <span className="text-[var(--text-primary)] font-mono font-bold uppercase tracking-widest">{lang}</span>
+                </button>
+                <button onClick={() => onToggleTheme(isLightMode ? 'dark' : 'light')}
+                    className="bg-[var(--bg-primary)]/40 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-2 rounded-full transition-all shadow-xl">
+                    {isLightMode ? <Moon size={14} className="text-[var(--text-dim)]" /> : <Sun size={14} className="text-[var(--text-dim)]" />}
+                </button>
+            </div>
 
             <motion.div
                 initial={{ opacity: 0, y: 40, scale: 0.97 }}
@@ -34,32 +48,32 @@ export default function LoginPage() {
                         <Anchor size={28} className="text-[var(--text-secondary)]" />
                     </motion.div>
                     <h1 className="text-3xl font-black tracking-tighter text-[var(--text-primary)] mb-2">
-                        Isla de Altos Mares
+                        {t(lang, 'project_title')}
                     </h1>
                     <p className="text-[var(--text-dim)] text-xs font-mono uppercase tracking-widest">
-                        Portal de Acceso — Sistema 04.02
+                        {t(lang, 'portal_name')} — {t(lang, 'system_id')}
                     </p>
                 </div>
 
                 {/* Card */}
                 <div className="bg-[var(--surface-card)] border border-[var(--border-secondary)] backdrop-blur-xl rounded-3xl p-8">
                     <p className="text-[var(--text-secondary)] text-sm text-center mb-6">
-                        Ingresa con tus credenciales de acceso
+                        {t(lang, 'login_prompt')}
                     </p>
 
                     <form onSubmit={(e) => {
                         e.preventDefault();
                         setLoading(true);
                         setError('');
-                        signIn(email, password).then(({ error }) => {
+                        signIn(email, password).then(({ error: authErr }) => {
                             setLoading(false);
-                            if (error) setError('Credenciales incorrectas. Verifica tu email y contraseña.');
+                            if (authErr) setError(t(lang, 'error_creds'));
                         });
                     }} className="space-y-4">
                         {/* Email */}
                         <div>
                             <label className="block text-[var(--text-dim)] text-xs font-mono uppercase tracking-widest mb-2">
-                                Email
+                                {t(lang, 'email_label')}
                             </label>
                             <input
                                 type="email"
@@ -74,7 +88,7 @@ export default function LoginPage() {
                         {/* Password */}
                         <div>
                             <label className="block text-[var(--text-dim)] text-xs font-mono uppercase tracking-widest mb-2">
-                                Contraseña
+                                {t(lang, 'password_label')}
                             </label>
                             <div className="relative">
                                 <input
@@ -121,15 +135,15 @@ export default function LoginPage() {
                             {loading ? (
                                 <>
                                     <Loader2 size={16} className="animate-spin" />
-                                    Verificando...
+                                    {t(lang, 'verifying')}
                                 </>
-                            ) : 'Ingresar'}
+                            ) : t(lang, 'login_button')}
                         </motion.button>
                     </form>
                 </div>
 
                 <p className="text-center text-[var(--text-dim)] text-[10px] font-mono uppercase tracking-widest mt-6">
-                    Acceso por invitación únicamente
+                    {t(lang, 'invitation_only')}
                 </p>
             </motion.div>
         </div>

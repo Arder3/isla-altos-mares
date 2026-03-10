@@ -6,7 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MODULE_REGISTRY, PROFILE_REGISTRY } from './core/registry';
 import { resolveAssetUrl } from './core/AssetResolver';
 import posthog from './core/analytics';
-import { Eye, LogOut, ArrowLeft, Sun, Moon, ChevronRight } from 'lucide-react';
+import { Eye, LogOut, ArrowLeft, Sun, Moon, ChevronRight, Languages } from 'lucide-react';
+import { getTranslation as t } from './core/i18n';
 
 // ── Role → Profile key ──
 const ROLE_TO_PROFILE = {
@@ -61,60 +62,78 @@ function ProgressBars({ progress, dimmed }) {
   );
 }
 
-// ── Floating Host Chrome ──
-function HostChrome({ viewAsId, setViewAsId, setViewAsProfileKey, signOut, isLightMode, onToggleTheme }) {
+// ── Global Chrome (Visible to all) ──
+function GlobalChrome({ lang, setLang, viewAsId, setViewAsId, setViewAsProfileKey, signOut, isLightMode, onToggleTheme, isHost }) {
   const [open, setOpen] = useState(false);
   const active = VIEW_AS_ROLES.find(r => r.id === (viewAsId || 'host')) || VIEW_AS_ROLES[0];
+  
   return (
     <div className="fixed top-4 right-4 z-[100] flex items-center gap-2">
-      <div className="relative">
-        <button onClick={() => setOpen(!open)}
-          className="flex items-center gap-2 bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] px-3 py-1.5 rounded-full text-xs transition-all shadow-xl">
-          <Eye size={11} className="text-[var(--text-dim)]" />
-          <span className="text-[var(--text-dim)] font-mono uppercase tracking-widest text-[9px]">Ver como:</span>
-          <span className={`w-2 h-2 rounded-full flex-shrink-0 ${active.color}`} />
-          <span className="text-[var(--text-primary)] font-bold uppercase tracking-wider text-[10px]">{active.label}</span>
-        </button>
-        <AnimatePresence>
-          {open && (
-            <motion.div initial={{ opacity: 0, y: 6, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 6, scale: 0.95 }} transition={{ duration: 0.12 }}
-              className="absolute right-0 top-10 bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded-2xl overflow-hidden shadow-2xl min-w-[160px]">
-              {VIEW_AS_ROLES.map(role => (
-                <button key={role.id}
-                  onClick={() => { setViewAsId(role.id); setViewAsProfileKey(role.profileKey); setOpen(false); posthog.capture('host_view_as', { role: role.id }); }}
-                  className={`w-full flex items-center gap-3 px-4 py-2.5 text-left hover:bg-[var(--surface-card)] transition-colors ${role.id === viewAsId ? 'bg-[var(--surface-card)]' : ''}`}>
-                  <span className={`w-2 h-2 rounded-full flex-shrink-0 ${role.color}`} />
-                  <span className="text-[var(--text-primary)] text-[10px] font-mono uppercase tracking-widest opacity-80">{role.label}</span>
-                  {role.id === (viewAsId || 'host') && <span className="ml-auto text-[var(--text-dim)] text-[10px]">✓</span>}
-                </button>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-      <button onClick={onToggleTheme}
-        className="bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title="Cambiar tema">
+      {/* Language Toggle */}
+      <button onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
+        className="bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all flex items-center justify-center gap-1.5 px-3 min-w-[64px]" 
+        title={t(lang, 'change_lang')}>
+        <Languages size={13} className="text-[var(--text-dim)]" />
+        <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[var(--text-primary)]">{lang}</span>
+      </button>
+
+      {/* View As (Host only) */}
+      {isHost && (
+        <div className="relative">
+          <button onClick={() => setOpen(!open)}
+            className="flex items-center gap-2 bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] px-3 py-1.5 rounded-full text-xs transition-all shadow-xl">
+            <Eye size={11} className="text-[var(--text-dim)]" />
+            <span className="text-[var(--text-dim)] font-mono uppercase tracking-widest text-[9px]">{t(lang, 'view_as')}</span>
+            <span className={`w-2 h-2 rounded-full flex-shrink-0 ${active.color}`} />
+            <span className="text-[var(--text-primary)] font-bold uppercase tracking-wider text-[10px]">{t(lang, `role_${active.id}`)}</span>
+          </button>
+          <AnimatePresence>
+            {open && (
+              <motion.div initial={{ opacity: 0, y: 6, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 6, scale: 0.95 }} transition={{ duration: 0.12 }}
+                className="absolute right-0 top-10 bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded-2xl overflow-hidden shadow-2xl min-w-[160px]">
+                {VIEW_AS_ROLES.map(role => (
+                  <button key={role.id}
+                    onClick={() => { setViewAsId(role.id); setViewAsProfileKey(role.profileKey); setOpen(false); posthog.capture('host_view_as', { role: role.id }); }}
+                    className={`w-full flex items-center gap-3 px-4 py-2.5 text-left hover:bg-[var(--surface-card)] transition-colors ${role.id === viewAsId ? 'bg-[var(--surface-card)]' : ''}`}>
+                    <span className={`w-2 h-2 rounded-full flex-shrink-0 ${role.color}`} />
+                    <span className="text-[var(--text-primary)] text-[10px] font-mono uppercase tracking-widest opacity-80">{t(lang, `role_${role.id}`)}</span>
+                    {role.id === (viewAsId || 'host') && <span className="ml-auto text-[var(--text-dim)] text-[10px]">✓</span>}
+                  </button>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      )}
+
+      {/* Theme Toggle */}
+      <button onClick={() => {
+        const next = isLightMode ? 'dark' : 'light';
+        onToggleTheme(next);
+      }}
+        className="bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title={t(lang, 'change_theme')}>
         {isLightMode ? <Moon size={13} className="text-[var(--text-dim)]" /> : <Sun size={13} className="text-[var(--text-dim)]" />}
       </button>
+
+      {/* Sign Out */}
       <button onClick={() => { posthog.capture('sign_out'); signOut(); }}
-        className="bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title="Cerrar sesión">
+        className="bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title={t(lang, 'sign_out')}>
         <LogOut size={13} className="text-[var(--text-dim)]" />
       </button>
     </div>
   );
 }
 
-// ── Portal ──
-function Portal() {
+// ── Portal Content ──
+function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
   const { user, profile, loading, signOut } = useAuth();
   const [activeSection, setActiveSection] = useState(null);
   const [selectedCharId, setSelectedCharId] = useState(null);
-  const [filterType, setFilterType] = useState('Todos');
-  const [filterMorality, setFilterMorality] = useState('Todos');
+  const [filterType, setFilterType] = useState('all');
+  const [filterMorality, setFilterMorality] = useState('all');
   const [viewAsId, setViewAsId] = useState(null);
   const [viewAsProfileKey, setViewAsProfileKey] = useState(null);
-  const [themeOverride, setThemeOverride] = useState(null);
 
   useEffect(() => {
     setThemeOverride(null);
@@ -126,17 +145,29 @@ function Portal() {
     </div>
   );
 
-  if (!user) return <LoginPage />;
-
   const isHost = profile?.rol === 'host';
   const realProfileKey = profile?.rol ? ROLE_TO_PROFILE[profile.rol] || 'producer' : 'producer';
   const activeProfileKey = isHost && viewAsProfileKey ? viewAsProfileKey : realProfileKey;
-  const activeViewId = viewAsId || 'host';
+  const activeViewId = viewAsId || (profile?.rol || 'host');
   const activeRole = VIEW_AS_ROLES.find(r => r.id === activeViewId) || VIEW_AS_ROLES[0];
   const stripeColor = activeRole.bannerColor;
 
   const defaultIsLight = activeViewId === 'kids' || activeViewId === 'educadores';
   const isLightMode = themeOverride === null ? defaultIsLight : themeOverride === 'light';
+
+  if (!user) return (
+    <LoginPage 
+      lang={lang} 
+      setLang={setLang} 
+      themeOverride={themeOverride} 
+      setThemeOverride={setThemeOverride} 
+      isLightMode={isLightMode} 
+      onToggleTheme={(next) => {
+        setThemeOverride(next);
+        localStorage.setItem('portal_theme', next);
+      }}
+    />
+  );
 
   const isCharAccessible = (char) => {
     const p = PROFILE_REGISTRY[activeProfileKey];
@@ -144,20 +175,20 @@ function Portal() {
     return p.access.some(id => char.id === id || char.id.startsWith(id) || id.startsWith(char.id));
   };
 
-  const goHome = () => { setActiveSection(null); setSelectedCharId(null); setFilterType('Todos'); setFilterMorality('Todos'); };
+  const goHome = () => { setActiveSection(null); setSelectedCharId(null); setFilterType('all'); setFilterMorality('all'); };
 
-  const TYPE_FILTERS = ['Todos', 'Principal', 'Secundario', 'NPC'];
-  const MORALITY_FILTERS = ['Todos', 'Positivo', 'Negativo', 'Neutral'];
+  const TYPE_FILTERS = ['all', 'main', 'secondary', 'npc'];
+  const MORALITY_FILTERS = ['all', 'positive', 'negative', 'neutral'];
 
   const filteredChars = Object.values(MODULE_REGISTRY).filter(char => {
-    const typeMatch = filterType === 'Todos' || char.type === filterType;
-    const moralMatch = filterMorality === 'Todos' || char.morality === filterMorality.toLowerCase();
-    return typeMatch && moralMatch;
+    const typeMatch = filterType === 'all' || char.type.toLowerCase() === t('es', filterType).toLowerCase();
+    const moralKeyMap = { positive: 'positivo', negative: 'negativo', neutral: 'neutral', all: 'all' };
+    const effectiveMoralMatch = filterMorality === 'all' || char.morality === moralKeyMap[filterMorality];
+    return typeMatch && effectiveMoralMatch;
   });
 
   return (
-    <div className={`min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500 ${isLightMode ? 'theme-light' : ''}`}>
-      
+    <>
       {stripeColor && (
         <motion.div key={activeViewId}
           initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
@@ -167,45 +198,48 @@ function Portal() {
         />
       )}
 
-      {isHost && (
-        <HostChrome 
-          viewAsId={activeViewId} setViewAsId={setViewAsId} 
-          setViewAsProfileKey={setViewAsProfileKey} signOut={signOut} 
-          isLightMode={isLightMode} 
-          onToggleTheme={() => setThemeOverride(isLightMode ? 'dark' : 'light')} 
-        />
-      )}
+      <GlobalChrome 
+        lang={lang} setLang={setLang}
+        viewAsId={activeViewId} setViewAsId={setViewAsId} 
+        setViewAsProfileKey={setViewAsProfileKey} signOut={signOut} 
+        isLightMode={isLightMode} 
+        onToggleTheme={(next) => {
+          setThemeOverride(next);
+          localStorage.setItem('portal_theme', next);
+        }} 
+        isHost={isHost}
+      />
 
       <AnimatePresence mode="wait">
         {selectedCharId ? (
           <motion.div key="char-view" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="pt-8">
-            <CharacterView charId={selectedCharId} activeProfile={activeProfileKey} roleLabel={activeRole.label} onBack={() => setSelectedCharId(null)} />
+            <CharacterView lang={lang} charId={selectedCharId} activeProfile={activeProfileKey} roleLabel={activeRole.label} onBack={() => setSelectedCharId(null)} />
           </motion.div>
         ) : activeSection === 'characters' ? (
           <motion.div key="characters" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="p-8 md:p-12 max-w-7xl mx-auto">
             <div className="mb-12">
               <button onClick={goHome} className="flex items-center gap-2 text-[var(--text-dim)] hover:text-[var(--text-primary)] transition-colors mb-6 group text-xs font-mono uppercase tracking-widest">
                 <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
-                Portal
+                {t(lang, 'back_to_portal')}
               </button>
-              <h1 className="text-5xl font-black uppercase tracking-tighter">Personajes</h1>
-              <p className="text-[var(--text-dim)] font-mono text-xs mt-1 uppercase tracking-widest">Principales · Secundarios · NPC</p>
+              <h1 className="text-5xl font-black uppercase tracking-tighter">{t(lang, 'section_characters')}</h1>
+              <p className="text-[var(--text-dim)] font-mono text-xs mt-1 uppercase tracking-widest">{t(lang, 'sub_characters')}</p>
             </div>
 
             <div className="flex flex-col gap-4 mb-10">
               <div className="flex items-center gap-4">
-                <span className="text-[var(--text-dim)] font-mono text-[9px] uppercase tracking-widest w-20">Importancia</span>
+                <span className="text-[var(--text-dim)] font-mono text-[9px] uppercase tracking-widest w-20">{t(lang, 'importance')}</span>
                 <div className="flex gap-2">
                   {TYPE_FILTERS.map(f => (
-                    <button key={f} onClick={() => setFilterType(f)} className={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest transition-all ${filterType === f ? 'bg-[var(--accent-primary)] text-[var(--accent-invert)]' : 'border border-[var(--border-secondary)] text-[var(--text-dim)] hover:text-[var(--text-primary)]'}`}>{f}</button>
+                    <button key={f} onClick={() => setFilterType(f)} className={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest transition-all ${filterType === f ? 'bg-[var(--accent-primary)] text-[var(--accent-invert)]' : 'border border-[var(--border-secondary)] text-[var(--text-dim)] hover:text-[var(--text-primary)]'}`}>{t(lang, f)}</button>
                   ))}
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <span className="text-[var(--text-dim)] font-mono text-[9px] uppercase tracking-widest w-20">Moralidad</span>
+                <span className="text-[var(--text-dim)] font-mono text-[9px] uppercase tracking-widest w-20">{t(lang, 'morality')}</span>
                 <div className="flex gap-2">
                   {MORALITY_FILTERS.map(f => (
-                    <button key={f} onClick={() => setFilterMorality(f)} className={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest transition-all ${filterMorality === f ? 'bg-[var(--accent-primary)] text-[var(--accent-invert)]' : 'border border-[var(--border-secondary)] text-[var(--text-dim)] hover:text-[var(--text-primary)]'}`}>{f}</button>
+                    <button key={f} onClick={() => setFilterMorality(f)} className={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest transition-all ${filterMorality === f ? 'bg-[var(--accent-primary)] text-[var(--accent-invert)]' : 'border border-[var(--border-secondary)] text-[var(--text-dim)] hover:text-[var(--text-primary)]'}`}>{t(lang, f)}</button>
                   ))}
                 </div>
               </div>
@@ -220,9 +254,9 @@ function Portal() {
                 return (
                   <motion.div key={char.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
                     whileHover={{ scale: accessible ? 1.015 : 1 }} onClick={() => accessible && setSelectedCharId(char.id)}
-                    className={`relative h-64 rounded-3xl overflow-hidden border transition-all duration-500 group shadow-xl ${accessible ? 'cursor-pointer border-[var(--border-primary)] hover:border-[var(--accent-primary)]' : 'border-[var(--border-secondary)]'}`}>
+                    className={`relative aspect-[1.618/1] rounded-3xl overflow-hidden border transition-all duration-500 group shadow-xl ${accessible ? 'cursor-pointer border-[var(--border-primary)] hover:border-[var(--accent-primary)]' : 'border-[var(--border-secondary)]'}`}>
                     <div className={`absolute inset-0 bg-gradient-to-br ${char.gradient || 'from-stone-900 to-stone-800'} opacity-40`} />
-                    {concept && <img src={concept} className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />}
+                    {concept && <img src={concept} className="absolute inset-0 w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />}
                     <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-[var(--bg-primary)]/40 to-transparent" />
                     
                     <div className="absolute bottom-0 left-0 right-0 p-6 flex justify-between items-end">
@@ -246,10 +280,10 @@ function Portal() {
           <motion.div key="home" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="p-8 md:p-12 max-w-7xl mx-auto">
             <header className="mb-16 flex justify-between items-start">
               <div>
-                <h1 className="text-4xl font-black uppercase tracking-tighter">{profile?.nombre_display || 'Portal Unificado'}</h1>
-                <p className="text-[var(--text-dim)] font-mono text-xs mt-1 uppercase tracking-widest">{profile?.rol?.toUpperCase() || 'HOST'} · ID 04.02</p>
+                <h1 className="text-4xl font-black uppercase tracking-tighter">{profile?.nombre_display || t(lang, 'portal_unified')}</h1>
+                <p className="text-[var(--text-dim)] font-mono text-xs mt-1 uppercase tracking-widest">{profile?.rol?.toUpperCase() || 'HOST'} · {t(lang, 'system_id')}</p>
               </div>
-              {!isHost && <button onClick={signOut} className="bg-[var(--surface-card)] px-6 py-2 rounded-full text-xs font-mono uppercase tracking-widest border border-[var(--border-primary)]">Salir</button>}
+              {!isHost && <button onClick={signOut} className="bg-[var(--surface-card)] px-6 py-2 rounded-full text-xs font-mono uppercase tracking-widest border border-[var(--border-primary)]">{t(lang, 'exit')}</button>}
             </header>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -258,13 +292,13 @@ function Portal() {
                 return (
                   <motion.div key={s.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}
                     onClick={() => active && setActiveSection(s.id)}
-                    className={`relative h-56 rounded-3xl overflow-hidden border transition-all duration-500 group shadow-lg ${active ? 'cursor-pointer border-[var(--border-primary)] hover:border-[var(--accent-primary)]' : 'border-[var(--border-secondary)] grayscale'}`}>
+                    className={`relative aspect-[1.618/1] rounded-3xl overflow-hidden border transition-all duration-500 group shadow-lg ${active ? 'cursor-pointer border-[var(--border-primary)] hover:border-[var(--accent-primary)]' : 'border-[var(--border-secondary)] grayscale'}`}>
                     <div className={`absolute inset-0 bg-gradient-to-br ${s.gradient} ${active ? 'opacity-80' : 'opacity-30'}`} />
                     <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)]/80 to-transparent" />
                     <div className="absolute inset-0 p-6 flex flex-col justify-end">
                       <span className="text-3xl mb-2">{s.emoji}</span>
-                      <h2 className="text-xl font-black uppercase tracking-tight">{s.label}</h2>
-                      <p className="text-[var(--text-dim)] text-[9px] font-mono uppercase tracking-widest mt-1">{s.sublabel}</p>
+                      <h2 className="text-xl font-black uppercase tracking-tight">{t(lang, `section_${s.id}`)}</h2>
+                      <p className="text-[var(--text-dim)] text-[9px] font-mono uppercase tracking-widest mt-1">{t(lang, `sub_${s.id}`)}</p>
                     </div>
                   </motion.div>
                 );
@@ -273,14 +307,32 @@ function Portal() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </>
   );
 }
 
 export default function App() {
+  const [lang, setLang] = useState(() => localStorage.getItem('portal_lang') || 'es');
+  const [themeOverride, setThemeOverride] = useState(() => localStorage.getItem('portal_theme'));
+
+  useEffect(() => {
+    localStorage.setItem('portal_lang', lang);
+  }, [lang]);
+
+  // Note: themeOverride persistence is handled manually in handlers 
+  // to avoid clearing it when role-switching (which uses setThemeOverride(null))
+  
+  // Determine if light mode is active for the container
+  // Note: Inside Portal we have role-based logic, but here we can at least apply the manual override or a default.
+  // We'll pass themeOverride down to Portal where it's combined with role logic.
+  // For the root div, we use a slightly simplified calculation or just the override.
+  const isLightMode = themeOverride === 'light'; 
+
   return (
     <AuthProvider>
-      <Portal />
+      <div className={`min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500 ${isLightMode ? 'theme-light' : ''}`}>
+        <Portal lang={lang} setLang={setLang} themeOverride={themeOverride} setThemeOverride={setThemeOverride} />
+      </div>
     </AuthProvider>
   );
 }

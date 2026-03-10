@@ -4,11 +4,12 @@ import { resolveAssetUrl } from '../core/AssetResolver';
 import { MODULE_REGISTRY, PROFILE_REGISTRY, LORE_ACCESS } from '../core/registry';
 import galleryManifest from '../core/gallery_manifest.json';
 import { ArrowLeft, Lock, X, ZoomIn, ZoomOut, Image as ImageIcon } from 'lucide-react';
+import { getTranslation as t } from '../core/i18n';
 
 // ─────────────────────────────────────────────
 // LIGHTBOX — zoom-to-pointer / zoom-to-pinch
 // ─────────────────────────────────────────────
-function Lightbox({ src, alt, onClose }) {
+function Lightbox({ src, alt, onClose, lang }) {
     const containerRef = useRef(null);
     const stateRef = useRef({ scale: 1, x: 0, y: 0 });
     const [, forceRender] = useState(0);
@@ -111,7 +112,7 @@ function Lightbox({ src, alt, onClose }) {
                 <button onClick={onClose} className="w-9 h-9 rounded-full bg-[var(--surface-card)] hover:bg-[var(--border-primary)] border border-[var(--border-primary)] flex items-center justify-center transition-all shadow-lg"><X size={14} className="text-[var(--text-secondary)]" /></button>
             </div>
             <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[var(--text-dim)] text-[10px] font-mono uppercase tracking-widest pointer-events-none whitespace-nowrap">
-                🖥 Scroll·zoom al cursor · Drag·mover &nbsp;|&nbsp; 📱 Pinch·zoom · 1 dedo·mover &nbsp;|&nbsp; Doble clic/tap · ESC · cerrar
+                {t(lang, 'lightbox_hint')}
             </p>
             <div ref={containerRef} className="w-full h-full flex items-center justify-center overflow-hidden" style={{ cursor: scale > 1 ? 'grab' : 'zoom-out' }}>
                 <img src={src} alt={alt} draggable={false}
@@ -125,14 +126,12 @@ function Lightbox({ src, alt, onClose }) {
 // ─────────────────────────────────────────────
 // TABS
 // ─────────────────────────────────────────────
-const TABS = ['Visual', 'Narrativa', 'Datos', 'Galería'];
-const MORALITY_LABEL = { positivo: '✦ Positivo', negativo: '✦ Negativo', neutral: '✦ Neutral' };
 const MORALITY_COLOR = { positivo: 'text-emerald-400', negativo: 'text-rose-400', neutral: 'text-amber-400' };
 
 // ─────────────────────────────────────────────
 // CHARACTER VIEW
 // ─────────────────────────────────────────────
-export default function CharacterView({ charId, activeProfile, roleLabel, onBack }) {
+export default function CharacterView({ lang, charId, activeProfile, roleLabel, onBack }) {
     const char = MODULE_REGISTRY[charId];
     if (!char) return <div>Character not found</div>;
 
@@ -141,7 +140,13 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
         char.id === id || char.id.startsWith(id) || id.startsWith(char.id)
     );
 
-    const [activeTab, setActiveTab] = useState('Visual');
+    const TABS = [
+        { key: 'visual', label: t(lang, 'tab_visual') },
+        { key: 'narrative', label: t(lang, 'tab_narrative') },
+        { key: 'data', label: t(lang, 'tab_data') },
+        { key: 'gallery', label: t(lang, 'tab_gallery') }
+    ];
+    const [activeTabKey, setActiveTabKey] = useState(TABS[0].key);
     const [lightboxSrc, setLightboxSrc] = useState(null);
     const lastTapRef = useRef({ time: 0, url: null });
 
@@ -170,19 +175,19 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                 <div className="max-w-7xl mx-auto">
                     <button onClick={onBack} className="flex items-center gap-2 text-[var(--text-dim)] hover:text-[var(--text-primary)] transition-colors mb-8 group">
                         <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
-                        VOLVER
+                        {t(lang, 'back')}
                     </button>
                     <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }}
                         className="flex flex-col items-center justify-center min-h-[60vh] text-center">
                         <div className="w-16 h-16 rounded-2xl bg-[var(--surface-card)] border border-[var(--border-primary)] flex items-center justify-center mb-6">
                             <Lock size={24} className="text-[var(--text-dim)]" />
                         </div>
-                        <h2 className="text-3xl font-black uppercase tracking-tighter mb-3 text-[var(--text-primary)]">Acceso Restringido</h2>
+                        <h2 className="text-3xl font-black uppercase tracking-tighter mb-3 text-[var(--text-primary)]">{t(lang, 'restricted_access')}</h2>
                         <p className="text-[var(--text-secondary)] text-sm max-w-md leading-relaxed">
-                            El perfil de <strong className="text-[var(--text-primary)] opacity-80">{char.name}</strong> no está disponible para <strong className="text-[var(--text-primary)] opacity-80">{roleLabel || activeProfile}</strong>.
+                            {t(lang, 'restricted_msg', { name: char.name, role: roleLabel || activeProfile })}
                         </p>
                         <button onClick={onBack} className="mt-8 bg-[var(--surface-card)] hover:bg-[var(--border-primary)] border border-[var(--border-primary)] px-8 py-3 rounded-full text-sm transition-all uppercase tracking-widest text-[var(--text-primary)]">
-                            ← Explorar
+                            ← {t(lang, 'explore')}
                         </button>
                     </motion.div>
                 </div>
@@ -192,11 +197,11 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
 
     // ── PRESENTATION ASSETS ──
     const presentationAssets = [
-        ...(char.assets?.concept ? [{ id: char.assets.concept, label: 'Concepto', assetType: 'concept' }] : []),
-        ...(char.assets?.acting || []).map(id => ({ id, label: 'Acting', assetType: 'acting' })),
-        ...(char.assets?.acting_hd || []).map(id => ({ id, label: 'Acting HD', assetType: 'acting_hd', hd: true })),
+        ...(char.assets?.concept ? [{ id: char.assets.concept, label: t(lang, 'asset_concept'), assetType: 'concept' }] : []),
+        ...(char.assets?.acting || []).map(id => ({ id, label: t(lang, 'asset_acting'), assetType: 'acting' })),
+        ...(char.assets?.acting_hd || []).map(id => ({ id, label: t(lang, 'asset_acting_hd'), assetType: 'acting_hd', hd: true })),
     ];
-    const turnaroundAssets = (char.assets?.turnaround || []).map(id => ({ id, label: 'Turnaround', assetType: 'turnaround' }));
+    const turnaroundAssets = (char.assets?.turnaround || []).map(id => ({ id, label: t(lang, 'asset_turnaround'), assetType: 'turnaround' }));
 
     // ── LORE ACCESS ──
     const canSee = (tier) => LORE_ACCESS[tier]?.includes(activeProfile);
@@ -211,13 +216,13 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                     <h3 className={`text-xs font-mono uppercase tracking-widest ${accessible ? 'text-[var(--text-secondary)]' : 'text-[var(--text-dim)]'}`}>{title}</h3>
                     {!accessible && (
                         <span className="ml-auto flex items-center gap-1 text-[9px] font-mono text-[var(--text-dim)] uppercase tracking-widest">
-                            <Lock size={9} /> acceso restringido
+                            <Lock size={9} /> {t(lang, 'restricted_access').toLowerCase()}
                         </span>
                     )}
                 </div>
                 {accessible
                     ? <p className="text-[var(--text-primary)] opacity-80 text-sm leading-relaxed">{text}</p>
-                    : <p className="text-[var(--text-dim)] text-sm italic">Contenido disponible para niveles superiores de acceso.</p>
+                    : <p className="text-[var(--text-dim)] text-sm italic">{t(lang, 'restricted_content')}</p>
                 }
             </motion.div>
         );
@@ -229,7 +234,7 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
     return (
         <>
             <AnimatePresence>
-                {lightboxSrc && <Lightbox src={lightboxSrc} alt={char.name} onClose={() => setLightboxSrc(null)} />}
+                {lightboxSrc && <Lightbox lang={lang} src={lightboxSrc} alt={char.name} onClose={() => setLightboxSrc(null)} />}
             </AnimatePresence>
 
             <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500">
@@ -240,7 +245,7 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                     {char.assets?.hero_bg ? (
                         <div className="absolute inset-0 z-0">
                             <img src={resolveAssetUrl(char.assets.hero_bg, char.name, 'SD')} alt=""
-                                className="w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+                                className="w-full h-full object-cover object-top opacity-100 transition-opacity duration-1000"
                                 style={{
                                     maskImage: 'linear-gradient(to left, black 30%, transparent 90%)',
                                     WebkitMaskImage: 'linear-gradient(to left, black 30%, transparent 90%)'
@@ -263,7 +268,7 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                         {/* Back button */}
                         <button onClick={onBack} className="flex items-center gap-2 text-[var(--text-dim)] hover:text-[var(--text-primary)] transition-colors group self-start">
                             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-                            <span className="font-mono text-[10px] uppercase tracking-widest">Personajes</span>
+                            <span className="font-mono text-[10px] uppercase tracking-widest">{t(lang, 'section_characters')}</span>
                         </button>
 
                         {/* Character identity */}
@@ -272,7 +277,7 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                                 <span className="text-[var(--text-dim)] font-mono text-[10px] uppercase tracking-widest">{char.type}</span>
                                 <span className="w-1 h-1 rounded-full bg-[var(--text-dim)] opacity-30" />
                                 <span className={`font-mono text-[10px] uppercase tracking-widest ${MORALITY_COLOR[char.morality] || 'text-[var(--text-dim)]'}`}>
-                                    {MORALITY_LABEL[char.morality] || char.morality}
+                                    ✦ {t(lang, char.morality || 'neutral')}
                                 </span>
                                 <span className="w-1 h-1 rounded-full bg-[var(--text-dim)] opacity-30" />
                                 <span className="text-[var(--text-dim)] font-mono text-[10px] opacity-60">{char.id}</span>
@@ -295,12 +300,12 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                 <div className="sticky top-0 z-20 bg-[var(--bg-primary)]/95 backdrop-blur-sm border-b border-[var(--border-primary)]">
                     <div className="max-w-7xl mx-auto px-8 md:px-12 flex gap-8">
                         {TABS.map(tab => (
-                            <button key={tab} onClick={() => setActiveTab(tab)}
-                                className={`py-4 text-[11px] font-mono uppercase tracking-widest transition-all border-b-2 -mb-px ${activeTab === tab
+                            <button key={tab.key} onClick={() => setActiveTabKey(tab.key)}
+                                className={`py-4 text-[11px] font-mono uppercase tracking-widest transition-all border-b-2 -mb-px ${activeTabKey === tab.key
                                     ? 'text-[var(--text-primary)] border-[var(--text-primary)]'
                                     : 'text-[var(--text-secondary)] border-transparent hover:text-[var(--text-primary)]'
                                     }`}>
-                                {tab}
+                                {tab.label}
                             </button>
                         ))}
                     </div>
@@ -312,7 +317,7 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                     <AnimatePresence mode="wait">
 
                         {/* ── VISUAL TAB ── */}
-                        {activeTab === 'Visual' && (
+                        {activeTabKey === 'visual' && (
                             <motion.div key="visual" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
 
                                 {presentationAssets.length > 0 && (
@@ -323,12 +328,12 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                                                 <motion.div key={asset.id} initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }}
                                                     onDoubleClick={() => openOnDblClick(url)}
                                                     onTouchEnd={(e) => openOnDblTap(e, url)}
-                                                    title="Doble clic / doble toque para ampliar"
+                                                    title={t(lang, 'hint_zoom')}
                                                     className="group relative bg-[var(--surface-card)] border border-[var(--border-secondary)] rounded-2xl overflow-hidden aspect-square cursor-zoom-in">
                                                     <img src={url} alt={asset.label} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-[1.02]" />
                                                     <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
                                                         <h3 className="text-sm font-bold text-[var(--text-primary)]">{asset.label}</h3>
-                                                        {asset.hd && <span className="text-[9px] text-amber-400 font-mono uppercase tracking-widest">Master Quality</span>}
+                                                        {asset.hd && <span className="text-[9px] text-amber-400 font-mono uppercase tracking-widest">{t(lang, 'master_quality')}</span>}
                                                     </div>
                                                 </motion.div>
                                             );
@@ -339,7 +344,7 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                                 {turnaroundAssets.length > 0 && (
                                     <>
                                         <p className="text-[var(--text-dim)] font-mono text-[10px] uppercase tracking-widest mb-4">
-                                            Turnaround · {turnaroundAssets.length} vistas
+                                            {t(lang, 'turnaround_label', { count: turnaroundAssets.length })}
                                         </p>
                                         <div className="flex gap-4 overflow-x-auto pb-2" style={{ height: '500px' }}>
                                             {turnaroundAssets.map(asset => {
@@ -361,44 +366,44 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                                 {presentationAssets.length === 0 && turnaroundAssets.length === 0 && (
                                     <div className="text-center py-24 text-[var(--text-dim)]">
                                         <p className="text-4xl mb-3 opacity-30">🎨</p>
-                                        <p className="font-mono text-xs uppercase tracking-widest">Assets visuales en desarrollo</p>
+                                        <p className="font-mono text-xs uppercase tracking-widest">{t(lang, 'visual_assets_dev')}</p>
                                     </div>
                                 )}
                             </motion.div>
                         )}
 
                         {/* ── NARRATIVA TAB ── */}
-                        {activeTab === 'Narrativa' && (
+                        {activeTabKey === 'narrative' && (
                             <motion.div key="narrativa" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
                                 className="flex flex-col gap-5 max-w-3xl">
                                 {char.lore ? (
                                     <>
-                                        <LoreCard tier="bio_short" icon="📖" title="Descripción general" text={char.lore.bio_short} />
-                                        <LoreCard tier="bio_full" icon="📚" title="Historia completa" text={char.lore.bio_full} />
-                                        <LoreCard tier="psych_profile" icon="🧠" title="Perfil psicológico" text={char.lore.psych_profile} />
+                                        <LoreCard tier="bio_short" icon="📖" title={t(lang, 'description_gen')} text={char.lore.bio_short} />
+                                        <LoreCard tier="bio_full" icon="📚" title={t(lang, 'history_full')} text={char.lore.bio_full} />
+                                        <LoreCard tier="psych_profile" icon="🧠" title={t(lang, 'psych_profile')} text={char.lore.psych_profile} />
                                     </>
                                 ) : (
                                     <div className="text-center py-24 text-[var(--text-dim)]">
                                         <p className="text-4xl mb-3 opacity-30">📝</p>
-                                        <p className="font-mono text-xs uppercase tracking-widest">Contenido narrativo en desarrollo</p>
+                                        <p className="font-mono text-xs uppercase tracking-widest">{t(lang, 'narrative_assets_dev')}</p>
                                     </div>
                                 )}
                             </motion.div>
                         )}
 
                         {/* ── DATOS TAB ── */}
-                        {activeTab === 'Datos' && (
+                        {activeTabKey === 'data' && (
                             <motion.div key="datos" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
                                 className="max-w-2xl">
 
                                 {/* Ficha */}
                                 <div className="bg-[var(--surface-card)] border border-[var(--border-secondary)] rounded-2xl overflow-hidden mb-6">
                                     {[
-                                        ['Nombre', char.name],
-                                        ['Tipo', char.type],
-                                        ['Moralidad', char.morality ? char.morality.charAt(0).toUpperCase() + char.morality.slice(1) : '—'],
-                                        ['ID', char.id],
-                                        ['Estado', char.status === 'active' ? 'Activo en portal' : 'En desarrollo'],
+                                        [t(lang, 'label_name'), char.name],
+                                        [t(lang, 'label_type'), t(lang, char.type.toLowerCase())],
+                                        [t(lang, 'label_moral'), char.morality ? t(lang, char.morality) : '—'],
+                                        [t(lang, 'label_id'), char.id],
+                                        [t(lang, 'label_status'), char.status === 'active' ? t(lang, 'active_portal') : t(lang, 'in_development')],
                                     ].map(([label, value], i, arr) => (
                                         <div key={label} className={`flex items-center ${i < arr.length - 1 ? 'border-b border-[var(--border-secondary)]' : ''}`}>
                                             <span className="w-40 px-6 py-4 text-[10px] font-mono uppercase tracking-widest text-[var(--text-dim)] flex-shrink-0">{label}</span>
@@ -409,11 +414,11 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
 
                                 {/* Production progress */}
                                 <div className="bg-[var(--surface-card)] border border-[var(--border-secondary)] rounded-2xl p-6">
-                                    <h3 className="text-[10px] font-mono uppercase tracking-widest text-[var(--text-dim)] mb-5">Estado de Producción</h3>
+                                    <h3 className="text-[10px] font-mono uppercase tracking-widest text-[var(--text-dim)] mb-5">{t(lang, 'production_status')}</h3>
                                     {char.progress && Object.entries(char.progress).map(([key, val]) => (
                                         <div key={key} className="mb-4 last:mb-0">
                                             <div className="flex justify-between items-center mb-1.5">
-                                                <span className="text-xs font-mono uppercase tracking-widest text-[var(--text-secondary)] opacity-80">{key}</span>
+                                                <span className="text-xs font-mono uppercase tracking-widest text-[var(--text-secondary)] opacity-80">{t(lang, `label_${key}`)}</span>
                                                 <span className="text-xs font-mono text-[var(--text-dim)]">{val}%</span>
                                             </div>
                                             <div className="h-1 bg-[var(--border-primary)] rounded-full overflow-hidden">
@@ -429,12 +434,12 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                         )}
 
                         {/* ── GALERÍA TAB ── */}
-                        {activeTab === 'Galería' && (
+                        {activeTabKey === 'gallery' && (
                             <motion.div key="galeria" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
                                 <div className="mb-8">
-                                    <h3 className="text-sm font-bold mb-1">Archivo de Producción</h3>
+                                    <h3 className="text-sm font-bold mb-1">{t(lang, 'gallery_archive')}</h3>
                                     <p className="text-[var(--text-dim)] text-[10px] font-mono uppercase tracking-widest">
-                                        Vista automatizada de todos los assets sincronizados en Cloudinary
+                                        {t(lang, 'gallery_sub')}
                                     </p>
                                 </div>
 
@@ -476,7 +481,7 @@ export default function CharacterView({ charId, activeProfile, roleLabel, onBack
                                 ) : (
                                     <div className="text-center py-24 text-[var(--text-dim)]">
                                         <ImageIcon className="mx-auto mb-4 opacity-20" size={48} />
-                                        <p className="font-mono text-xs uppercase tracking-widest text-center">No hay assets sincronizados para este personaje</p>
+                                        <p className="font-mono text-xs uppercase tracking-widest text-center">{t(lang, 'no_assets')}</p>
                                     </div>
                                 )}
                             </motion.div>
