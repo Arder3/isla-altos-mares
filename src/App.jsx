@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import LoginPage from './components/LoginPage';
 import CharacterView from './components/CharacterView';
@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MODULE_REGISTRY, PROFILE_REGISTRY } from './core/registry';
 import { resolveAssetUrl } from './core/AssetResolver';
 import posthog from './core/analytics';
-import { Eye, LogOut, ArrowLeft } from 'lucide-react';
+import { Eye, LogOut, ArrowLeft, Sun, Moon, ChevronRight } from 'lucide-react';
 
 // ── Role → Profile key ──
 const ROLE_TO_PROFILE = {
@@ -62,7 +62,7 @@ function ProgressBars({ progress, dimmed }) {
 }
 
 // ── Floating Host Chrome ──
-function HostChrome({ viewAsId, setViewAsId, setViewAsProfileKey, signOut }) {
+function HostChrome({ viewAsId, setViewAsId, setViewAsProfileKey, signOut, isLightMode, onToggleTheme }) {
   const [open, setOpen] = useState(false);
   const active = VIEW_AS_ROLES.find(r => r.id === viewAsId) || VIEW_AS_ROLES[0];
   return (
@@ -93,6 +93,10 @@ function HostChrome({ viewAsId, setViewAsId, setViewAsProfileKey, signOut }) {
           )}
         </AnimatePresence>
       </div>
+      <button onClick={onToggleTheme}
+        className="bg-[var(--bg-primary)]/60 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title="Cambiar tema">
+        {isLightMode ? <Moon size={13} className="text-[var(--text-dim)]" /> : <Sun size={13} className="text-[var(--text-dim)]" />}
+      </button>
       <button onClick={() => { posthog.capture('sign_out'); signOut(); }}
         className="bg-[var(--bg-primary)]/60 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title="Cerrar sesión">
         <LogOut size={13} className="text-[var(--text-dim)]" />
@@ -111,6 +115,8 @@ function Portal() {
   const [viewAsId, setViewAsId] = useState(null);
   const [viewAsProfileKey, setViewAsProfileKey] = useState(null);
 
+  const [themeOverride, setThemeOverride] = useState(null); // 'light' or 'dark'
+
   if (loading) return (
     <div className="min-h-screen bg-[var(--bg-primary)] flex items-center justify-center transition-colors duration-500">
       <div className="w-8 h-8 border-2 border-[var(--border-primary)] border-t-[var(--text-primary)] rounded-full animate-spin" />
@@ -125,7 +131,15 @@ function Portal() {
   const activeViewId = viewAsId || 'host';
   const activeRole = VIEW_AS_ROLES.find(r => r.id === activeViewId);
   const stripeColor = activeRole?.bannerColor || null;
-  const isLightMode = activeViewId === 'kids' || activeViewId === 'educadores';
+
+  // Manual theme override logic
+  const defaultIsLight = activeViewId === 'kids' || activeViewId === 'educadores';
+  const isLightMode = themeOverride === null ? defaultIsLight : themeOverride === 'light';
+
+  // Reset override when role changes
+  useEffect(() => {
+    setThemeOverride(null);
+  }, [activeViewId]);
 
   const isCharAccessible = (char) => {
     const p = PROFILE_REGISTRY[activeProfileKey];
@@ -178,7 +192,20 @@ function Portal() {
       </AnimatePresence>
 
       {/* ── Host chrome ── */}
-      {isHost && <HostChrome viewAsId={activeViewId} setViewAsId={setViewAsId} setViewAsProfileKey={setViewAsProfileKey} signOut={signOut} />}
+      {isHost && (
+        <HostChrome 
+          viewAsId={activeViewId} 
+          setViewAsId={setViewAsId} 
+          setViewAsProfileKey={setViewAsProfileKey} 
+          signOut={signOut} 
+          isLightMode={isLightMode}
+          onToggleTheme={() => {
+            const next = isLightMode ? 'dark' : 'light';
+            setThemeOverride(next);
+            posthog.capture('manual_theme_toggle', { theme: next });
+          }}
+        />
+      )}
 
       {/* ── Content ── */}
       <AnimatePresence mode="wait">
