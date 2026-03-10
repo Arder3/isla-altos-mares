@@ -11,19 +11,8 @@ export default function LoginPage() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        setError('');
-        const { error } = await signIn(email, password);
-        setLoading(false);
-        if (error) {
-            setError('Credenciales incorrectas. Verifica tu email y contraseña.');
-        }
-    };
-
     return (
-        <div className="min-h-screen bg-[#050505] flex items-center justify-center p-6 relative overflow-hidden">
+        <div className="min-h-screen bg-[var(--bg-primary)] flex items-center justify-center p-6 relative overflow-hidden transition-colors duration-500">
             {/* Ambient glows */}
             <div className="absolute top-[-20%] right-[-10%] w-[50%] h-[50%] bg-indigo-600/10 blur-[180px] rounded-full pointer-events-none" />
             <div className="absolute bottom-[-20%] left-[-10%] w-[40%] h-[40%] bg-purple-600/10 blur-[180px] rounded-full pointer-events-none" />
@@ -40,28 +29,36 @@ export default function LoginPage() {
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-                        className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center"
+                        className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-[var(--surface-card)] border border-[var(--border-primary)] flex items-center justify-center"
                     >
-                        <Anchor size={28} className="text-white/60" />
+                        <Anchor size={28} className="text-[var(--text-secondary)]" />
                     </motion.div>
-                    <h1 className="text-3xl font-black tracking-tighter text-white mb-2">
+                    <h1 className="text-3xl font-black tracking-tighter text-[var(--text-primary)] mb-2">
                         Isla de Altos Mares
                     </h1>
-                    <p className="text-white/30 text-xs font-mono uppercase tracking-widest">
+                    <p className="text-[var(--text-dim)] text-xs font-mono uppercase tracking-widest">
                         Portal de Acceso — Sistema 04.02
                     </p>
                 </div>
 
                 {/* Card */}
-                <div className="bg-white/[0.03] border border-white/[0.07] backdrop-blur-xl rounded-3xl p-8">
-                    <p className="text-white/50 text-sm text-center mb-6">
+                <div className="bg-[var(--surface-card)] border border-[var(--border-secondary)] backdrop-blur-xl rounded-3xl p-8">
+                    <p className="text-[var(--text-secondary)] text-sm text-center mb-6">
                         Ingresa con tus credenciales de acceso
                     </p>
 
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <form onSubmit={(e) => {
+                        e.preventDefault();
+                        setLoading(true);
+                        setError('');
+                        signIn(email, password).then(({ error }) => {
+                            setLoading(false);
+                            if (error) setError('Credenciales incorrectas. Verifica tu email y contraseña.');
+                        });
+                    }} className="space-y-4">
                         {/* Email */}
                         <div>
-                            <label className="block text-white/40 text-xs font-mono uppercase tracking-widest mb-2">
+                            <label className="block text-[var(--text-dim)] text-xs font-mono uppercase tracking-widest mb-2">
                                 Email
                             </label>
                             <input
@@ -70,13 +67,13 @@ export default function LoginPage() {
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
                                 placeholder="tu@email.com"
-                                className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white/30 transition-colors text-sm"
+                                className="w-full bg-[var(--surface-card)] border border-[var(--border-primary)] rounded-xl px-4 py-3 text-[var(--text-primary)] placeholder:text-[var(--text-dim)] focus:outline-none focus:border-[var(--text-secondary)] transition-colors text-sm"
                             />
                         </div>
 
                         {/* Password */}
                         <div>
-                            <label className="block text-white/40 text-xs font-mono uppercase tracking-widest mb-2">
+                            <label className="block text-[var(--text-dim)] text-xs font-mono uppercase tracking-widest mb-2">
                                 Contraseña
                             </label>
                             <div className="relative">
@@ -86,12 +83,12 @@ export default function LoginPage() {
                                     value={password}
                                     onChange={e => setPassword(e.target.value)}
                                     placeholder="••••••••"
-                                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 pr-12 text-white placeholder:text-white/20 focus:outline-none focus:border-white/30 transition-colors text-sm"
+                                    className="w-full bg-[var(--surface-card)] border border-[var(--border-primary)] rounded-xl px-4 py-3 pr-12 text-[var(--text-primary)] placeholder:text-[var(--text-dim)] focus:outline-none focus:border-[var(--text-secondary)] transition-colors text-sm"
                                 />
                                 <button
                                     type="button"
                                     onClick={() => setShowPass(!showPass)}
-                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 transition-colors"
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--text-dim)] hover:text-[var(--text-secondary)] transition-colors"
                                 >
                                     {showPass ? <EyeOff size={16} /> : <Eye size={16} />}
                                 </button>
@@ -119,7 +116,7 @@ export default function LoginPage() {
                             disabled={loading}
                             whileHover={{ scale: loading ? 1 : 1.02 }}
                             whileTap={{ scale: loading ? 1 : 0.98 }}
-                            className="w-full bg-white text-black font-black py-3 rounded-xl text-sm tracking-widest uppercase transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-2"
+                            className="w-full bg-[var(--accent-primary)] text-[var(--accent-invert)] font-black py-3 rounded-xl text-sm tracking-widest uppercase transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-2"
                         >
                             {loading ? (
                                 <>
@@ -131,7 +128,7 @@ export default function LoginPage() {
                     </form>
                 </div>
 
-                <p className="text-center text-white/20 text-[10px] font-mono uppercase tracking-widest mt-6">
+                <p className="text-center text-[var(--text-dim)] text-[10px] font-mono uppercase tracking-widest mt-6">
                     Acceso por invitación únicamente
                 </p>
             </motion.div>

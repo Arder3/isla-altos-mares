@@ -16,7 +16,7 @@ const ROLE_TO_PROFILE = {
 };
 
 const VIEW_AS_ROLES = [
-  { id: 'host', profileKey: 'equipo', label: 'Host', color: 'bg-white', bannerColor: null },
+  { id: 'host', profileKey: 'equipo', label: 'Host', color: 'bg-[var(--text-primary)]', bannerColor: null },
   { id: 'equipo', profileKey: 'equipo', label: 'Equipo', color: 'bg-violet-500', bannerColor: '#8B5CF6' },
   { id: 'vip', profileKey: 'investor', label: 'VIP', color: 'bg-amber-400', bannerColor: '#FBBF24' },
   { id: 'confidente', profileKey: 'equipo', label: 'Confidente', color: 'bg-sky-500', bannerColor: '#0EA5E9' },
@@ -69,24 +69,24 @@ function HostChrome({ viewAsId, setViewAsId, setViewAsProfileKey, signOut }) {
     <div className="fixed top-4 right-4 z-50 flex items-center gap-2">
       <div className="relative">
         <button onClick={() => setOpen(!open)}
-          className="flex items-center gap-2 bg-black/60 backdrop-blur border border-white/10 hover:border-white/25 px-3 py-1.5 rounded-full text-xs transition-all">
-          <Eye size={11} className="text-white/40" />
-          <span className="text-white/40 font-mono uppercase tracking-widest">Ver como:</span>
+          className="flex items-center gap-2 bg-[var(--bg-primary)]/60 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] px-3 py-1.5 rounded-full text-xs transition-all shadow-xl">
+          <Eye size={11} className="text-[var(--text-dim)]" />
+          <span className="text-[var(--text-dim)] font-mono uppercase tracking-widest">Ver como:</span>
           <span className={`w-2 h-2 rounded-full flex-shrink-0 ${active.color}`} />
-          <span className="text-white font-bold uppercase tracking-wider text-[10px]">{active.label}</span>
+          <span className="text-[var(--text-primary)] font-bold uppercase tracking-wider text-[10px]">{active.label}</span>
         </button>
         <AnimatePresence>
           {open && (
             <motion.div initial={{ opacity: 0, y: 6, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 6, scale: 0.95 }} transition={{ duration: 0.12 }}
-              className="absolute right-0 top-10 bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl min-w-[160px]">
+              className="absolute right-0 top-10 bg-[var(--bg-primary)] border border-[var(--border-primary)] rounded-2xl overflow-hidden shadow-2xl min-w-[160px]">
               {VIEW_AS_ROLES.map(role => (
                 <button key={role.id}
                   onClick={() => { setViewAsId(role.id); setViewAsProfileKey(role.profileKey); setOpen(false); posthog.capture('host_view_as', { role: role.id }); }}
-                  className={`w-full flex items-center gap-3 px-4 py-2.5 text-left hover:bg-white/5 transition-colors ${role.id === viewAsId ? 'bg-white/8' : ''}`}>
+                  className={`w-full flex items-center gap-3 px-4 py-2.5 text-left hover:bg-[var(--surface-card)] transition-colors ${role.id === viewAsId ? 'bg-[var(--surface-card)]' : ''}`}>
                   <span className={`w-2 h-2 rounded-full flex-shrink-0 ${role.color}`} />
-                  <span className="text-white/80 text-[10px] font-mono uppercase tracking-widest">{role.label}</span>
-                  {role.id === (viewAsId || 'host') && <span className="ml-auto text-white/30 text-[10px]">✓</span>}
+                  <span className="text-[var(--text-primary)] text-[10px] font-mono uppercase tracking-widest opacity-80">{role.label}</span>
+                  {role.id === (viewAsId || 'host') && <span className="ml-auto text-[var(--text-dim)] text-[10px]">✓</span>}
                 </button>
               ))}
             </motion.div>
@@ -94,8 +94,8 @@ function HostChrome({ viewAsId, setViewAsId, setViewAsProfileKey, signOut }) {
         </AnimatePresence>
       </div>
       <button onClick={() => { posthog.capture('sign_out'); signOut(); }}
-        className="bg-black/60 backdrop-blur border border-white/10 hover:border-white/25 p-1.5 rounded-full transition-all" title="Cerrar sesión">
-        <LogOut size={13} className="text-white/50" />
+        className="bg-[var(--bg-primary)]/60 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title="Cerrar sesión">
+        <LogOut size={13} className="text-[var(--text-dim)]" />
       </button>
     </div>
   );
@@ -162,7 +162,8 @@ function Portal() {
   });
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${isLightMode ? 'theme-light bg-white' : 'bg-[#050505]'} text-white`}>
+    <div className={`min-h-screen transition-colors duration-500 ${isLightMode ? 'theme-light' : ''}`}>
+      <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen transition-colors duration-500">
 
       {/* ── Role stripe ── */}
       <AnimatePresence>
@@ -194,12 +195,12 @@ function Portal() {
 
             <div className="max-w-7xl mx-auto mb-12">
               <button onClick={goHome}
-                className="flex items-center gap-2 text-white/30 hover:text-white transition-colors mb-8 group text-xs font-mono uppercase tracking-widest">
+                className="flex items-center gap-2 text-[var(--text-dim)] hover:text-[var(--text-primary)] transition-colors mb-8 group text-xs font-mono uppercase tracking-widest">
                 <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
                 Portal
               </button>
-              <h1 className="text-5xl font-black uppercase tracking-tighter">Personajes</h1>
-              <p className="text-white/30 font-mono text-xs mt-1 uppercase tracking-widest">Principales · Secundarios · NPC</p>
+              <h1 className="text-5xl font-black uppercase tracking-tighter text-[var(--text-primary)]">Personajes</h1>
+              <p className="text-[var(--text-dim)] font-mono text-xs mt-1 uppercase tracking-widest">Principales · Secundarios · NPC</p>
             </div>
 
             {/* Filter strips */}
@@ -221,15 +222,15 @@ function Portal() {
                 if (isComingSoon) return (
                   <motion.div key={char.id}
                     initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-                    className="relative h-72 rounded-3xl overflow-hidden border border-white/[0.04] cursor-default">
+                    className="relative h-72 rounded-3xl overflow-hidden border border-[var(--border-secondary)] cursor-default">
                     <div className={`absolute inset-0 bg-gradient-to-br ${char.gradient || 'from-stone-900 to-stone-800'} opacity-40`} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
-                    <div className="absolute top-4 right-4 bg-black/40 border border-white/10 px-2.5 py-1 rounded-full">
-                      <span className="text-[9px] font-mono text-white/30 uppercase tracking-widest">En desarrollo</span>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)]/85 via-[var(--bg-primary)]/20 to-transparent" />
+                    <div className="absolute top-4 right-4 bg-[var(--bg-primary)]/40 border border-[var(--border-primary)] px-2.5 py-1 rounded-full">
+                      <span className="text-[9px] font-mono text-[var(--text-dim)] uppercase tracking-widest">En desarrollo</span>
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h2 className="text-3xl font-black uppercase tracking-tighter text-white/25">{char.name}</h2>
-                      <p className="text-white/20 font-mono text-[10px] uppercase tracking-widest mt-0.5">{char.type} · {char.id}</p>
+                      <h2 className="text-3xl font-black uppercase tracking-tighter text-[var(--text-primary)] opacity-25">{char.name}</h2>
+                      <p className="text-[var(--text-dim)] font-mono text-[10px] uppercase tracking-widest mt-0.5">{char.type} · {char.id}</p>
                       <ProgressBars progress={char.progress} dimmed />
                     </div>
                   </motion.div>
@@ -240,18 +241,18 @@ function Portal() {
                   <motion.div key={char.id}
                     whileHover={{ scale: accessible ? 1.015 : 1.005 }} whileTap={{ scale: 0.99 }}
                     onClick={() => { posthog.capture(accessible ? 'open_character' : 'open_restricted', { character: char.name, profile: activeProfileKey, accessible }); setSelectedCharId(char.id); }}
-                    className="relative h-72 rounded-3xl overflow-hidden cursor-pointer border transition-all duration-500 group"
-                    style={{ borderColor: accessible ? 'rgba(255,255,255,0.06)' : 'rgba(255,255,255,0.04)' }}>
+                    className="relative h-72 rounded-3xl overflow-hidden cursor-pointer border transition-all duration-500 group shadow-xl"
+                    style={{ borderColor: accessible ? 'var(--border-primary)' : 'var(--border-secondary)' }}>
 
                     {conceptUrl
                       ? <img src={conceptUrl} alt={char.name} className={`absolute inset-0 w-full h-full object-cover object-top transition-all duration-700 ${accessible ? 'group-hover:scale-105' : 'grayscale opacity-40'}`} />
-                      : <div className="absolute inset-0 bg-white/[0.02]" />}
+                      : <div className="absolute inset-0 bg-[var(--surface-card)]" />}
 
-                    <div className={`absolute inset-0 bg-gradient-to-t ${accessible ? 'from-black/90 via-black/40 to-transparent' : 'from-black/95 via-black/60 to-black/20'} transition-all duration-500`} />
+                    <div className={`absolute inset-0 bg-gradient-to-t ${accessible ? 'from-[var(--bg-primary)]/90 via-[var(--bg-primary)]/40 to-transparent' : 'from-[var(--bg-primary)]/95 via-[var(--bg-primary)]/60 to-[var(--bg-primary)]/20'} transition-all duration-500`} />
 
                     {!accessible && (
-                      <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-white/30">
+                      <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[var(--surface-card)] border border-[var(--border-primary)] flex items-center justify-center">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-[var(--text-dim)]">
                           <rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0110 0v4" />
                         </svg>
                       </div>
@@ -259,13 +260,13 @@ function Portal() {
 
                     <div className="absolute bottom-0 left-0 right-0 p-6 flex justify-between items-end">
                       <div className="flex-1 min-w-0">
-                        <h2 className={`text-3xl font-black uppercase tracking-tighter drop-shadow-lg ${accessible ? 'text-white' : 'text-white/40'}`}>{char.name}</h2>
-                        <p className="text-white/30 font-mono text-[10px] uppercase tracking-widest mt-0.5">
-                          {char.type} · {char.id}{!accessible && <span className="ml-2 text-white/20">· Acceso restringido</span>}
+                        <h2 className={`text-3xl font-black uppercase tracking-tighter drop-shadow-lg ${accessible ? 'text-[var(--text-primary)]' : 'text-[var(--text-dim)]'}`}>{char.name}</h2>
+                        <p className="text-[var(--text-secondary)] font-mono text-[10px] uppercase tracking-widest mt-0.5 opacity-60">
+                          {char.type} · {char.id}{!accessible && <span className="ml-2 opacity-30">· Acceso restringido</span>}
                         </p>
                         <ProgressBars progress={char.progress} dimmed={!accessible} />
                       </div>
-                      <div className={`ml-4 w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 flex-shrink-0 ${accessible ? 'bg-white/10 border-white/20 group-hover:bg-white group-hover:text-black text-white' : 'bg-white/5 border-white/10 text-white/20'}`}>
+                      <div className={`ml-4 w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300 flex-shrink-0 ${accessible ? 'bg-[var(--surface-card)] border-[var(--border-primary)] group-hover:bg-[var(--accent-primary)] group-hover:text-[var(--accent-invert)] text-[var(--text-primary)]' : 'bg-[var(--surface-card)] border-[var(--border-secondary)] text-[var(--text-dim)] opacity-40'}`}>
                         <span className="text-sm">{accessible ? '→' : '🔒'}</span>
                       </div>
                     </div>
@@ -281,12 +282,12 @@ function Portal() {
 
             <header className="flex justify-between items-start mb-16 max-w-7xl mx-auto">
               <div>
-                <h1 className="text-4xl font-black uppercase tracking-tighter">{profile?.nombre_display || 'Portal Unificado'}</h1>
-                <p className="text-white/40 font-mono text-xs mt-1 uppercase tracking-widest">{profile?.rol?.toUpperCase() || 'HOST'} · Sistema Modular ID 04.02</p>
+                <h1 className="text-4xl font-black uppercase tracking-tighter text-[var(--text-primary)]">{profile?.nombre_display || 'Portal Unificado'}</h1>
+                <p className="text-[var(--text-secondary)] font-mono text-xs mt-1 uppercase tracking-widest">{profile?.rol?.toUpperCase() || 'HOST'} · Sistema Modular ID 04.02</p>
               </div>
               {!isHost && (
                 <button onClick={() => { posthog.capture('sign_out'); signOut(); }}
-                  className="bg-white/5 hover:bg-white/10 border border-white/10 px-6 py-2 rounded-full text-xs transition-all uppercase tracking-widest">
+                  className="bg-[var(--surface-card)] hover:bg-[var(--border-primary)] border border-[var(--border-secondary)] px-6 py-2 rounded-full text-xs transition-all uppercase tracking-widest text-[var(--text-primary)]">
                   Salir
                 </button>
               )}
@@ -300,29 +301,29 @@ function Portal() {
                     initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.06 }}
                     whileHover={{ scale: isActive ? 1.02 : 1.005, y: isActive ? -3 : 0 }} whileTap={{ scale: 0.98 }}
                     onClick={() => { if (isActive) { posthog.capture('open_section', { section: section.id }); setActiveSection(section.id); } }}
-                    className={`relative h-52 rounded-3xl overflow-hidden border transition-all duration-500 group ${isActive ? 'cursor-pointer border-white/10 hover:border-white/20' : 'cursor-default border-white/[0.04]'}`}>
+                    className={`relative h-52 rounded-3xl overflow-hidden border transition-all duration-500 group shadow-lg ${isActive ? 'cursor-pointer border-[var(--border-primary)] hover:border-[var(--accent-primary)]' : 'cursor-default border-[var(--border-secondary)]'}`}>
 
                     <div className={`absolute inset-0 bg-gradient-to-br ${section.gradient} ${isActive ? 'opacity-80 group-hover:opacity-100' : 'opacity-40'} transition-opacity duration-500`} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)]/60 to-transparent" />
                     <div className={`absolute -right-4 -top-4 text-9xl transition-transform duration-500 ${isActive ? 'group-hover:scale-110 group-hover:rotate-6' : ''}`}
                       style={{ opacity: isActive ? 0.15 : 0.08 }}>
                       {section.emoji}
                     </div>
 
                     {!isActive && (
-                      <div className="absolute top-4 right-4 bg-black/40 border border-white/10 px-2.5 py-1 rounded-full">
-                        <span className="text-[9px] font-mono text-white/30 uppercase tracking-widest">En desarrollo</span>
+                      <div className="absolute top-4 right-4 bg-[var(--bg-primary)]/40 border border-[var(--border-primary)] px-2.5 py-1 rounded-full">
+                        <span className="text-[9px] font-mono text-[var(--text-dim)] uppercase tracking-widest">En desarrollo</span>
                       </div>
                     )}
 
                     <div className="absolute bottom-0 left-0 right-0 p-6 flex justify-between items-end">
                       <div>
                         <div className="text-2xl mb-1.5">{section.emoji}</div>
-                        <h2 className={`text-xl font-black uppercase tracking-tight leading-tight ${isActive ? 'text-white' : 'text-white/40'}`}>{section.label}</h2>
-                        <p className={`font-mono text-[9px] uppercase tracking-widest mt-1 ${isActive ? 'text-white/40' : 'text-white/20'}`}>{section.sublabel}</p>
+                        <h2 className={`text-xl font-black uppercase tracking-tight leading-tight ${isActive ? 'text-[var(--text-primary)]' : 'text-[var(--text-dim)]'}`}>{section.label}</h2>
+                        <p className={`font-mono text-[9px] uppercase tracking-widest mt-1 ${isActive ? 'text-[var(--text-secondary)] opacity-60' : 'text-[var(--text-dim)]'}`}>{section.sublabel}</p>
                       </div>
                       {isActive && (
-                        <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0 text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
+                        <div className="w-10 h-10 rounded-full bg-[var(--surface-card)] border border-[var(--border-primary)] flex items-center justify-center flex-shrink-0 text-[var(--text-primary)] group-hover:bg-[var(--accent-primary)] group-hover:text-[var(--accent-invert)] transition-all duration-300 shadow-md">
                           <span className="text-sm">→</span>
                         </div>
                       )}
@@ -334,6 +335,7 @@ function Portal() {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
     </div>
   );
 }
