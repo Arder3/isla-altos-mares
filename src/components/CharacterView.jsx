@@ -149,14 +149,14 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
     const [activeTabKey, setActiveTabKey] = useState(TABS[0].key);
     const [lightboxSrc, setLightboxSrc] = useState(null);
     const [isVertical, setIsVertical] = useState(window.matchMedia('(orientation: portrait)').matches);
-    const [isPc, setIsPc] = useState(window.matchMedia('(pointer: fine)').matches);
+    const [isPc, setIsPc] = useState(window.innerWidth > 1024 || window.matchMedia('(pointer: fine)').matches);
 
     useEffect(() => {
         const mq = window.matchMedia('(orientation: portrait)');
         const pmq = window.matchMedia('(pointer: fine)');
         const listener = () => {
             setIsVertical(mq.matches);
-            setIsPc(pmq.matches);
+            setIsPc(window.innerWidth > 1024 || pmq.matches);
         };
         mq.addEventListener('change', listener);
         pmq.addEventListener('change', listener);
@@ -184,16 +184,21 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
         };
 
         if (manifest) {
-            // Mita Specific Override: Strict Device-Based Pose/Ratio (Ignoring Orientation)
+            // Mita Specific Override: Strict Device-Based Pose/Ratio (Strict asset matching)
             if (char.name === 'Mita') {
-                const targetRatio = isPc ? '2-1' : '1-1';
-                const targetPose = isPc ? 'PoseA' : 'PoseB';
-                
-                const hdMita = findHero(manifest.HD, targetRatio, targetPose);
-                if (hdMita) return { id: hdMita, type: 'HD' };
-                
-                const sdMita = findHero(manifest.SD, targetRatio, targetPose);
-                if (sdMita) return { id: sdMita, type: 'SD' };
+                if (isPc) {
+                    // For PC: Strictly PoseA + 2-1 + Top
+                    const hdMita = manifest.HD.find(id => id.includes('PoseA') && id.includes('2-1') && id.includes('Top'));
+                    if (hdMita) return { id: hdMita, type: 'HD' };
+                    const sdMita = manifest.SD.find(id => id.includes('PoseA') && id.includes('2-1') && id.includes('Top'));
+                    if (sdMita) return { id: sdMita, type: 'SD' };
+                } else {
+                    // For Mobile: Strictly PoseB + 1-1
+                    const hdMita = manifest.HD.find(id => id.includes('PoseB') && id.includes('1-1'));
+                    if (hdMita) return { id: hdMita, type: 'HD' };
+                    const sdMita = manifest.SD.find(id => id.includes('PoseB') && id.includes('1-1'));
+                    if (sdMita) return { id: sdMita, type: 'SD' };
+                }
             }
 
             let ratio = isVertical ? '1-1' : '2-1';
