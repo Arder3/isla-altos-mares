@@ -149,37 +149,61 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
     const [activeTabKey, setActiveTabKey] = useState(TABS[0].key);
     const [lightboxSrc, setLightboxSrc] = useState(null);
     const [isVertical, setIsVertical] = useState(window.matchMedia('(orientation: portrait)').matches);
+    const [isPc, setIsPc] = useState(window.innerWidth > 768);
+
     useEffect(() => {
         const mq = window.matchMedia('(orientation: portrait)');
-        const listener = (e) => setIsVertical(e.matches);
+        const listener = (e) => {
+            setIsVertical(e.matches);
+            setIsPc(window.innerWidth > 768);
+        };
         mq.addEventListener('change', listener);
-        return () => mq.removeEventListener('change', listener);
+        window.addEventListener('resize', listener);
+        return () => {
+            mq.removeEventListener('change', listener);
+            window.removeEventListener('resize', listener);
+        };
     }, []);
 
     // ── SMART HERO FALLBACK (Multi-Ratio, Pattern-Based) ──
     const getSmartHero = () => {
         const manifest = galleryManifest[char.name];
-        const ratio = isVertical ? '1-1' : '2-1';
+        let ratio = isVertical ? '1-1' : '2-1';
+        
+        // Priority Pose based on device
+        const priorityPose = isPc ? 'PoseA' : 'PoseB';
 
-        // Helper: find file containing Hero_RATIO in HD or SD arrays
-        const findHero = (arr = [], heroRatio) =>
-            arr.find(id => id.includes(`Hero_${heroRatio}`) || id.includes(`Hero_${heroRatio.replace('-', 'x')}`));
+        // Helper: find file containing Hero_RATIO and optionally a Pose identifier
+        const findHero = (arr = [], heroRatio, poseFilter = null) => {
+            if (!arr) return null;
+            return arr.find(id => {
+                const matchRatio = id.includes(`Hero_${heroRatio}`) || id.includes(`Hero_${heroRatio.replace('-', 'x')}`);
+                const matchPose = poseFilter ? id.includes(poseFilter) : true;
+                return matchRatio && matchPose;
+            });
+        };
 
         if (manifest) {
-            // 1. HD con el ratio correcto
+            // 1. Try Priority Pose + Correct Ratio (HD then SD)
+            const hdPriority = findHero(manifest.HD, ratio, priorityPose);
+            if (hdPriority) return { id: hdPriority, type: 'HD' };
+            
+            const sdPriority = findHero(manifest.SD, ratio, priorityPose);
+            if (sdPriority) return { id: sdPriority, type: 'SD' };
+
+            // 2. Try ANY Pose + Correct Ratio (HD then SD) - for characters without specific poses
             const hdMatch = findHero(manifest.HD, ratio);
             if (hdMatch) return { id: hdMatch, type: 'HD' };
 
-            // 2. SD con el ratio correcto
             const sdMatch = findHero(manifest.SD, ratio);
             if (sdMatch) return { id: sdMatch, type: 'SD' };
 
-            // 3. Si buscábamos 2-1 y no hay, fallback a 1-1 HD
+            // 3. Fallback to 1-1 if we were looking for something else
             if (ratio !== '1-1') {
-                const hd11 = findHero(manifest.HD, '1-1');
+                const hd11 = findHero(manifest.HD, '1-1', priorityPose) || findHero(manifest.HD, '1-1');
                 if (hd11) return { id: hd11, type: 'HD' };
 
-                const sd11 = findHero(manifest.SD, '1-1');
+                const sd11 = findHero(manifest.SD, '1-1', priorityPose) || findHero(manifest.SD, '1-1');
                 if (sd11) return { id: sd11, type: 'SD' };
             }
         }

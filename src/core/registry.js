@@ -29,8 +29,9 @@ export const MODULE_REGISTRY = {
         assets: {
             concept: '03.02.03.01.03.01_Concepto_General',
             hero: {
-                '1-1': 'v1',
-                '2-1': 'v1'
+                '1-1': ['v1', 'v2', 'v3'],
+                '1-2': ['v1', 'v2'],
+                '2-1': ['v1']
             },
             turnaround: [
                 '03.02.03.01.03.09.01_Frontal',
