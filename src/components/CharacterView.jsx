@@ -156,35 +156,32 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
         return () => mq.removeEventListener('change', listener);
     }, []);
 
-    // ── SMART HERO FALLBACK (Multi-Ratio) ──
+    // ── SMART HERO FALLBACK (Multi-Ratio, Pattern-Based) ──
     const getSmartHero = () => {
         const manifest = galleryManifest[char.name];
         const ratio = isVertical ? '1-1' : '2-1';
-        const version = char.assets?.hero?.[ratio] || 'v1';
-        
-        // Mapeo de sub-segmento segun ratio
-        const subSeg = ratio === '1-1' ? '01' : (ratio === '2-1' ? '03' : '02');
-        
-        // Intentar construir ID base: XX.XX.XX.XX.YY.50.SS_Name_Hero_Ratio_vX
-        // Donde YY es 04 (HD) o 03 (SD), y SS es subSeg
-        const buildId = (type) => {
-            const segYY = type === 'HD' ? '04' : '03';
-            return `${char.id}.${segYY}.50.${subSeg}_${char.name}_Hero_${ratio}_${version}`;
-        };
 
-        const hdId = buildId('HD');
-        const sdId = buildId('SD');
+        // Helper: find file containing Hero_RATIO in HD or SD arrays
+        const findHero = (arr = [], heroRatio) =>
+            arr.find(id => id.includes(`Hero_${heroRatio}`) || id.includes(`Hero_${heroRatio.replace('-', 'x')}`));
 
-        // 1. Try HD version if in manifest
-        if (manifest?.HD.includes(hdId)) return { id: hdId, type: 'HD' };
-        
-        // 2. Try SD version if in manifest
-        if (manifest?.SD.includes(sdId)) return { id: sdId, type: 'SD' };
+        if (manifest) {
+            // 1. HD con el ratio correcto
+            const hdMatch = findHero(manifest.HD, ratio);
+            if (hdMatch) return { id: hdMatch, type: 'HD' };
 
-        // 3. If target ratio fails, try 1-1 fallback (if we were looking for 2-1)
-        if (ratio !== '1-1') {
-            const fallback11Hd = `${char.id}.04.50.01_${char.name}_Hero_1-1_v1`;
-            if (manifest?.HD.includes(fallback11Hd)) return { id: fallback11Hd, type: 'HD' };
+            // 2. SD con el ratio correcto
+            const sdMatch = findHero(manifest.SD, ratio);
+            if (sdMatch) return { id: sdMatch, type: 'SD' };
+
+            // 3. Si buscábamos 2-1 y no hay, fallback a 1-1 HD
+            if (ratio !== '1-1') {
+                const hd11 = findHero(manifest.HD, '1-1');
+                if (hd11) return { id: hd11, type: 'HD' };
+
+                const sd11 = findHero(manifest.SD, '1-1');
+                if (sd11) return { id: sd11, type: 'SD' };
+            }
         }
 
         // 4. Ultimate Fallback: Concept Art
