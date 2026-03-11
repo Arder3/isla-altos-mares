@@ -7048,7 +7048,7 @@
       "doc:script",
       "script:jsx"
     ],
-    "size": 33715,
+    "size": 34216,
     "modified": "2026-03-11"
   },
   {
@@ -7062,8 +7062,8 @@
       "doc:script",
       "script:jsx"
     ],
-    "size": 35032,
-    "modified": "2026-03-10"
+    "size": 36905,
+    "modified": "2026-03-11"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/src/components/LandingPage.jsx",
@@ -7132,8 +7132,8 @@
       "doc:script",
       "script:js"
     ],
-    "size": 857,
-    "modified": "2026-03-08"
+    "size": 874,
+    "modified": "2026-03-11"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/src/core/gallery_manifest.json",
@@ -7146,7 +7146,7 @@
       "data:json",
       "doc:datos"
     ],
-    "size": 4218,
+    "size": 4252,
     "modified": "2026-03-11"
   },
   {
@@ -7174,7 +7174,7 @@
       "data:json",
       "doc:datos"
     ],
-    "size": 289786,
+    "size": 292380,
     "modified": "2026-03-11"
   },
   {
@@ -7188,8 +7188,8 @@
       "doc:script",
       "script:js"
     ],
-    "size": 8086,
-    "modified": "2026-03-10"
+    "size": 7936,
+    "modified": "2026-03-11"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/src/core/supabaseClient.js",

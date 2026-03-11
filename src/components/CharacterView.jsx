@@ -148,27 +148,46 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
     ];
     const [activeTabKey, setActiveTabKey] = useState(TABS[0].key);
     const [lightboxSrc, setLightboxSrc] = useState(null);
-    // ── SMART HERO FALLBACK ──
+    const [isVertical, setIsVertical] = useState(window.matchMedia('(orientation: portrait)').matches);
+    useEffect(() => {
+        const mq = window.matchMedia('(orientation: portrait)');
+        const listener = (e) => setIsVertical(e.matches);
+        mq.addEventListener('change', listener);
+        return () => mq.removeEventListener('change', listener);
+    }, []);
+
+    // ── SMART HERO FALLBACK (Multi-Ratio) ──
     const getSmartHero = () => {
-        // 0. Manual Override from Registry
-        if (char.assets?.hero_bg) {
-            const segments = char.assets.hero_bg.split('.');
-            const type = segments[4] === '04' ? 'HD' : 'SD';
-            return { id: char.assets.hero_bg, type };
+        const manifest = galleryManifest[char.name];
+        const ratio = isVertical ? '1-1' : '2-1';
+        const version = char.assets?.hero?.[ratio] || 'v1';
+        
+        // Mapeo de sub-segmento segun ratio
+        const subSeg = ratio === '1-1' ? '01' : (ratio === '2-1' ? '03' : '02');
+        
+        // Intentar construir ID base: XX.XX.XX.XX.YY.50.SS_Name_Hero_Ratio_vX
+        // Donde YY es 04 (HD) o 03 (SD), y SS es subSeg
+        const buildId = (type) => {
+            const segYY = type === 'HD' ? '04' : '03';
+            return `${char.id}.${segYY}.50.${subSeg}_${char.name}_Hero_${ratio}_${version}`;
+        };
+
+        const hdId = buildId('HD');
+        const sdId = buildId('SD');
+
+        // 1. Try HD version if in manifest
+        if (manifest?.HD.includes(hdId)) return { id: hdId, type: 'HD' };
+        
+        // 2. Try SD version if in manifest
+        if (manifest?.SD.includes(sdId)) return { id: sdId, type: 'SD' };
+
+        // 3. If target ratio fails, try 1-1 fallback (if we were looking for 2-1)
+        if (ratio !== '1-1') {
+            const fallback11Hd = `${char.id}.04.50.01_${char.name}_Hero_1-1_v1`;
+            if (manifest?.HD.includes(fallback11Hd)) return { id: fallback11Hd, type: 'HD' };
         }
 
-        const manifest = galleryManifest[char.name];
-        if (!manifest) return { id: char.assets?.concept, type: 'SD' };
-
-        // 1. Try to find a 'Hero' asset in HD
-        const hdHero = manifest.HD.find(id => id.toLowerCase().includes('hero'));
-        if (hdHero) return { id: hdHero, type: 'HD' };
-
-        // 2. Try to find a 'Hero' asset in SD
-        const sdHero = manifest.SD.find(id => id.toLowerCase().includes('hero'));
-        if (sdHero) return { id: sdHero, type: 'SD' };
-
-        // 3. Fallback to Concept Art (hardcoded in registry)
+        // 4. Ultimate Fallback: Concept Art
         return { id: char.assets?.concept, type: 'SD' };
     };
 

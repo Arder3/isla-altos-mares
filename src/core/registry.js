@@ -28,7 +28,10 @@ export const MODULE_REGISTRY = {
         },
         assets: {
             concept: '03.02.03.01.03.01_Concepto_General',
-            hero_bg: '03.02.03.01.04.50.01_Mita_Hero_1-1_PoseB_v01',
+            hero: {
+                '1-1': 'v1',
+                '2-1': 'v1'
+            },
             turnaround: [
                 '03.02.03.01.03.09.01_Frontal',
                 '03.02.03.01.03.09.02_Posterior',
