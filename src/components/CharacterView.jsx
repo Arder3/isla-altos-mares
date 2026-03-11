@@ -150,6 +150,13 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
     const [lightboxSrc, setLightboxSrc] = useState(null);
     // ── SMART HERO FALLBACK ──
     const getSmartHero = () => {
+        // 0. Manual Override from Registry
+        if (char.assets?.hero_bg) {
+            const segments = char.assets.hero_bg.split('.');
+            const type = segments[4] === '04' ? 'HD' : 'SD';
+            return { id: char.assets.hero_bg, type };
+        }
+
         const manifest = galleryManifest[char.name];
         if (!manifest) return { id: char.assets?.concept, type: 'SD' };
 
