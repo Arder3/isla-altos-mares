@@ -40,23 +40,28 @@ export const MODULE_REGISTRY = {
         }
     },
 
-    '03.02.03.02': {
-        id: '03.02.03.02', name: 'Cito', type: 'Principal', morality: 'positivo', status: 'active',
-        progress: { narrativa: 80, arte: 70, hd: 0 },
-        lore: {
-            bio_short: 'Infante curioso con una energía pura que atrae a las criaturas de la isla. Su inocencia desbloquea misterios que los adultos no pueden ver. El corazón de cada aventura.',
-            bio_full: 'Cito no tiene miedo porque aún no sabe que debería tenerlo. Esa inocencia es su superpoder. Las criaturas de la isla lo reconocen como algo distinto — no una amenaza, sino parte del ecosistema. Su magia es involuntaria: donde Cito va, el mundo responde. Desde que apareció en la vida de Mita, cada día es un descubrimiento nuevo para ambos.',
-            psych_profile: 'Perfil psicológico: curiosidad pura sin filtro de peligro. Sin estructura cortical de miedo desarrollada. Responde al mundo con asombro total. Catalizador narrativo — su presencia activa la magia latente. Arquetipo: El Niño / El Trickster Inocente.'
-        },
-        assets: {
-            concept: '03.02.03.02.03.01_Concepto_Maestro',
-            acting: [
-                '03.02.03.02.03.14.01_Interaccion_Abeja_Flor',
-                '03.02.03.02.03.14.05_Interaccion_Castillo_Arena',
-                '03.02.03.02.03.14.10_Interaccion_Mariposa'
-            ]
-        }
-    },
+	'03.02.03.02': {
+		id: '03.02.03.02', name: 'Cito', type: 'Principal', morality: 'positivo', status: 'active',
+		progress: { narrativa: 80, arte: 70, hd: 0 },
+		lore: {
+			bio_short: 'Infante curioso con una energía pura que atrae a las criaturas de la isla. Su inocencia desbloquea misterios que los adultos no pueden ver. El corazón de cada aventura.',
+			bio_full: 'Cito no tiene miedo porque aún no sabe que debería tenerlo. Esa inocencia es su superpoder. Las criaturas de la isla lo reconocen como algo distinto — no una amenaza, sino parte del ecosistema. Su magia es involuntaria: donde Cito va, el mundo responde. Desde que apareció en la vida de Mita, cada día es un descubrimiento nuevo para ambos.',
+			psych_profile: 'Perfil psicológico: curiosidad pura sin filtro de peligro. Sin estructura cortical de miedo desarrollada. Responde al mundo con asombro total. Catalizador narrativo — su presencia activa la magia latente. Arquetipo: El Niño / El Trickster Inocente.'
+		},
+		assets: {
+			concept: '03.02.03.02.03.01_Concept_Maestro',
+			hero: {
+				'1-1': 'v1',
+				'1-2': ['v1', 'v2', 'v3', 'v4'],
+				'2-1': ['v1', 'v2']
+			},
+			acting: [
+				'03.02.03.02.03.14.01_Interaccion_Abeja_Flor',
+				'03.02.03.02.03.14.05_Interaccion_Castillo_Arena',
+				'03.02.03.02.03.14.10_Interaccion_Mariposa'
+			]
+		}
+	},
 
     // ── PRINCIPALES — EN DESARROLLO ───────────────────────────────
     '03.02.03.03': {

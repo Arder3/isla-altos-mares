@@ -30,17 +30,19 @@
       "03.02.03.01.03.12.11_Concentrada",
       "03.02.03.01.03.12.12_Energetica",
       "03.02.03.01.03.12.13_Cansada",
-      "03.02.03.01.03.12.14_Asustada",
-      "03.02.03.01.03.50.03_Mita_Hero_2-1_PoseA_Full_v01"
+      "03.02.03.01.03.12.14_Asustada"
     ],
     "HD": [
       "03.02.03.01.04.50.01_Mita_Hero_1-1_PoseA_v01",
       "03.02.03.01.04.50.01_Mita_Hero_1-1_PoseB_v01",
       "03.02.03.01.04.50.01_Mita_Hero_1-1_PoseB_v02",
+      "03.02.03.01.04.50.01_Mita_Hero_1-1_PoseC_v01",
       "03.02.03.01.04.50.02_Mita_Hero_1-2_PoseB_Left_v01",
       "03.02.03.01.04.50.02_Mita_Hero_1-2_PoseB_Left_v02",
       "03.02.03.01.04.50.02_Mita_Hero_1-2_PoseB_Right_v01",
       "03.02.03.01.04.50.02_Mita_Hero_1-2_PoseB_Right_v02",
+      "03.02.03.01.04.50.01_Mita_Hero_1-1_PoseC_Bottom_v01",
+      "03.02.03.01.04.50.01_Mita_Hero_1-1_PoseC_Top_v01",
       "03.02.03.01.04.50.03_Mita_Hero_2-1_PoseA_Bottom_v01",
       "03.02.03.01.04.50.03_Mita_Hero_2-1_PoseA_Top_v01"
     ],
@@ -71,7 +73,17 @@
       "03.02.03.02.03.14.07_Pintando_Hoja",
       "03.02.03.02.03.14.08_Curiosidad_Cangrejo",
       "03.02.03.02.03.14.09_Interaccion_Tortuga",
-      "03.02.03.02.03.14.10_Interaccion_Mariposa"
+      "03.02.03.02.03.14.10_Interaccion_Mariposa",
+      "03.02.03.02.03.50.01_Cito_Hero_1-1_v1",
+      "03.02.03.02.03.50.01_Cito_Hero_Blueprint_1x1_A_v1",
+      "03.02.03.02.03.50.01_Cito_Hero_Blueprint_1x1_B_v1",
+      "03.02.03.02.03.50.01_Cito_Hero_Blueprint_1x1_C_v1",
+      "03.02.03.02.03.50.02_Cito_Hero_1-2_v1",
+      "03.02.03.02.03.50.02_Cito_Hero_1-2_v2",
+      "03.02.03.02.03.50.02_Cito_Hero_1-2_v3",
+      "03.02.03.02.03.50.02_Cito_Hero_1-2_v4",
+      "03.02.03.02.03.50.03_Cito_Hero_2-1_v1",
+      "03.02.03.02.03.50.03_Cito_Hero_2-1_v2"
     ],
     "HD": [
       "03.02.03.02.04.14.01_Interaccion_Abeja_Flor_HD",

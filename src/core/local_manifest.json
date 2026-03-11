@@ -3600,7 +3600,7 @@
       "txt:md",
       "type:ssot"
     ],
-    "size": 2970,
+    "size": 2588,
     "modified": "2026-03-11"
   },
   {
@@ -5443,27 +5443,6 @@
     "hd_path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.04_Material_HD/03.02.03.01.04.50_Material_Web/03.02.03.01.04.50.03_Hero_2-1/03.02.03.01.04.50.03_Mita_Hero_2-1_PoseA_Bottom_v01.png"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.50_Material_Web/03.02.03.01.03.50.03_Hero_2-1/03.02.03.01.03.50.03_Mita_Hero_2-1_PoseA_Full_v01.png",
-    "name": "Mita Hero 2-1 PoseA Full v01",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.50_Material_Web/03.02.03.01.03.50.03_Hero_2-1/03.02.03.01.03.50.03_Mita_Hero_2-1_PoseA_Full_v01.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "content:concepto_general",
-      "content:hero",
-      "doc:imagen",
-      "entity:mita",
-      "img:png",
-      "obj:personaje",
-      "status:web"
-    ],
-    "size": 574845,
-    "modified": "2026-03-10"
-  },
-  {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.50_Material_Web/03.02.03.01.03.50.03_Hero_2-1/03.02.03.01.03.50.03_Mita_Hero_2-1_PoseA_Top_v01.png",
     "name": "Mita Hero 2-1 PoseA Top v01",
     "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.50_Material_Web/03.02.03.01.03.50.03_Hero_2-1/03.02.03.01.03.50.03_Mita_Hero_2-1_PoseA_Top_v01.png",
@@ -5550,6 +5529,27 @@
     "modified": "2026-03-11"
   },
   {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.04_Material_HD/03.02.03.01.04.50_Material_Web/03.02.03.01.04.50.01_Hero_1x1/03.02.03.01.04.50.01_Mita_Hero_1-1_PoseC_v01.png",
+    "name": "Mita Hero 1-1 PoseC v01",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.04_Material_HD/03.02.03.01.04.50_Material_Web/03.02.03.01.04.50.01_Hero_1x1/03.02.03.01.04.50.01_Mita_Hero_1-1_PoseC_v01.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:concepto_general",
+      "content:hero",
+      "doc:imagen",
+      "entity:mita",
+      "img:png",
+      "obj:personaje",
+      "status:hd"
+    ],
+    "size": 6193316,
+    "modified": "2026-03-11"
+  },
+  {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.04_Material_HD/03.02.03.01.04.50_Material_Web/03.02.03.01.04.50.02_Hero_1-2/03.02.03.01.04.50.02_Mita_Hero_1-2_PoseB_Left_v01.png",
     "name": "Mita Hero 1-2 PoseB Left v01",
     "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.04_Material_HD/03.02.03.01.04.50_Material_Web/03.02.03.01.04.50.02_Hero_1-2/03.02.03.01.04.50.02_Mita_Hero_1-2_PoseB_Left_v01.png",
@@ -5631,6 +5631,48 @@
       "status:hd"
     ],
     "size": 3002544,
+    "modified": "2026-03-11"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.04_Material_HD/03.02.03.01.04.50_Material_Web/03.02.03.01.04.50.03_Hero_2-1/03.02.03.01.04.50.01_Mita_Hero_1-1_PoseC_Bottom_v01.png",
+    "name": "Mita Hero 1-1 PoseC Bottom v01",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.04_Material_HD/03.02.03.01.04.50_Material_Web/03.02.03.01.04.50.03_Hero_2-1/03.02.03.01.04.50.01_Mita_Hero_1-1_PoseC_Bottom_v01.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:concepto_general",
+      "content:hero",
+      "doc:imagen",
+      "entity:mita",
+      "img:png",
+      "obj:personaje",
+      "status:hd"
+    ],
+    "size": 3132115,
+    "modified": "2026-03-11"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.04_Material_HD/03.02.03.01.04.50_Material_Web/03.02.03.01.04.50.03_Hero_2-1/03.02.03.01.04.50.01_Mita_Hero_1-1_PoseC_Top_v01.png",
+    "name": "Mita Hero 1-1 PoseC Top v01",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.04_Material_HD/03.02.03.01.04.50_Material_Web/03.02.03.01.04.50.03_Hero_2-1/03.02.03.01.04.50.01_Mita_Hero_1-1_PoseC_Top_v01.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:concepto_general",
+      "content:hero",
+      "doc:imagen",
+      "entity:mita",
+      "img:png",
+      "obj:personaje",
+      "status:hd"
+    ],
+    "size": 3044538,
     "modified": "2026-03-11"
   },
   {
@@ -5854,6 +5896,114 @@
     ],
     "size": 169594,
     "modified": "2026-03-08"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/cito_hero_1-2_v1_left.png",
+    "name": "cito hero 1-2 v1 left",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/cito_hero_1-2_v1_left.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 497241,
+    "modified": "2026-03-11"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/cito_hero_1-2_v1_right.png",
+    "name": "cito hero 1-2 v1 right",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/cito_hero_1-2_v1_right.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 513446,
+    "modified": "2026-03-11"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/cito_hero_2-1_v1_bottom.png",
+    "name": "cito hero 2-1 v1 bottom",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/cito_hero_2-1_v1_bottom.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 494377,
+    "modified": "2026-03-11"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/cito_hero_2-1_v1_top.png",
+    "name": "cito hero 2-1 v1 top",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/cito_hero_2-1_v1_top.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 452451,
+    "modified": "2026-03-11"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/cito_hero_diptico_horiz_v1.png",
+    "name": "cito hero diptico horiz v1",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/cito_hero_diptico_horiz_v1.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 775046,
+    "modified": "2026-03-11"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/cito_hero_diptico_vert_v1.png",
+    "name": "cito hero diptico vert v1",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/cito_hero_diptico_vert_v1.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 791062,
+    "modified": "2026-03-11"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/ZZ_cito_grid_face_source.png",
@@ -6468,6 +6618,69 @@
     "modified": "2026-03-08"
   },
   {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.50_Material_Web/03.02.03.02.03.50.01_Hero_1x1/03.02.03.02.03.50.01_Cito_Hero_1-1_v1.png",
+    "name": "Cito Hero 1-1 v1",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.50_Material_Web/03.02.03.02.03.50.01_Hero_1x1/03.02.03.02.03.50.01_Cito_Hero_1-1_v1.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:concepto_general",
+      "content:hero",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje",
+      "status:web"
+    ],
+    "size": 497241,
+    "modified": "2026-03-11"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.50_Material_Web/03.02.03.02.03.50.02_Hero_1-2/03.02.03.02.03.50.02_Cito_Hero_1-2_v1.png",
+    "name": "Cito Hero 1-2 v1",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.50_Material_Web/03.02.03.02.03.50.02_Hero_1-2/03.02.03.02.03.50.02_Cito_Hero_1-2_v1.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:hero",
+      "content:pose_referencia",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje",
+      "status:web"
+    ],
+    "size": 497241,
+    "modified": "2026-03-11"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.50_Material_Web/03.02.03.02.03.50.03_Hero_2-1/03.02.03.02.03.50.03_Cito_Hero_2-1_v1.png",
+    "name": "Cito Hero 2-1 v1",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.50_Material_Web/03.02.03.02.03.50.03_Hero_2-1/03.02.03.02.03.50.03_Cito_Hero_2-1_v1.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:concepto_general",
+      "content:hero",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje",
+      "status:web"
+    ],
+    "size": 452451,
+    "modified": "2026-03-11"
+  },
+  {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.04_Material_HD/03.02.03.02.04.14_Acting_y_Expresion/03.02.03.02.04.14.01_Interaccion_Abeja_Flor_HD.png",
     "name": "Interaccion Abeja Flor HD",
     "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.04_Material_HD/03.02.03.02.04.14_Acting_y_Expresion/03.02.03.02.04.14.01_Interaccion_Abeja_Flor_HD.png",
@@ -6667,7 +6880,7 @@
       "txt:md",
       "type:ssot"
     ],
-    "size": 2703,
+    "size": 2445,
     "modified": "2026-03-11"
   },
   {
@@ -6686,7 +6899,7 @@
       "txt:md",
       "type:ssot"
     ],
-    "size": 2634,
+    "size": 2376,
     "modified": "2026-03-11"
   },
   {
@@ -7062,7 +7275,7 @@
       "doc:script",
       "script:jsx"
     ],
-    "size": 36905,
+    "size": 36712,
     "modified": "2026-03-11"
   },
   {
