@@ -166,7 +166,7 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
     };
 
     const smartHero = getSmartHero();
-    const conceptUrl = smartHero.id ? resolveAssetUrl(smartHero.id, char.name, smartHero.type) : null;
+    const heroUrl = smartHero.id ? resolveAssetUrl(smartHero.id, char.name, smartHero.type) : null;
 
     const lastTapRef = useRef({ time: 0, url: null });
 
@@ -215,7 +215,7 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
 
     // ── PRESENTATION ASSETS ──
     const presentationAssets = [
-        ...(smartHero.id ? [{ id: smartHero.id, label: t(lang, 'asset_concept'), assetType: 'concept', hd: smartHero.type === 'HD' }] : []),
+        ...(char.assets?.concept ? [{ id: char.assets.concept, label: t(lang, 'asset_concept'), assetType: 'concept' }] : []),
         ...(char.assets?.acting || []).map(id => ({ id, label: t(lang, 'asset_acting'), assetType: 'acting' })),
     ];
     const turnaroundAssets = (char.assets?.turnaround || []).map(id => ({ id, label: t(lang, 'asset_turnaround'), assetType: 'turnaround' }));
@@ -259,9 +259,9 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
                 {/* ── HERO ZONE ── */}
                 <div className="relative overflow-hidden bg-[var(--bg-primary)]" style={{ minHeight: '65vh' }}>
                     {/* Background Concept or Smart Hero */}
-                    {conceptUrl && (
+                    {heroUrl && (
                         <div className="absolute inset-0 z-0">
-                            <img src={conceptUrl} alt={char.name}
+                            <img src={heroUrl} alt={char.name}
                                 className="w-full h-full object-cover object-top opacity-100 transition-opacity duration-1000"
                                 style={{
                                     maskImage: 'linear-gradient(to left, black 30%, transparent 90%)',
