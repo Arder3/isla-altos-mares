@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sync": "node scripts/sync-assets.cjs",
+    "build-manifest": "node scripts/build-local-manifest.cjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.99.0",

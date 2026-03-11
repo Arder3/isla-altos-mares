@@ -148,9 +148,27 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
     ];
     const [activeTabKey, setActiveTabKey] = useState(TABS[0].key);
     const [lightboxSrc, setLightboxSrc] = useState(null);
-    const lastTapRef = useRef({ time: 0, url: null });
+    // ── SMART HERO FALLBACK ──
+    const getSmartHero = () => {
+        const manifest = galleryManifest[char.name];
+        if (!manifest) return { id: char.assets?.concept, type: 'SD' };
 
-    const conceptUrl = char.assets?.concept ? resolveAssetUrl(char.assets.concept, char.name, 'SD') : null;
+        // 1. Try to find a 'Hero' asset in HD
+        const hdHero = manifest.HD.find(id => id.toLowerCase().includes('hero'));
+        if (hdHero) return { id: hdHero, type: 'HD' };
+
+        // 2. Try to find a 'Hero' asset in SD
+        const sdHero = manifest.SD.find(id => id.toLowerCase().includes('hero'));
+        if (sdHero) return { id: sdHero, type: 'SD' };
+
+        // 3. Fallback to Concept Art (hardcoded in registry)
+        return { id: char.assets?.concept, type: 'SD' };
+    };
+
+    const smartHero = getSmartHero();
+    const conceptUrl = smartHero.id ? resolveAssetUrl(smartHero.id, char.name, smartHero.type) : null;
+
+    const lastTapRef = useRef({ time: 0, url: null });
 
     const openLightbox = (url) => setLightboxSrc(url);
     const openOnDblClick = (url) => openLightbox(url);
@@ -197,9 +215,8 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
 
     // ── PRESENTATION ASSETS ──
     const presentationAssets = [
-        ...(char.assets?.concept ? [{ id: char.assets.concept, label: t(lang, 'asset_concept'), assetType: 'concept' }] : []),
+        ...(smartHero.id ? [{ id: smartHero.id, label: t(lang, 'asset_concept'), assetType: 'concept', hd: smartHero.type === 'HD' }] : []),
         ...(char.assets?.acting || []).map(id => ({ id, label: t(lang, 'asset_acting'), assetType: 'acting' })),
-        ...(char.assets?.acting_hd || []).map(id => ({ id, label: t(lang, 'asset_acting_hd'), assetType: 'acting_hd', hd: true })),
     ];
     const turnaroundAssets = (char.assets?.turnaround || []).map(id => ({ id, label: t(lang, 'asset_turnaround'), assetType: 'turnaround' }));
 
@@ -241,10 +258,10 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
 
                 {/* ── HERO ZONE ── */}
                 <div className="relative overflow-hidden bg-[var(--bg-primary)]" style={{ minHeight: '65vh' }}>
-                    {/* Background Blueprint or Concept Art */}
-                    {char.assets?.hero_bg ? (
+                    {/* Background Concept or Smart Hero */}
+                    {conceptUrl && (
                         <div className="absolute inset-0 z-0">
-                            <img src={resolveAssetUrl(char.assets.hero_bg, char.name, 'SD')} alt=""
+                            <img src={conceptUrl} alt={char.name}
                                 className="w-full h-full object-cover object-top opacity-100 transition-opacity duration-1000"
                                 style={{
                                     maskImage: 'linear-gradient(to left, black 30%, transparent 90%)',
@@ -252,11 +269,6 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
                                 }}
                             />
                         </div>
-                    ) : conceptUrl && (
-                        <img src={conceptUrl} alt={char.name}
-                            className="absolute right-0 top-0 h-full w-auto max-w-[55%] object-contain object-right-top"
-                            style={{ maskImage: 'linear-gradient(to left, black 40%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to left, black 40%, transparent 100%)' }}
-                        />
                     )}
 
                     {/* Dark gradient overlays for readability and blending */}
@@ -281,6 +293,14 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
                                 </span>
                                 <span className="w-1 h-1 rounded-full bg-[var(--text-dim)] opacity-30" />
                                 <span className="text-[var(--text-dim)] font-mono text-[10px] opacity-60">{char.id}</span>
+                                {smartHero.type === 'HD' && (
+                                    <>
+                                        <span className="w-1 h-1 rounded-full bg-[var(--text-dim)] opacity-30" />
+                                        <span className="text-amber-400 font-mono text-[10px] uppercase tracking-widest flex items-center gap-1">
+                                            <ImageIcon size={10} /> {t(lang, 'master_quality')}
+                                        </span>
+                                    </>
+                                )}
                             </div>
 
                             <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-4">

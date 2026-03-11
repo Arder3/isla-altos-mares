@@ -1,0 +1,125 @@
+{
+  "_comment": "SSoT: Tag Taxonomy for Isla de Altos Mares 4.0",
+  "_version": "1.0",
+  "_doc": "Tags are derived automatically from file paths by build-local-manifest.cjs. This file is the single source of truth for all tagging rules.",
+
+  "hierarchyTags": {
+    "_doc": "Tags applied to ALL files/folders whose path contains the key segment.",
+    "01_Gerencia_Produccion": ["area:gestion"],
+    "02_Referencias":         ["area:referencia"],
+    "03_Universo":            ["area:universo"],
+    "03.01_Narrativa":        ["area:narrativa"],
+    "03.02_Arte":             ["area:arte"],
+    "04_Proyectos":           ["area:proyectos"],
+    "01.02_Flujos_de_Trabajo":["area:flujos"],
+    "01.03_Matrices_Produccion": ["area:matrices"],
+    "01.06_Plantillas_Narrativas": ["area:plantillas"]
+  },
+
+  "objectTypeTags": {
+    "_doc": "Tags derived from the object type folder name anywhere in the path.",
+    "03.02.03_Personajes_Principales": ["obj:personaje", "char:principal"],
+    "03.02.04_Personajes_Secundarios": ["obj:personaje", "char:secundario"],
+    "03.02.05_Personajes_NPC":         ["obj:personaje", "char:npc"],
+    "03.01.03_Personajes_Principales": ["obj:personaje", "char:principal"],
+    "03.01.04_Personajes_Secundarios": ["obj:personaje", "char:secundario"],
+    "03.02.02_Locaciones":             ["obj:locacion"],
+    "03.02.07_Utileria":               ["obj:utileria"],
+    "03.02.08_Vehiculos":              ["obj:vehiculo"],
+    "03.02.09_Escenografia":           ["obj:escenografia"]
+  },
+
+  "statusFolderTags": {
+    "_doc": "Tags from subfolder names ending in specific patterns. Applied to all children.",
+    "_Proceso":         ["status:proceso"],
+    "_Aprobados":       ["status:aprobado"],
+    "_Material_HD":     ["status:hd", "doc:imagen"],
+    "_Material_Web":    ["status:web", "doc:imagen"],
+    "03.50_Material_Web": ["status:web", "content:hero", "doc:imagen"],
+    "04.50_Material_Web": ["status:hd",  "content:hero", "doc:imagen"],
+    "_3D":              ["status:3d"],
+    "_Bocetos":         ["status:boceto"],
+    "_Descartes":       ["status:descarte"]
+  },
+
+  "fileNamePatternTags": {
+    "_doc": "Tags applied when the FILENAME (not extension) matches a pattern. Patterns are case-insensitive substrings.",
+    "SSoT":      ["type:ssot"],
+    "Template":  ["type:plantilla"],
+    "Plantilla": ["type:plantilla"],
+    "Listado":   ["type:listado"],
+    "Matriz":    ["type:matriz"],
+    "Grid":      ["content:grid"]
+  },
+
+  "extensionTags": {
+    "_doc": "Tags derived from file extension.",
+    ".png":  ["doc:imagen", "img:png"],
+    ".jpg":  ["doc:imagen", "img:jpg"],
+    ".jpeg": ["doc:imagen", "img:jpg"],
+    ".webp": ["doc:imagen", "img:webp"],
+    ".psd":  ["doc:imagen", "img:psd"],
+    ".mp4":  ["doc:video",  "vid:mp4"],
+    ".mov":  ["doc:video",  "vid:mov"],
+    ".gif":  ["doc:video",  "vid:gif"],
+    ".md":   ["doc:texto",  "txt:md"],
+    ".txt":  ["doc:texto",  "txt:txt"],
+    ".pdf":  ["doc:texto",  "txt:pdf"],
+    ".csv":  ["doc:calculo","calc:csv"],
+    ".xlsx": ["doc:calculo","calc:xlsx"],
+    ".py":   ["doc:script", "script:py"],
+    ".cjs":  ["doc:script", "script:js"],
+    ".js":   ["doc:script", "script:js"],
+    ".jsx":  ["doc:script", "script:jsx"],
+    ".json": ["doc:datos",  "data:json"]
+  },
+
+  "contentSegmentTags": {
+    "_doc": "Tags derived from the 6th or 7th numeric segment of an asset public_id.",
+    "01": "content:concepto_general",
+    "02": "content:pose_referencia",
+    "03": "content:concepto_general",
+    "08": "content:ref_facial",
+    "09": "content:turnaround_cuerpo",
+    "10": "content:turnaround_rostro",
+    "11": "content:ref_facial",
+    "12": "content:expresiones",
+    "13": "content:actuacion",
+    "14": "content:gestos",
+    "05": "content:actuacion",
+    "50": "content:hero"
+  },
+
+  "angleTags": {
+    "_doc": "Regex patterns matched against full filename to derive the view angle.",
+    "Frontal(?!_Izquierd|_Derec)": "angle:frontal",
+    "Posterior(?!_Izquierd|_Derec)": "angle:posterior",
+    "Lateral_Derecho": "angle:lateral_derecho",
+    "Lateral_Izquierdo": "angle:lateral_izquierdo",
+    "Lateral(?!_)": "angle:lateral_derecho",
+    "34_Frontal_Derecho|Frontal_Derecho": "angle:3q_frontal_derecho",
+    "34_Frontal_Izquierdo|Frontal_Izquierdo": "angle:3q_frontal_izquierdo",
+    "34_Posterior_Derecho|Posterior_Derecho": "angle:3q_posterior_derecho",
+    "34_Posterior_Izquierdo|Posterior_Izquierdo": "angle:3q_posterior_izquierdo",
+    "Superior": "angle:superior",
+    "34(?!_)|3_4": "angle:3q_frontal_derecho"
+  },
+
+  "expressionTags": {
+    "_doc": "Tags for expression images, matched from filename.",
+    "Alegre":       "expr:alegre",
+    "Triste":       "expr:triste",
+    "Molesta":      "expr:molesta",
+    "Sorprendida":  "expr:sorprendida",
+    "Curiosa":      "expr:curiosa",
+    "Ironica":      "expr:ironica",
+    "Pensativa":    "expr:pensativa",
+    "Riendo":       "expr:riendo",
+    "Timida":       "expr:timida",
+    "Llorando":     "expr:llorando",
+    "Concentrada":  "expr:concentrada",
+    "Energetica":   "expr:energetica",
+    "Cansada":      "expr:cansada",
+    "Asustada":     "expr:asustada"
+  }
+}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import LoginPage from './components/LoginPage';
 import CharacterView from './components/CharacterView';
+import BrowserView from './components/BrowserView';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MODULE_REGISTRY, PROFILE_REGISTRY } from './core/registry';
 import { resolveAssetUrl } from './core/AssetResolver';
@@ -34,6 +35,8 @@ const SECTIONS = [
   { id: 'map', label: 'Mapa & Biomas', sublabel: 'Territorios · Locaciones · Rutas', emoji: '🗺️', gradient: 'from-amber-950 via-yellow-900 to-orange-900', status: 'coming_soon' },
   { id: 'artifacts', label: 'Artefactos', sublabel: 'Objetos · Reliquias · Tecnología', emoji: '⚙️', gradient: 'from-violet-950 via-purple-900 to-fuchsia-900', status: 'coming_soon' },
   { id: 'mysteries', label: 'Misterios', sublabel: 'Enigmas · Secretos · Revelaciones', emoji: '🔮', gradient: 'from-rose-950 via-pink-900 to-red-900', status: 'coming_soon' },
+  { id: 'proyectos', label: 'Proyectos', sublabel: 'Films · Series · Cortometrajes', emoji: '🎬', gradient: 'from-sky-950 via-cyan-900 to-blue-900', status: 'coming_soon' },
+  { id: 'browser', label: 'Browser', sublabel: 'Assets · Galería · Explorador', emoji: '🖼️', gradient: 'from-slate-900 via-zinc-800 to-slate-900', status: 'active' },
 ];
 
 // ── Progress bars ──
@@ -172,6 +175,29 @@ function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
   };
 
   const goHome = () => { setActiveSection(null); setSelectedCharId(null); setFilterType('all'); setFilterMorality('all'); };
+
+  // Browser section
+  if (activeSection === 'browser') return (
+    <>
+      {stripeColor && (
+        <motion.div key={activeViewId}
+          initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
+          transition={{ duration: 0.35 }}
+          style={{ backgroundColor: stripeColor, transformOrigin: 'left' }}
+          className="fixed top-0 left-0 right-0 z-[110] h-[3px]"
+        />
+      )}
+      <GlobalChrome
+        lang={lang} setLang={setLang}
+        viewAsId={activeViewId} setViewAsId={setViewAsId}
+        setViewAsProfileKey={setViewAsProfileKey} signOut={signOut}
+        isLightMode={isLightMode}
+        onToggleTheme={(next) => { setThemeOverride(next); }}
+        isHost={isHost}
+      />
+      <BrowserView lang={lang} onBack={goHome} />
+    </>
+  );
 
   const TYPE_FILTERS = ['all', 'main', 'secondary', 'npc'];
   const MORALITY_FILTERS = ['all', 'positive', 'negative', 'neutral'];

@@ -16,6 +16,6 @@ export const resolveAssetUrl = (id, charName, type = 'SD') => {
     return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/v1/AltosMares/${charName}/${type}/${id}`;
 };
 
-export const getCloudinaryThumbnail = (id, charName) => {
-    return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/c_thumb,w_200,g_face/v1/AltosMares/${charName}/SD/${id}`;
+export const getCloudinaryThumbnail = (id, charName, type = 'SD') => {
+    return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/c_thumb,w_200,g_face/v1/AltosMares/${charName}/${type}/${id}`;
 };

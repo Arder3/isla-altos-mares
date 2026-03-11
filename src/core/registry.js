@@ -28,7 +28,7 @@ export const MODULE_REGISTRY = {
         },
         assets: {
             concept: '03.02.03.01.03.01_Concepto_General',
-            hero_bg: '03.02.03.01.05.03_Mita_Hero_2-1_PoseA_Full_v01',
+            hero_bg: '03.02.03.01.03.50.03_Mita_Hero_2-1_PoseA_Full_v01',
             turnaround: [
                 '03.02.03.01.03.09.01_Frontal',
                 '03.02.03.01.03.09.02_Posterior',
@@ -51,10 +51,6 @@ export const MODULE_REGISTRY = {
                 '03.02.03.02.03.14.01_Interaccion_Abeja_Flor',
                 '03.02.03.02.03.14.05_Interaccion_Castillo_Arena',
                 '03.02.03.02.03.14.10_Interaccion_Mariposa'
-            ],
-            acting_hd: [
-                '03.02.03.02.04.14.01_Interaccion_Abeja_Flor_HD',
-                '03.02.03.02.04.14.11_Interaccion_Cocodrilo_HD'
             ]
         }
     },

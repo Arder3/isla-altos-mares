@@ -31,18 +31,20 @@
       "03.02.03.01.03.12.12_Energetica",
       "03.02.03.01.03.12.13_Cansada",
       "03.02.03.01.03.12.14_Asustada",
-      "03.02.03.01.05.01_Mita_Hero_1-1_PoseA_v01",
-      "03.02.03.01.05.01_Mita_Hero_1-1_PoseB_v01",
-      "03.02.03.01.05.01_Mita_Hero_1-1_PoseB_v02",
-      "03.02.03.01.05.02_Mita_Hero_1-2_PoseB_Left_v01",
-      "03.02.03.01.05.02_Mita_Hero_1-2_PoseB_Left_v02",
-      "03.02.03.01.05.02_Mita_Hero_1-2_PoseB_Right_v01",
-      "03.02.03.01.05.02_Mita_Hero_1-2_PoseB_Right_v02",
-      "03.02.03.01.05.03_Mita_Hero_2-1_PoseA_Bottom_v01",
-      "03.02.03.01.05.03_Mita_Hero_2-1_PoseA_Full_v01",
-      "03.02.03.01.05.03_Mita_Hero_2-1_PoseA_Top_v01"
+      "03.02.03.01.03.50.03_Mita_Hero_2-1_PoseA_Full_v01"
     ],
-    "HD": []
+    "HD": [
+      "03.02.03.01.04.50.01_Mita_Hero_1-1_PoseA_v01",
+      "03.02.03.01.04.50.01_Mita_Hero_1-1_PoseB_v01",
+      "03.02.03.01.04.50.01_Mita_Hero_1-1_PoseB_v02",
+      "03.02.03.01.04.50.02_Mita_Hero_1-2_PoseB_Left_v01",
+      "03.02.03.01.04.50.02_Mita_Hero_1-2_PoseB_Left_v02",
+      "03.02.03.01.04.50.02_Mita_Hero_1-2_PoseB_Right_v01",
+      "03.02.03.01.04.50.02_Mita_Hero_1-2_PoseB_Right_v02",
+      "03.02.03.01.04.50.03_Mita_Hero_2-1_PoseA_Bottom_v01",
+      "03.02.03.01.04.50.03_Mita_Hero_2-1_PoseA_Top_v01"
+    ],
+    "importance": "Principal"
   },
   "Cito": {
     "SD": [
@@ -78,6 +80,57 @@
       "03.02.03.02.04.14.07_Pintando_Hoja_HD",
       "03.02.03.02.04.14.08_Curiosidad_Cangrejo_HD",
       "03.02.03.02.04.14.11_Interaccion_Cocodrilo_HD"
-    ]
+    ],
+    "importance": "Principal"
+  },
+  "Padre": {
+    "SD": [],
+    "HD": [],
+    "importance": "Principal"
+  },
+  "Capitan_Barracuda": {
+    "SD": [],
+    "HD": [],
+    "importance": "Principal"
+  },
+  "Guardian_del_Eco": {
+    "SD": [],
+    "HD": [],
+    "importance": "Principal"
+  },
+  "Sofia": {
+    "SD": [],
+    "HD": [],
+    "importance": "Secundario"
+  },
+  "Papa_Gato_Garfield": {
+    "SD": [],
+    "HD": [],
+    "importance": "Secundario"
+  },
+  "Mama_Gata_Sofia": {
+    "SD": [],
+    "HD": [],
+    "importance": "Secundario"
+  },
+  "Gatita_Gema": {
+    "SD": [],
+    "HD": [],
+    "importance": "Secundario"
+  },
+  "Gatita_Joya": {
+    "SD": [],
+    "HD": [],
+    "importance": "Secundario"
+  },
+  "Estegosaurio_Valiente": {
+    "SD": [],
+    "HD": [],
+    "importance": "NPC"
+  },
+  "Pteranodon_Guia": {
+    "SD": [],
+    "HD": [],
+    "importance": "NPC"
   }
 }

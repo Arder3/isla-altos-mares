@@ -37,6 +37,10 @@ export const translations = {
     sub_artifacts: "Objetos · Reliquias · Tecnología",
     section_mysteries: "Misterios",
     sub_mysteries: "Enigmas · Secretos · Revelaciones",
+    section_proyectos: "Proyectos",
+    sub_proyectos: "Films · Series · Cortometrajes",
+    section_browser: "Browser",
+    sub_browser: "Assets · Galería · Explorador",
     
     // Filters & Status
     importance: "Importancia",
@@ -145,6 +149,10 @@ export const translations = {
     sub_artifacts: "Objects · Relics · Technology",
     section_mysteries: "Mysteries",
     sub_mysteries: "Enigmas · Secrets · Revelations",
+    section_proyectos: "Projects",
+    sub_proyectos: "Films · Series · Short Films",
+    section_browser: "Browser",
+    sub_browser: "Assets · Gallery · Explorer",
     
     // Filters & Status
     importance: "Importance",
