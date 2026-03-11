@@ -50,7 +50,7 @@ export const MODULE_REGISTRY = {
 			psych_profile: 'Perfil psicológico: curiosidad pura sin filtro de peligro. Sin estructura cortical de miedo desarrollada. Responde al mundo con asombro total. Catalizador narrativo — su presencia activa la magia latente. Arquetipo: El Niño / El Trickster Inocente.'
 		},
 		assets: {
-			concept: '03.02.03.02.03.01_Concept_Maestro',
+			concept: '03.02.03.02.03.01_Concepto_Maestro',
 			hero: {
 				'1-1': 'v1',
 				'1-2': ['v1', 'v2', 'v3', 'v4'],
