@@ -135,9 +135,6 @@ function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
   const [viewAsId, setViewAsId] = useState(null);
   const [viewAsProfileKey, setViewAsProfileKey] = useState(null);
 
-  useEffect(() => {
-    setThemeOverride(null);
-  }, [viewAsId]);
 
   if (loading) return (
     <div className="min-h-screen bg-[#050505] flex items-center justify-center">
@@ -164,7 +161,6 @@ function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
       isLightMode={isLightMode} 
       onToggleTheme={(next) => {
         setThemeOverride(next);
-        localStorage.setItem('portal_theme', next);
       }}
     />
   );
@@ -205,7 +201,6 @@ function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
         isLightMode={isLightMode} 
         onToggleTheme={(next) => {
           setThemeOverride(next);
-          localStorage.setItem('portal_theme', next);
         }} 
         isHost={isHost}
       />
@@ -319,18 +314,21 @@ export default function App() {
     localStorage.setItem('portal_lang', lang);
   }, [lang]);
 
-  // Note: themeOverride persistence is handled manually in handlers 
-  // to avoid clearing it when role-switching (which uses setThemeOverride(null))
-  
-  // Determine if light mode is active for the container
-  // Note: Inside Portal we have role-based logic, but here we can at least apply the manual override or a default.
-  // We'll pass themeOverride down to Portal where it's combined with role logic.
-  // For the root div, we use a slightly simplified calculation or just the override.
+  useEffect(() => {
+    console.log('App: themeOverride changed to:', themeOverride);
+    if (themeOverride) {
+      localStorage.setItem('portal_theme', themeOverride);
+    } else {
+      localStorage.removeItem('portal_theme');
+    }
+  }, [themeOverride]);
+
   const isLightMode = themeOverride === 'light'; 
+  console.log('App: isLightMode calculated as:', isLightMode, 'themeOverride is:', themeOverride);
 
   return (
     <AuthProvider>
-      <div className={`min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500 ${isLightMode ? 'theme-light' : ''}`}>
+      <div id="portal-root" className={`min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500 ${isLightMode ? 'theme-light' : ''}`}>
         <Portal lang={lang} setLang={setLang} themeOverride={themeOverride} setThemeOverride={setThemeOverride} />
       </div>
     </AuthProvider>
