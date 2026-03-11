@@ -324,7 +324,8 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
             <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500">
 
                 {/* ── HERO ZONE ── */}
-                <div className="relative overflow-hidden bg-[var(--bg-primary)]" style={{ minHeight: '65vh' }}>
+                <div className="relative overflow-hidden bg-[var(--bg-primary)] transition-all duration-500" 
+                     style={{ minHeight: isVertical ? '65vh' : '50vw' }}>
                     {/* Background Concept or Smart Hero */}
                     {heroUrl && (
                         <div className="absolute inset-0 z-0">
@@ -343,7 +344,8 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
                     <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-transparent to-[var(--bg-primary)]/30" />
 
                     {/* Content */}
-                    <div className="relative z-10 flex flex-col justify-between h-full p-8 md:p-12" style={{ minHeight: '65vh' }}>
+                    <div className="relative z-10 flex flex-col justify-between h-full p-8 md:p-12" 
+                         style={{ minHeight: isVertical ? '65vh' : '50vw' }}>
                         {/* Back button */}
                         <button onClick={onBack} className="flex items-center gap-2 text-[var(--text-dim)] hover:text-[var(--text-primary)] transition-colors group self-start">
                             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
