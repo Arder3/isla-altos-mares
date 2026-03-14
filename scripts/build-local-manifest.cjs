@@ -76,8 +76,6 @@ function deriveTags(absolutePath) {
   extTags.forEach(t => tags.add(t));
 
   // 6. CONTENT SEGMENT TAGS
-  //    Supports 6-segment IDs (XX.XX.XX.XX.XX.CC) AND
-  //             7-segment IDs (XX.XX.XX.XX.XX.XX.CC) — e.g. after Material_Web migration
   const numericMatch = base.match(/^(\d{2}\.\d{2}\.\d{2}\.\d{2}(?:\.\d{2})+)\.(\d{2})/);
   if (numericMatch) {
     const contentSeg = numericMatch[2];
@@ -99,14 +97,13 @@ function deriveTags(absolutePath) {
     if (base.toLowerCase().includes(word.toLowerCase())) tags.add(tag);
   }
 
-  // 9. ENTITY/CHARACTER TAGS — extract char name from path
-  //    Pattern: XX.XX.XX.NN_CharName (4th level entity folder)
+  // 9. ENTITY/CHARACTER TAGS
   const charFolderMatch = rel.match(/\d{2}\.\d{2}\.\d{2}\.\d{2}_([^/]+)/);
   if (charFolderMatch) {
     tags.add(`entity:${charFolderMatch[1].toLowerCase()}`);
   }
 
-  // 10. CONTENT:HERO TAG for Material_Web
+  // 10. CONTENT:HERO TAG
   if (rel.includes('Material_Web')) {
     tags.add('content:hero');
   }
@@ -114,21 +111,10 @@ function deriveTags(absolutePath) {
   return [...tags].sort();
 }
 
-// ──────────────────────────────────────────────────
-// HD PRIORITY RESOLVER
-// ──────────────────────────────────────────────────
-// If a file lives in XX.03.50_Material_Web, check if its homolog
-// exists in XX.04.50_Material_Web. If so, tag it with status:hd_disponible
-// and store hd_path so the portal can serve the HD version automatically.
-
 function resolveHdPath(absolutePath) {
   const rel = absolutePath.replace(/\\/g, '/');
-  // Detect if this file is inside a 03.50_Material_Web subtree
   if (!rel.includes('.03.50_Material_Web')) return null;
 
-  // Build the homolog HD path:
-  // 1. Jump from _Aprobados to _Material_HD tree
-  // 2. Change version segment 03.50 to 04.50
   const hdRel = rel
     .replace(/\.03_Aprobados/g, '.04_Material_HD')
     .replace(/\.03\.50_Material_Web/g, '.04.50_Material_Web')
@@ -141,20 +127,15 @@ function resolveHdPath(absolutePath) {
   return null;
 }
 
-// ──────────────────────────────────────────────────
-// CRAWLER
-// ──────────────────────────────────────────────────
-
 function humanName(filePath) {
   const base = path.basename(filePath, path.extname(filePath));
-  // Remove numeric prefix like "03.02.03.01_" or "01.06.02_"
+  // Remove numeric prefix like "03.02.03.01_"
   return base.replace(/^\d[\d.]*_/, '').replace(/_/g, ' ');
 }
 
 const manifest = [];
 let scanned = 0;
 let indexed = 0;
-let hdResolved = 0;
 
 function crawl(dir) {
   let entries;
@@ -174,19 +155,19 @@ function crawl(dir) {
       if (!INCLUDE_EXT.has(ext)) continue;
 
       const rel  = full.replace(/\\/g, '/');
+      const base = path.basename(entry, ext);
       const tags = deriveTags(full);
       indexed++;
 
-      // HD Priority Resolution
       const hdPath = resolveHdPath(full);
       if (hdPath) {
         tags.push('status:hd_disponible');
         tags.sort();
-        hdResolved++;
       }
 
       const entry_obj = {
         id:     rel,
+        fileId: base, // KEEP THE ORIGINAL FILENAME (WITH ID) FOR LOOKUP
         name:   humanName(full),
         path:   rel,
         ext:    ext.replace('.', ''),
@@ -197,19 +178,13 @@ function crawl(dir) {
       };
 
       if (hdPath) entry_obj.hd_path = hdPath;
-
       manifest.push(entry_obj);
     }
   }
 }
 
-// ──────────────────────────────────────────────────
-// RUN
-// ──────────────────────────────────────────────────
-
 console.log('--- Building Local File Manifest ---');
 crawl(BASE);
-
 fs.writeFileSync(OUT, JSON.stringify(manifest, null, 2));
 console.log(`✅ Scanned: ${scanned} files, Indexed: ${indexed} files`);
 console.log(`✅ Manifest written to: ${OUT}`);

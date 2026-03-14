@@ -24,6 +24,13 @@ export const translations = {
     explore: "Explorar",
     portal_unified: "Portal Unificado",
     
+    // Notifications
+    notification_update_title: "Actualización del Portal",
+    notification_update_msg: "Se han detectado cambios recientes en los assets. Revisa las novedades.",
+    notification_review: "Revisar Browser",
+    notification_settings: "Notificaciones",
+    notification_dismiss: "Descartar",
+    
     // Sections
     section_world: "Creación del Mundo",
     sub_world: "Génesis · Historia · Mitología",
@@ -135,6 +142,13 @@ export const translations = {
     back: "BACK",
     explore: "Explore",
     portal_unified: "Unified Portal",
+    
+    // Notifications
+    notification_update_title: "Portal Update",
+    notification_update_msg: "Recent changes have been detected in the assets. Review what's new.",
+    notification_review: "Review Browser",
+    notification_settings: "Notifications",
+    notification_dismiss: "Dismiss",
     
     // Sections
     section_world: "World Building",

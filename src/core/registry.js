@@ -66,9 +66,23 @@ export const MODULE_REGISTRY = {
 
     // ── PRINCIPALES — EN DESARROLLO ───────────────────────────────
     '03.02.03.03': {
-        id: '03.02.03.03', name: 'El Padre', type: 'Principal', morality: 'positivo', status: 'coming_soon',
+        id: '03.02.03.03', name: 'Padre', type: 'Principal', morality: 'positivo', status: 'active',
         gradient: 'from-amber-950 via-stone-900 to-amber-900',
-        progress: { narrativa: 80, arte: 0, hd: 0 }, assets: {}
+        progress: { narrativa: 100, arte: 100, hd: 0 },
+        lore: {
+            bio_short: 'Padre abnegado y pilar de su hogar. Un hombre de pocas palabras pero acciones firmes, cuya nobleza se refleja en sus manos curtidas por el trabajo pesado.',
+            bio_full: 'El Padre ha dedicado su vida a proteger a su familia frente a las inclemencias de la Isla. Su rostro cansado oculta una voluntad inquebrantable. Como jefe de mantenimiento y construcción, conoce cada rincón de la infraestructura del asentamiento. Su relación con el Capitán Barracuda es tensa, marcada por desacuerdos del pasado sobre la seguridad de los colonos.',
+            psych_profile: 'Perfil psicológico: Altamente resiliente. Fuerte sentido del deber y sacrificio personal. Arquetipo: El Guardián / El Padre Protector. Motivación primaria: La seguridad de su prole.'
+        },
+        assets: {
+            concept: '03.02.03.03.03.01_Concepto_Maestro_Vestuario_General',
+            turnaround: [
+                '03.02.03.03.03.09.01_Frontal',
+                '03.02.03.03.03.09.02_Posterior',
+                '03.02.03.03.03.09.03_Lateral_Derecho',
+                '03.02.03.03.03.09.04_Lateral_Izquierdo'
+            ]
+        }
     },
     '03.02.03.04': {
         id: '03.02.03.04', name: 'Capitán Barracuda', type: 'Principal', morality: 'negativo', status: 'coming_soon',
@@ -95,10 +109,10 @@ export const MODULE_REGISTRY = {
 
 export const PROFILE_REGISTRY = {
     child: { id: 'child', theme: 'playful', access: ['03.02.03.01.03.01', '03.02.03.01.03.14', '03.02.03.02.03.01', '03.02.03.02.03.14'] },
-    educator: { id: 'educator', theme: 'structured', access: ['03.02.03.01', '03.02.03.02'] },
-    producer: { id: 'producer', theme: 'industrial', access: ['03.02.03.01', '03.02.03.02'] },
-    investor: { id: 'investor', theme: 'premium', access: ['03.02.03.01', '03.02.03.02'] },
-    equipo: { id: 'equipo', theme: 'technical', access: ['03.02.03.01', '03.02.03.02'] },
+    educator: { id: 'educator', theme: 'structured', access: ['03.02.03.01', '03.02.03.02', '03.02.03.03'] },
+    producer: { id: 'producer', theme: 'industrial', access: ['03.02.03.01', '03.02.03.02', '03.02.03.03'] },
+    investor: { id: 'investor', theme: 'premium', access: ['03.02.03.01', '03.02.03.02', '03.02.03.03'] },
+    equipo: { id: 'equipo', theme: 'technical', access: ['03.02.03.01', '03.02.03.02', '03.02.03.03'] },
 };
 
 // Lore access tiers:

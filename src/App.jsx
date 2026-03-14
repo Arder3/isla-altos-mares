@@ -7,8 +7,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MODULE_REGISTRY, PROFILE_REGISTRY } from './core/registry';
 import { resolveAssetUrl } from './core/AssetResolver';
 import posthog from './core/analytics';
-import { Eye, LogOut, ArrowLeft, Sun, Moon, ChevronRight, Languages } from 'lucide-react';
+import { Eye, LogOut, ArrowLeft, Sun, Moon, ChevronRight, Languages, Bell, BellOff } from 'lucide-react';
 import { getTranslation as t } from './core/i18n';
+import NotificationSystem from './components/NotificationSystem';
 
 // ── Role → Profile key ──
 const ROLE_TO_PROFILE = {
@@ -68,8 +69,18 @@ function ProgressBars({ progress, dimmed }) {
 // ── Global Chrome (Visible to all) ──
 function GlobalChrome({ lang, setLang, viewAsId, setViewAsId, setViewAsProfileKey, signOut, isLightMode, onToggleTheme, isHost }) {
   const [open, setOpen] = useState(false);
+  const [notificationsEnabled, setNotificationsEnabled] = useState(() => localStorage.getItem('portal_notifications_enabled') !== 'false');
   const active = VIEW_AS_ROLES.find(r => r.id === (viewAsId || 'host')) || VIEW_AS_ROLES[0];
   
+  // Listen for external storage changes (like clearing local storage)
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setNotificationsEnabled(localStorage.getItem('portal_notifications_enabled') !== 'false');
+    };
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+  }, []);
+
   return (
     <div className="fixed top-4 right-4 z-[100] flex items-center gap-2">
       {/* Language Toggle */}
@@ -117,6 +128,25 @@ function GlobalChrome({ lang, setLang, viewAsId, setViewAsId, setViewAsProfileKe
       }}
         className="bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title={t(lang, 'change_theme')}>
         {isLightMode ? <Moon size={13} className="text-[var(--text-dim)]" /> : <Sun size={13} className="text-[var(--text-dim)]" />}
+      </button>
+
+      {/* Notifications Toggle */}
+      <button 
+        onClick={() => {
+          const newState = !notificationsEnabled;
+          setNotificationsEnabled(newState);
+          localStorage.setItem('portal_notifications_enabled', newState.toString());
+          // Alert other components
+          window.dispatchEvent(new Event('storage'));
+        }}
+        className="bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" 
+        title={t(lang, 'notification_settings')}
+      >
+        {notificationsEnabled ? (
+          <Bell size={13} className="text-[var(--text-dim)]" />
+        ) : (
+          <BellOff size={13} className="text-[var(--text-primary)] opacity-50" />
+        )}
       </button>
 
       {/* Sign Out */}
@@ -211,6 +241,8 @@ function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
 
   return (
     <>
+      <NotificationSystem lang={lang} onReview={() => setActiveSection('browser')} />
+      
       {stripeColor && (
         <motion.div key={activeViewId}
           initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}

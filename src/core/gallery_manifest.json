@@ -96,7 +96,32 @@
     "importance": "Principal"
   },
   "Padre": {
-    "SD": [],
+    "SD": [
+      "03.02.03.03.03.01_Concepto_Maestro_Vestuario_General",
+      "03.02.03.03.03.02_Concepto_Maestro_Vestuario_Trabajo",
+      "03.02.03.03.03.03_Acting_Maestro_Vestuario_General",
+      "03.02.03.03.03.04_Acting_Maestro_Vestuario_Trabajo",
+      "03.02.03.03.03.09.01_Frontal",
+      "03.02.03.03.03.09.02_Posterior",
+      "03.02.03.03.03.09.03_Lateral_Derecho",
+      "03.02.03.03.03.09.04_Lateral_Izquierdo",
+      "03.02.03.03.03.09.05_Frontal_34_Derecho",
+      "03.02.03.03.03.09.06_Frontal_34_Izquierdo",
+      "03.02.03.03.03.09.07_Posterior_34_Derecho",
+      "03.02.03.03.03.09.08_Posterior_34_Izquierdo",
+      "03.02.03.03.03.11.01_Frontal",
+      "03.02.03.03.03.11.02_Posterior",
+      "03.02.03.03.03.11.03_Lateral_Derecho",
+      "03.02.03.03.03.11.04_Lateral_Izquierdo",
+      "03.02.03.03.03.11.05_Frontal_34_Derecho",
+      "03.02.03.03.03.11.06_Frontal_34_Izquierdo",
+      "03.02.03.03.03.11.07_Posterior_34_Derecho",
+      "03.02.03.03.03.11.08_Posterior_34_Izquierdo",
+      "03.02.03.03.01_Padre_Blueprint_Dual_Borrador_R45",
+      "03.02.03.03.01_Padre_General_Blueprint_Borrador_R42",
+      "03.02.03.03.01_Padre_Obrero_Blueprint_Borrador_R43",
+      "03.02.03.03.01_Padre_Obrero_Blueprint_Horizontal_Borrador_R44"
+    ],
     "HD": [],
     "importance": "Principal"
   },

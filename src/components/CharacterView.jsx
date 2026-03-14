@@ -172,60 +172,54 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
     const getSmartHero = () => {
         const manifest = galleryManifest[char.name];
         
-        // Helper: find file containing Hero_RATIO and optionally a Pose identifier
+        // Helper: find file containing Hero_RATIO or Blueprint and optionally a Pose identifier
         const findHero = (arr = [], heroRatio, poseFilter = null) => {
             if (!arr) return null;
             return arr.find(id => {
                 const r = heroRatio.replace('-', 'x');
-                const matchRatio = id.includes(`Hero_${heroRatio}`) || id.includes(`Hero_${r}`);
+                const matchRatio = id.includes(`Hero_${heroRatio}`) || id.includes(`Hero_${r}`) || id.includes(`_${heroRatio}`) || id.includes(`_${r}`);
                 const matchPose = poseFilter ? id.includes(poseFilter) : true;
-                return matchRatio && matchPose;
+                const isBlueprint = id.includes('Blueprint');
+                // For Padre, Blueprints are the Heros
+                return (matchRatio || isBlueprint) && matchPose;
             });
         };
 
         if (manifest) {
-            // Mita Specific Override: Strict Device-Based Pose/Ratio (Strict asset matching)
+            // Mita Specific Override...
             if (char.name === 'Mita') {
                 if (isPc) {
-                    // For PC: Strictly PoseA + 2-1 + Top
                     const hdMita = manifest.HD.find(id => id.includes('PoseA') && id.includes('2-1') && id.includes('Top'));
                     if (hdMita) return { id: hdMita, type: 'HD' };
-                    const sdMita = manifest.SD.find(id => id.includes('PoseA') && id.includes('2-1') && id.includes('Top'));
-                    if (sdMita) return { id: sdMita, type: 'SD' };
                 } else {
-                    // For Mobile: Strictly PoseB + 1-1
                     const hdMita = manifest.HD.find(id => id.includes('PoseB') && id.includes('1-1'));
                     if (hdMita) return { id: hdMita, type: 'HD' };
-                    const sdMita = manifest.SD.find(id => id.includes('PoseB') && id.includes('1-1'));
-                    if (sdMita) return { id: sdMita, type: 'SD' };
                 }
             }
 
             let ratio = isVertical ? '1-1' : '2-1';
             const priorityPose = isPc ? 'PoseA' : 'PoseB';
 
-            // 1. Try Priority Pose + Correct Ratio (HD then SD)
+            // 1. Try Priority Pose + Correct Ratio
             const hdPriority = findHero(manifest.HD, ratio, priorityPose);
             if (hdPriority) return { id: hdPriority, type: 'HD' };
             
             const sdPriority = findHero(manifest.SD, ratio, priorityPose);
             if (sdPriority) return { id: sdPriority, type: 'SD' };
 
-            // 2. Try ANY Pose + Correct Ratio (HD then SD)
+            // 2. Try ANY Pose + Correct Ratio
             const hdMatch = findHero(manifest.HD, ratio);
             if (hdMatch) return { id: hdMatch, type: 'HD' };
 
             const sdMatch = findHero(manifest.SD, ratio);
             if (sdMatch) return { id: sdMatch, type: 'SD' };
 
-            // 3. Fallback to 1-1 if we were looking for something else
-            if (ratio !== '1-1') {
-                const hd11 = findHero(manifest.HD, '1-1', priorityPose) || findHero(manifest.HD, '1-1');
-                if (hd11) return { id: hd11, type: 'HD' };
+            // 3. Fallback to any Blueprint or 1-1
+            const hdAny = findHero(manifest.HD, '1-1') || manifest.HD[0];
+            if (hdAny) return { id: hdAny, type: 'HD' };
 
-                const sd11 = findHero(manifest.SD, '1-1', priorityPose) || findHero(manifest.SD, '1-1');
-                if (sd11) return { id: sd11, type: 'SD' };
-            }
+            const sdAny = findHero(manifest.SD, '1-1') || manifest.SD[0];
+            if (sdAny) return { id: sdAny, type: 'SD' };
         }
 
         // 4. Ultimate Fallback: Concept Art

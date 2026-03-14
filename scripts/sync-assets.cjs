@@ -33,17 +33,19 @@ const syncFolder = async (localPath, cloudinaryFolder, charName, type, rootFolde
             const publicId = path.parse(file).name;
             console.log(`🚀 Syncing: ${file} -> ${rootFolder || cloudinaryFolder}`);
             try {
+                // We ALWAYS add to manifest first so Local Portal works without Cloudinary
+                if (!galleryManifest[charName][type].includes(publicId)) {
+                    galleryManifest[charName][type].push(publicId);
+                }
+
                 await cloudinary.uploader.upload(fullPath, {
                     public_id: publicId,
                     folder: rootFolder || cloudinaryFolder,
                     overwrite: true,
                     resource_type: 'image',
                 });
-                if (!galleryManifest[charName][type].includes(publicId)) {
-                    galleryManifest[charName][type].push(publicId);
-                }
             } catch (err) {
-                console.error(`❌ Error syncing ${file}:`, err.message);
+                console.warn(`⚠️ Local entry kept, but Cloudinary sync failed for ${file}:`, err.message);
             }
         }
     }

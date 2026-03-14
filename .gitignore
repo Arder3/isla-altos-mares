@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Portal Asset Junctions (Hybrid Mode)
+public/03_Universo
