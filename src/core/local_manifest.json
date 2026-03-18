@@ -378,6 +378,20 @@
     "modified": "2026-03-14"
   },
   {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/.agent/workflows/wf_resolucion_hibrida_portal.md",
+    "fileId": "wf_resolucion_hibrida_portal",
+    "name": "wf resolucion hibrida portal",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/.agent/workflows/wf_resolucion_hibrida_portal.md",
+    "ext": "md",
+    "format": "md",
+    "tags": [
+      "doc:texto",
+      "txt:md"
+    ],
+    "size": 2848,
+    "modified": "2026-03-14"
+  },
+  {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/.agent/workflows/wf_turnaround_fase1.md",
     "fileId": "wf_turnaround_fase1",
     "name": "wf turnaround fase1",
@@ -664,8 +678,8 @@
       "doc:texto",
       "txt:md"
     ],
-    "size": 8675,
-    "modified": "2026-03-14"
+    "size": 12895,
+    "modified": "2026-03-17"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/01_Gerencia_Produccion/01.06_Legal_y_Copyright/01.06.02_Auditorias_Semanales/2026_03_13_Reporte_Legal.md",
@@ -3508,8 +3522,8 @@
       "obj:personaje",
       "txt:md"
     ],
-    "size": 2483,
-    "modified": "2026-03-13"
+    "size": 2618,
+    "modified": "2026-03-15"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.01_Narrativa/03.01.03_Personajes_Principales/03.01.03.04_Capitan_Barracuda.md",
@@ -3527,8 +3541,8 @@
       "obj:personaje",
       "txt:md"
     ],
-    "size": 1539,
-    "modified": "2026-03-07"
+    "size": 3563,
+    "modified": "2026-03-15"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.01_Narrativa/03.01.03_Personajes_Principales/03.01.03.05_Guardian_del_Eco.md",
@@ -3546,8 +3560,8 @@
       "obj:personaje",
       "txt:md"
     ],
-    "size": 1433,
-    "modified": "2026-03-07"
+    "size": 1853,
+    "modified": "2026-03-15"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.01_Narrativa/03.01.04_Personajes_Secundarios/03.01.04.00_SSoT.md",
@@ -4044,6 +4058,448 @@
     "modified": "2026-03-08"
   },
   {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0000.png",
+    "fileId": "AresPro_Vista_0000",
+    "name": "AresPro Vista 0000",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0000.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 108938,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0001.png",
+    "fileId": "AresPro_Vista_0001",
+    "name": "AresPro Vista 0001",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0001.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 112432,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0002.png",
+    "fileId": "AresPro_Vista_0002",
+    "name": "AresPro Vista 0002",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0002.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 172032,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0003.png",
+    "fileId": "AresPro_Vista_0003",
+    "name": "AresPro Vista 0003",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0003.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 120409,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0004.png",
+    "fileId": "AresPro_Vista_0004",
+    "name": "AresPro Vista 0004",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0004.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 168977,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0005.png",
+    "fileId": "AresPro_Vista_0005",
+    "name": "AresPro Vista 0005",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0005.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 109861,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0006.png",
+    "fileId": "AresPro_Vista_0006",
+    "name": "AresPro Vista 0006",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0006.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 169493,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0007.png",
+    "fileId": "AresPro_Vista_0007",
+    "name": "AresPro Vista 0007",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0007.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 111895,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0008.png",
+    "fileId": "AresPro_Vista_0008",
+    "name": "AresPro Vista 0008",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0008.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 172992,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0009.png",
+    "fileId": "AresPro_Vista_0009",
+    "name": "AresPro Vista 0009",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0009.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 96326,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0010.png",
+    "fileId": "AresPro_Vista_0010",
+    "name": "AresPro Vista 0010",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0010.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 111251,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0011.png",
+    "fileId": "AresPro_Vista_0011",
+    "name": "AresPro Vista 0011",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0011.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 110436,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0012.png",
+    "fileId": "AresPro_Vista_0012",
+    "name": "AresPro Vista 0012",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0012.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 106390,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0013.png",
+    "fileId": "AresPro_Vista_0013",
+    "name": "AresPro Vista 0013",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0013.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 98353,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0014.png",
+    "fileId": "AresPro_Vista_0014",
+    "name": "AresPro Vista 0014",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0014.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 108980,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0015.png",
+    "fileId": "AresPro_Vista_0015",
+    "name": "AresPro Vista 0015",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0015.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 117370,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0016.png",
+    "fileId": "AresPro_Vista_0016",
+    "name": "AresPro Vista 0016",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0016.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 112780,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0017.png",
+    "fileId": "AresPro_Vista_0017",
+    "name": "AresPro Vista 0017",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0017.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 112320,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0018.png",
+    "fileId": "AresPro_Vista_0018",
+    "name": "AresPro Vista 0018",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0018.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 172603,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0019.png",
+    "fileId": "AresPro_Vista_0019",
+    "name": "AresPro Vista 0019",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0019.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 114920,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0020.png",
+    "fileId": "AresPro_Vista_0020",
+    "name": "AresPro Vista 0020",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0020.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 170096,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0021.png",
+    "fileId": "AresPro_Vista_0021",
+    "name": "AresPro Vista 0021",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0021.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 111458,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0022.png",
+    "fileId": "AresPro_Vista_0022",
+    "name": "AresPro Vista 0022",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0022.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 174662,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0023.png",
+    "fileId": "AresPro_Vista_0023",
+    "name": "AresPro Vista 0023",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0023.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 123791,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0024.png",
+    "fileId": "AresPro_Vista_0024",
+    "name": "AresPro Vista 0024",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0024.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 174105,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0025.png",
+    "fileId": "AresPro_Vista_0025",
+    "name": "AresPro Vista 0025",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.01_Direccion_Arte/03.02.01.01_Vistas_Maestras_AresPro/AresPro_Vista_0025.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:vistas_maestras_arespro",
+      "img:png"
+    ],
+    "size": 114498,
+    "modified": "2026-03-18"
+  },
+  {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.02_Locaciones/03.02.02.00_SSoT.md",
     "fileId": "03.02.02.00_SSoT",
     "name": "SSoT",
@@ -4277,8 +4733,103 @@
       "txt:md",
       "type:ssot"
     ],
-    "size": 2852,
-    "modified": "2026-03-14"
+    "size": 3825,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.01_Proceso/03.02.03.01.01_Mita_Alma_Aislada_V27_Replica.png",
+    "fileId": "03.02.03.01.01_Mita_Alma_Aislada_V27_Replica",
+    "name": "Mita Alma Aislada V27 Replica",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.01_Proceso/03.02.03.01.01_Mita_Alma_Aislada_V27_Replica.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:mita",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 583754,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.01_Proceso/03.02.03.01.01_Mita_Alma_Aislada_V27_Replica_Definitiva.png",
+    "fileId": "03.02.03.01.01_Mita_Alma_Aislada_V27_Replica_Definitiva",
+    "name": "Mita Alma Aislada V27 Replica Definitiva",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.01_Proceso/03.02.03.01.01_Mita_Alma_Aislada_V27_Replica_Definitiva.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:mita",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 467449,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.01_Proceso/03.02.03.01.01_Mita_Alma_Aislada_V27_Replica_Strict.png",
+    "fileId": "03.02.03.01.01_Mita_Alma_Aislada_V27_Replica_Strict",
+    "name": "Mita Alma Aislada V27 Replica Strict",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.01_Proceso/03.02.03.01.01_Mita_Alma_Aislada_V27_Replica_Strict.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:mita",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 611648,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.01_Proceso/03.02.03.01.01_Mita_Alma_Aislada_V27_Strict_Definitiva_V5.png",
+    "fileId": "03.02.03.01.01_Mita_Alma_Aislada_V27_Strict_Definitiva_V5",
+    "name": "Mita Alma Aislada V27 Strict Definitiva V5",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.01_Proceso/03.02.03.01.01_Mita_Alma_Aislada_V27_Strict_Definitiva_V5.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:mita",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 439070,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.01_Proceso/composicion.png",
+    "fileId": "composicion",
+    "name": "composicion",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.01_Proceso/composicion.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:mita",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 266027,
+    "modified": "2026-03-16"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.01_Proceso/mita_acting_asombro_magico_diptico.png",
@@ -5448,6 +5999,108 @@
     "modified": "2026-03-04"
   },
   {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.04_Turnaround_Cuerpo/03.02.03.01.03.04.01_Frontal.png",
+    "fileId": "03.02.03.01.03.04.01_Frontal",
+    "name": "Frontal",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.04_Turnaround_Cuerpo/03.02.03.01.03.04.01_Frontal.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "angle:frontal",
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:concepto_general",
+      "doc:imagen",
+      "entity:mita",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 457473,
+    "modified": "2026-03-04"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.04_Turnaround_Cuerpo/03.02.03.01.03.04.02_Frontal_Derecho.png",
+    "fileId": "03.02.03.01.03.04.02_Frontal_Derecho",
+    "name": "Frontal Derecho",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.04_Turnaround_Cuerpo/03.02.03.01.03.04.02_Frontal_Derecho.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "angle:3q_frontal_derecho",
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:pose_referencia",
+      "doc:imagen",
+      "entity:mita",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 332758,
+    "modified": "2026-03-08"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.04_Turnaround_Cuerpo/03.02.03.01.03.04.05_Posterior.png",
+    "fileId": "03.02.03.01.03.04.05_Posterior",
+    "name": "Posterior",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.04_Turnaround_Cuerpo/03.02.03.01.03.04.05_Posterior.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "angle:posterior",
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:actuacion",
+      "doc:imagen",
+      "entity:mita",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 458659,
+    "modified": "2026-03-04"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.04_Turnaround_Cuerpo/03.02.03.01.03.04.06_Posterior_Izquierdo.png",
+    "fileId": "03.02.03.01.03.04.06_Posterior_Izquierdo",
+    "name": "Posterior Izquierdo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.04_Turnaround_Cuerpo/03.02.03.01.03.04.06_Posterior_Izquierdo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "angle:3q_posterior_izquierdo",
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:mita",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 457124,
+    "modified": "2026-03-04"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.04_Turnaround_Cuerpo/03.02.03.01.03.04.07_Izquierdo.png",
+    "fileId": "03.02.03.01.03.04.07_Izquierdo",
+    "name": "Izquierdo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.04_Turnaround_Cuerpo/03.02.03.01.03.04.07_Izquierdo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:mita",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 304856,
+    "modified": "2026-03-08"
+  },
+  {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.08_Referencia_Facial.png",
     "fileId": "03.02.03.01.03.08_Referencia_Facial",
     "name": "Referencia Facial",
@@ -5466,110 +6119,6 @@
     ],
     "size": 635028,
     "modified": "2026-03-02"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.09_Turnaround_Cuerpo/03.02.03.01.03.09.01_Frontal.png",
-    "fileId": "03.02.03.01.03.09.01_Frontal",
-    "name": "Frontal",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.09_Turnaround_Cuerpo/03.02.03.01.03.09.01_Frontal.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "angle:frontal",
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "content:concepto_general",
-      "doc:imagen",
-      "entity:mita",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 457473,
-    "modified": "2026-03-04"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.09_Turnaround_Cuerpo/03.02.03.01.03.09.02_Posterior.png",
-    "fileId": "03.02.03.01.03.09.02_Posterior",
-    "name": "Posterior",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.09_Turnaround_Cuerpo/03.02.03.01.03.09.02_Posterior.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "angle:posterior",
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "content:pose_referencia",
-      "doc:imagen",
-      "entity:mita",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 458659,
-    "modified": "2026-03-04"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.09_Turnaround_Cuerpo/03.02.03.01.03.09.03_Lateral.png",
-    "fileId": "03.02.03.01.03.09.03_Lateral",
-    "name": "Lateral",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.09_Turnaround_Cuerpo/03.02.03.01.03.09.03_Lateral.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "angle:lateral_derecho",
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "content:concepto_general",
-      "doc:imagen",
-      "entity:mita",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 304856,
-    "modified": "2026-03-08"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.09_Turnaround_Cuerpo/03.02.03.01.03.09.05_34_Frontal_Derecho.png",
-    "fileId": "03.02.03.01.03.09.05_34_Frontal_Derecho",
-    "name": "34 Frontal Derecho",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.09_Turnaround_Cuerpo/03.02.03.01.03.09.05_34_Frontal_Derecho.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "angle:3q_frontal_derecho",
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "content:actuacion",
-      "doc:imagen",
-      "entity:mita",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 332758,
-    "modified": "2026-03-08"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.09_Turnaround_Cuerpo/03.02.03.01.03.09.07_34_Posterior.png",
-    "fileId": "03.02.03.01.03.09.07_34_Posterior",
-    "name": "34 Posterior",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.09_Turnaround_Cuerpo/03.02.03.01.03.09.07_34_Posterior.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "angle:posterior",
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "doc:imagen",
-      "entity:mita",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 457124,
-    "modified": "2026-03-04"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.01_Mita/03.02.03.01.03_Aprobados/03.02.03.01.03.10_Turnaround_Rostro/03.02.03.01.03.10.01_Frontal.png",
@@ -6504,6 +7053,25 @@
     "modified": "2026-03-11"
   },
   {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/03.02.03.02.01_Cito_Acting_Definitivo_Final_V8.png",
+    "fileId": "03.02.03.02.01_Cito_Acting_Definitivo_Final_V8",
+    "name": "Cito Acting Definitivo Final V8",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/03.02.03.02.01_Cito_Acting_Definitivo_Final_V8.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 491334,
+    "modified": "2026-03-15"
+  },
+  {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.01_Proceso/03.02.03.02.03.50.01_Cito_Hero_1-1_v1.png",
     "fileId": "03.02.03.02.03.50.01_Cito_Hero_1-1_v1",
     "name": "Cito Hero 1-1 v1",
@@ -7275,6 +7843,102 @@
     "modified": "2026-03-04"
   },
   {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.02_Descartados/03.02.03.02.01_Cito_Acting_Anatomia_Verificada_V4.png",
+    "fileId": "03.02.03.02.01_Cito_Acting_Anatomia_Verificada_V4",
+    "name": "Cito Acting Anatomia Verificada V4",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.02_Descartados/03.02.03.02.01_Cito_Acting_Anatomia_Verificada_V4.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 526032,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.02_Descartados/03.02.03.02.01_Cito_Acting_Definitivo_Sketch_V7.png",
+    "fileId": "03.02.03.02.01_Cito_Acting_Definitivo_Sketch_V7",
+    "name": "Cito Acting Definitivo Sketch V7",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.02_Descartados/03.02.03.02.01_Cito_Acting_Definitivo_Sketch_V7.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 502236,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.02_Descartados/03.02.03.02.01_Cito_Acting_Marcha_Dinamica_Diagonal_V2.png",
+    "fileId": "03.02.03.02.01_Cito_Acting_Marcha_Dinamica_Diagonal_V2",
+    "name": "Cito Acting Marcha Dinamica Diagonal V2",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.02_Descartados/03.02.03.02.01_Cito_Acting_Marcha_Dinamica_Diagonal_V2.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 526239,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.02_Descartados/03.02.03.02.01_Cito_Acting_Marcha_Molesta_Cangrejo_V1.png",
+    "fileId": "03.02.03.02.01_Cito_Acting_Marcha_Molesta_Cangrejo_V1",
+    "name": "Cito Acting Marcha Molesta Cangrejo V1",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.02_Descartados/03.02.03.02.01_Cito_Acting_Marcha_Molesta_Cangrejo_V1.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "expr:molesta",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 484850,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.02_Descartados/03.02.03.02.01_Cito_Acting_Natural_Opposition_V3.png",
+    "fileId": "03.02.03.02.01_Cito_Acting_Natural_Opposition_V3",
+    "name": "Cito Acting Natural Opposition V3",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.02_Descartados/03.02.03.02.01_Cito_Acting_Natural_Opposition_V3.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 535958,
+    "modified": "2026-03-15"
+  },
+  {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.02_Descartados/cito_exp_alegre_v_antigua.png",
     "fileId": "cito_exp_alegre_v_antigua",
     "name": "cito exp alegre v antigua",
@@ -7434,10 +8098,10 @@
     "modified": "2026-03-04"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.01_V1_Frontal.png",
-    "fileId": "03.02.03.02.03.09.01_V1_Frontal",
-    "name": "V1 Frontal",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.01_V1_Frontal.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/03.02.03.02.03.04.01_Frontal.png",
+    "fileId": "03.02.03.02.03.04.01_Frontal",
+    "name": "Frontal",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/03.02.03.02.03.04.01_Frontal.png",
     "ext": "png",
     "format": "png",
     "tags": [
@@ -7455,14 +8119,14 @@
     "modified": "2026-03-08"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.02_V1_Lateral.png",
-    "fileId": "03.02.03.02.03.09.02_V1_Lateral",
-    "name": "V1 Lateral",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.02_V1_Lateral.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/03.02.03.02.03.04.02_Frontal_Derecho.png",
+    "fileId": "03.02.03.02.03.04.02_Frontal_Derecho",
+    "name": "Frontal Derecho",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/03.02.03.02.03.04.02_Frontal_Derecho.png",
     "ext": "png",
     "format": "png",
     "tags": [
-      "angle:lateral_derecho",
+      "angle:3q_frontal_derecho",
       "area:arte",
       "area:universo",
       "char:principal",
@@ -7472,18 +8136,17 @@
       "img:png",
       "obj:personaje"
     ],
-    "size": 374456,
+    "size": 416727,
     "modified": "2026-03-08"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.03_V1_Posterior.png",
-    "fileId": "03.02.03.02.03.09.03_V1_Posterior",
-    "name": "V1 Posterior",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.03_V1_Posterior.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/03.02.03.02.03.04.03_Derecho.png",
+    "fileId": "03.02.03.02.03.04.03_Derecho",
+    "name": "Derecho",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/03.02.03.02.03.04.03_Derecho.png",
     "ext": "png",
     "format": "png",
     "tags": [
-      "angle:posterior",
       "area:arte",
       "area:universo",
       "char:principal",
@@ -7493,34 +8156,35 @@
       "img:png",
       "obj:personaje"
     ],
-    "size": 402255,
+    "size": 374456,
     "modified": "2026-03-08"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.04_V1_34.png",
-    "fileId": "03.02.03.02.03.09.04_V1_34",
-    "name": "V1 34",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.04_V1_34.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/03.02.03.02.03.04.05_Posterior.png",
+    "fileId": "03.02.03.02.03.04.05_Posterior",
+    "name": "Posterior",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/03.02.03.02.03.04.05_Posterior.png",
     "ext": "png",
     "format": "png",
     "tags": [
-      "angle:3q_frontal_derecho",
+      "angle:posterior",
       "area:arte",
       "area:universo",
       "char:principal",
+      "content:actuacion",
       "doc:imagen",
       "entity:cito",
       "img:png",
       "obj:personaje"
     ],
-    "size": 416727,
+    "size": 402255,
     "modified": "2026-03-08"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.05_V2_Frontal.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/V2_Variante/03.02.03.02.03.09.05_V2_Frontal.png",
     "fileId": "03.02.03.02.03.09.05_V2_Frontal",
     "name": "V2 Frontal",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.05_V2_Frontal.png",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/V2_Variante/03.02.03.02.03.09.05_V2_Frontal.png",
     "ext": "png",
     "format": "png",
     "tags": [
@@ -7538,10 +8202,10 @@
     "modified": "2026-03-08"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.06_V2_Lateral.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/V2_Variante/03.02.03.02.03.09.06_V2_Lateral.png",
     "fileId": "03.02.03.02.03.09.06_V2_Lateral",
     "name": "V2 Lateral",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.06_V2_Lateral.png",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/V2_Variante/03.02.03.02.03.09.06_V2_Lateral.png",
     "ext": "png",
     "format": "png",
     "tags": [
@@ -7558,10 +8222,10 @@
     "modified": "2026-03-08"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.07_V2_Posterior.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/V2_Variante/03.02.03.02.03.09.07_V2_Posterior.png",
     "fileId": "03.02.03.02.03.09.07_V2_Posterior",
     "name": "V2 Posterior",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.07_V2_Posterior.png",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/V2_Variante/03.02.03.02.03.09.07_V2_Posterior.png",
     "ext": "png",
     "format": "png",
     "tags": [
@@ -7578,10 +8242,10 @@
     "modified": "2026-03-08"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.08_V2_34.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/V2_Variante/03.02.03.02.03.09.08_V2_34.png",
     "fileId": "03.02.03.02.03.09.08_V2_34",
     "name": "V2 34",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.09_Turnaround_Cuerpo/03.02.03.02.03.09.08_V2_34.png",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.04_Turnaround_Cuerpo/V2_Variante/03.02.03.02.03.09.08_V2_34.png",
     "ext": "png",
     "format": "png",
     "tags": [
@@ -7596,88 +8260,6 @@
       "obj:personaje"
     ],
     "size": 403855,
-    "modified": "2026-03-08"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.10_Turnaround_Rostro/03.02.03.02.03.10.01_Frontal.png",
-    "fileId": "03.02.03.02.03.10.01_Frontal",
-    "name": "Frontal",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.10_Turnaround_Rostro/03.02.03.02.03.10.01_Frontal.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "angle:frontal",
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "content:concepto_general",
-      "doc:imagen",
-      "entity:cito",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 198503,
-    "modified": "2026-03-08"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.10_Turnaround_Rostro/03.02.03.02.03.10.02_Posterior.png",
-    "fileId": "03.02.03.02.03.10.02_Posterior",
-    "name": "Posterior",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.10_Turnaround_Rostro/03.02.03.02.03.10.02_Posterior.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "angle:posterior",
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "content:pose_referencia",
-      "doc:imagen",
-      "entity:cito",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 196895,
-    "modified": "2026-03-08"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.10_Turnaround_Rostro/03.02.03.02.03.10.03_34_Frontal_Izquierdo.png",
-    "fileId": "03.02.03.02.03.10.03_34_Frontal_Izquierdo",
-    "name": "34 Frontal Izquierdo",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.10_Turnaround_Rostro/03.02.03.02.03.10.03_34_Frontal_Izquierdo.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "angle:3q_frontal_izquierdo",
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "content:concepto_general",
-      "doc:imagen",
-      "entity:cito",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 198040,
-    "modified": "2026-03-08"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.10_Turnaround_Rostro/03.02.03.02.03.10.04_Izquierdo.png",
-    "fileId": "03.02.03.02.03.10.04_Izquierdo",
-    "name": "Izquierdo",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.10_Turnaround_Rostro/03.02.03.02.03.10.04_Izquierdo.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "doc:imagen",
-      "entity:cito",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 192659,
     "modified": "2026-03-08"
   },
   {
@@ -7801,44 +8383,6 @@
     "modified": "2026-03-08"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.14_Acting_y_Expresion/03.02.03.02.03.14.06_Heroe_Espada_Madera.png",
-    "fileId": "03.02.03.02.03.14.06_Heroe_Espada_Madera",
-    "name": "Heroe Espada Madera",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.14_Acting_y_Expresion/03.02.03.02.03.14.06_Heroe_Espada_Madera.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "doc:imagen",
-      "entity:cito",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 199694,
-    "modified": "2026-03-08"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.14_Acting_y_Expresion/03.02.03.02.03.14.07_Pintando_Hoja.png",
-    "fileId": "03.02.03.02.03.14.07_Pintando_Hoja",
-    "name": "Pintando Hoja",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.14_Acting_y_Expresion/03.02.03.02.03.14.07_Pintando_Hoja.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "doc:imagen",
-      "entity:cito",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 218019,
-    "modified": "2026-03-08"
-  },
-  {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.14_Acting_y_Expresion/03.02.03.02.03.14.08_Curiosidad_Cangrejo.png",
     "fileId": "03.02.03.02.03.14.08_Curiosidad_Cangrejo",
     "name": "Curiosidad Cangrejo",
@@ -7856,26 +8400,6 @@
       "obj:personaje"
     ],
     "size": 194164,
-    "modified": "2026-03-08"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.14_Acting_y_Expresion/03.02.03.02.03.14.09_Interaccion_Tortuga.png",
-    "fileId": "03.02.03.02.03.14.09_Interaccion_Tortuga",
-    "name": "Interaccion Tortuga",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.03.14_Acting_y_Expresion/03.02.03.02.03.14.09_Interaccion_Tortuga.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "content:turnaround_cuerpo",
-      "doc:imagen",
-      "entity:cito",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 173138,
     "modified": "2026-03-08"
   },
   {
@@ -8119,10 +8643,190 @@
     "modified": "2026-03-11"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.04_Material_HD/03.02.03.02.04.14_Acting_y_Expresion/03.02.03.02.04.14.01_Interaccion_Abeja_Flor_HD.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.02_Ref_Cuerpo_Completo.png",
+    "fileId": "03.02.03.02.03.02_Ref_Cuerpo_Completo",
+    "name": "Ref Cuerpo Completo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.02_Ref_Cuerpo_Completo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:pose_referencia",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 477093,
+    "modified": "2026-03-17"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.05_Referencia_Facial.png",
+    "fileId": "03.02.03.02.03.05_Referencia_Facial",
+    "name": "Referencia Facial",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.05_Referencia_Facial.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:actuacion",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 52672,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.10.01_Frontal.png",
+    "fileId": "03.02.03.02.03.10.01_Frontal",
+    "name": "Frontal",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.10.01_Frontal.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "angle:frontal",
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:concepto_general",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 198503,
+    "modified": "2026-03-08"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.10.02_Posterior.png",
+    "fileId": "03.02.03.02.03.10.02_Posterior",
+    "name": "Posterior",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.10.02_Posterior.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "angle:posterior",
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:pose_referencia",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 196895,
+    "modified": "2026-03-08"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.10.03_34_Frontal_Izquierdo.png",
+    "fileId": "03.02.03.02.03.10.03_34_Frontal_Izquierdo",
+    "name": "34 Frontal Izquierdo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.10.03_34_Frontal_Izquierdo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "angle:3q_frontal_izquierdo",
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:concepto_general",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 198040,
+    "modified": "2026-03-08"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.10.04_Izquierdo.png",
+    "fileId": "03.02.03.02.03.10.04_Izquierdo",
+    "name": "Izquierdo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.10.04_Izquierdo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 192659,
+    "modified": "2026-03-08"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.14.06_Heroe_Espada_Madera.png",
+    "fileId": "03.02.03.02.03.14.06_Heroe_Espada_Madera",
+    "name": "Heroe Espada Madera",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.14.06_Heroe_Espada_Madera.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 199694,
+    "modified": "2026-03-08"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.14.07_Pintando_Hoja.png",
+    "fileId": "03.02.03.02.03.14.07_Pintando_Hoja",
+    "name": "Pintando Hoja",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.14.07_Pintando_Hoja.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 218019,
+    "modified": "2026-03-08"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.14.09_Interaccion_Tortuga.png",
+    "fileId": "03.02.03.02.03.14.09_Interaccion_Tortuga",
+    "name": "Interaccion Tortuga",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.03.14.09_Interaccion_Tortuga.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:turnaround_cuerpo",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 173138,
+    "modified": "2026-03-08"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.04.14.01_Interaccion_Abeja_Flor_HD.png",
     "fileId": "03.02.03.02.04.14.01_Interaccion_Abeja_Flor_HD",
     "name": "Interaccion Abeja Flor HD",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.04_Material_HD/03.02.03.02.04.14_Acting_y_Expresion/03.02.03.02.04.14.01_Interaccion_Abeja_Flor_HD.png",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.04.14.01_Interaccion_Abeja_Flor_HD.png",
     "ext": "png",
     "format": "png",
     "tags": [
@@ -8137,6 +8841,45 @@
     ],
     "size": 4848799,
     "modified": "2026-03-08"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.04.14.07_Pintando_Hoja_HD.png",
+    "fileId": "03.02.03.02.04.14.07_Pintando_Hoja_HD",
+    "name": "Pintando Hoja HD",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.03_Aprobados/03.02.03.02.05_Pendiente_Correccion/03.02.03.02.04.14.07_Pintando_Hoja_HD.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 4825069,
+    "modified": "2026-03-08"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.04_Material_HD/03.02.03.02.04.05_Referencia_Facial_HD.png",
+    "fileId": "03.02.03.02.04.05_Referencia_Facial_HD",
+    "name": "Referencia Facial HD",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.04_Material_HD/03.02.03.02.04.05_Referencia_Facial_HD.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:actuacion",
+      "doc:imagen",
+      "entity:cito",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 52672,
+    "modified": "2026-03-18"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.04_Material_HD/03.02.03.02.04.14_Acting_y_Expresion/03.02.03.02.04.14.05_Interaccion_Castillo_Arena_HD.png",
@@ -8175,25 +8918,6 @@
       "obj:personaje"
     ],
     "size": 5097173,
-    "modified": "2026-03-08"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.04_Material_HD/03.02.03.02.04.14_Acting_y_Expresion/03.02.03.02.04.14.07_Pintando_Hoja_HD.png",
-    "fileId": "03.02.03.02.04.14.07_Pintando_Hoja_HD",
-    "name": "Pintando Hoja HD",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.02_Cito/03.02.03.02.04_Material_HD/03.02.03.02.04.14_Acting_y_Expresion/03.02.03.02.04.14.07_Pintando_Hoja_HD.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "doc:imagen",
-      "entity:cito",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 4825069,
     "modified": "2026-03-08"
   },
   {
@@ -10012,50 +10736,10 @@
     "modified": "2026-03-11"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.01_Concepto_Maestro_Vestuario_General.png",
-    "fileId": "03.02.03.03.03.01_Concepto_Maestro_Vestuario_General",
-    "name": "Concepto Maestro Vestuario General",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.01_Concepto_Maestro_Vestuario_General.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "content:concepto_general",
-      "doc:imagen",
-      "entity:padre",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 472648,
-    "modified": "2026-03-12"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.02_Concepto_Maestro_Vestuario_Trabajo.png",
-    "fileId": "03.02.03.03.03.02_Concepto_Maestro_Vestuario_Trabajo",
-    "name": "Concepto Maestro Vestuario Trabajo",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.02_Concepto_Maestro_Vestuario_Trabajo.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "content:pose_referencia",
-      "doc:imagen",
-      "entity:padre",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 488630,
-    "modified": "2026-03-12"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.03_Acting_Maestro_Vestuario_General.png",
-    "fileId": "03.02.03.03.03.03_Acting_Maestro_Vestuario_General",
-    "name": "Acting Maestro Vestuario General",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.03_Acting_Maestro_Vestuario_General.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.01.01_Concepto_Gral_Vestuario_General.png",
+    "fileId": "03.02.03.03.03.01.01_Concepto_Gral_Vestuario_General",
+    "name": "Concepto Gral Vestuario General",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.01.01_Concepto_Gral_Vestuario_General.png",
     "ext": "png",
     "format": "png",
     "tags": [
@@ -10072,16 +10756,17 @@
     "modified": "2026-03-12"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Acting_Maestro_Vestuario_Trabajo.png",
-    "fileId": "03.02.03.03.03.04_Acting_Maestro_Vestuario_Trabajo",
-    "name": "Acting Maestro Vestuario Trabajo",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Acting_Maestro_Vestuario_Trabajo.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.01.02_Concepto_Gral_Vestuario_Trabajo.png",
+    "fileId": "03.02.03.03.03.01.02_Concepto_Gral_Vestuario_Trabajo",
+    "name": "Concepto Gral Vestuario Trabajo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.01.02_Concepto_Gral_Vestuario_Trabajo.png",
     "ext": "png",
     "format": "png",
     "tags": [
       "area:arte",
       "area:universo",
       "char:principal",
+      "content:pose_referencia",
       "doc:imagen",
       "entity:padre",
       "img:png",
@@ -10091,10 +10776,50 @@
     "modified": "2026-03-12"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.01_Frontal.png",
-    "fileId": "03.02.03.03.03.09.01_Frontal",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.02.01_Ref_Cuerpo_Completo_Vestuario_General.png",
+    "fileId": "03.02.03.03.03.02.01_Ref_Cuerpo_Completo_Vestuario_General",
+    "name": "Ref Cuerpo Completo Vestuario General",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.02.01_Ref_Cuerpo_Completo_Vestuario_General.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:concepto_general",
+      "doc:imagen",
+      "entity:padre",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 472648,
+    "modified": "2026-03-12"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.02.02_Ref_Cuerpo_Completo_Vestuario_Trabajo.png",
+    "fileId": "03.02.03.03.03.02.02_Ref_Cuerpo_Completo_Vestuario_Trabajo",
+    "name": "Ref Cuerpo Completo Vestuario Trabajo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.02.02_Ref_Cuerpo_Completo_Vestuario_Trabajo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:pose_referencia",
+      "doc:imagen",
+      "entity:padre",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 488630,
+    "modified": "2026-03-12"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.01_Frontal.png",
+    "fileId": "03.02.03.03.03.04.01_Frontal",
     "name": "Frontal",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.01_Frontal.png",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.01_Frontal.png",
     "ext": "png",
     "format": "png",
     "tags": [
@@ -10112,14 +10837,14 @@
     "modified": "2026-03-14"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.02_Posterior.png",
-    "fileId": "03.02.03.03.03.09.02_Posterior",
-    "name": "Posterior",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.02_Posterior.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.02_Frontal_Derecho.png",
+    "fileId": "03.02.03.03.03.04.02_Frontal_Derecho",
+    "name": "Frontal Derecho",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.02_Frontal_Derecho.png",
     "ext": "png",
     "format": "png",
     "tags": [
-      "angle:posterior",
+      "angle:3q_frontal_derecho",
       "area:arte",
       "area:universo",
       "char:principal",
@@ -10129,18 +10854,17 @@
       "img:png",
       "obj:personaje"
     ],
-    "size": 388516,
+    "size": 287085,
     "modified": "2026-03-14"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.03_Lateral_Derecho.png",
-    "fileId": "03.02.03.03.03.09.03_Lateral_Derecho",
-    "name": "Lateral Derecho",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.03_Lateral_Derecho.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.03_Derecho.png",
+    "fileId": "03.02.03.03.03.04.03_Derecho",
+    "name": "Derecho",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.03_Derecho.png",
     "ext": "png",
     "format": "png",
     "tags": [
-      "angle:lateral_derecho",
       "area:arte",
       "area:universo",
       "char:principal",
@@ -10154,75 +10878,14 @@
     "modified": "2026-03-14"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.04_Lateral_Izquierdo.png",
-    "fileId": "03.02.03.03.03.09.04_Lateral_Izquierdo",
-    "name": "Lateral Izquierdo",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.04_Lateral_Izquierdo.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.04_Posterior_Derecho.png",
+    "fileId": "03.02.03.03.03.04.04_Posterior_Derecho",
+    "name": "Posterior Derecho",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.04_Posterior_Derecho.png",
     "ext": "png",
     "format": "png",
     "tags": [
-      "angle:lateral_izquierdo",
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "doc:imagen",
-      "entity:padre",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 240024,
-    "modified": "2026-03-14"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.05_Frontal_34_Derecho.png",
-    "fileId": "03.02.03.03.03.09.05_Frontal_34_Derecho",
-    "name": "Frontal 34 Derecho",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.05_Frontal_34_Derecho.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "angle:frontal",
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "content:actuacion",
-      "doc:imagen",
-      "entity:padre",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 287085,
-    "modified": "2026-03-14"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.06_Frontal_34_Izquierdo.png",
-    "fileId": "03.02.03.03.03.09.06_Frontal_34_Izquierdo",
-    "name": "Frontal 34 Izquierdo",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.06_Frontal_34_Izquierdo.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "angle:frontal",
-      "area:arte",
-      "area:universo",
-      "char:principal",
-      "doc:imagen",
-      "entity:padre",
-      "img:png",
-      "obj:personaje"
-    ],
-    "size": 282957,
-    "modified": "2026-03-14"
-  },
-  {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.07_Posterior_34_Derecho.png",
-    "fileId": "03.02.03.03.03.09.07_Posterior_34_Derecho",
-    "name": "Posterior 34 Derecho",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.07_Posterior_34_Derecho.png",
-    "ext": "png",
-    "format": "png",
-    "tags": [
-      "angle:posterior",
+      "angle:3q_posterior_derecho",
       "area:arte",
       "area:universo",
       "char:principal",
@@ -10235,14 +10898,74 @@
     "modified": "2026-03-14"
   },
   {
-    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.08_Posterior_34_Izquierdo.png",
-    "fileId": "03.02.03.03.03.09.08_Posterior_34_Izquierdo",
-    "name": "Posterior 34 Izquierdo",
-    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.09_Turnaround_Cuerpo/03.02.03.03.03.09.08_Posterior_34_Izquierdo.png",
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.05_Posterior.png",
+    "fileId": "03.02.03.03.03.04.05_Posterior",
+    "name": "Posterior",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.05_Posterior.png",
     "ext": "png",
     "format": "png",
     "tags": [
       "angle:posterior",
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:actuacion",
+      "doc:imagen",
+      "entity:padre",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 388516,
+    "modified": "2026-03-14"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.06_Posterior_Izquierdo.png",
+    "fileId": "03.02.03.03.03.04.06_Posterior_Izquierdo",
+    "name": "Posterior Izquierdo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.06_Posterior_Izquierdo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "angle:3q_posterior_izquierdo",
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:padre",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 277712,
+    "modified": "2026-03-14"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.07_Izquierdo.png",
+    "fileId": "03.02.03.03.03.04.07_Izquierdo",
+    "name": "Izquierdo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.07_Izquierdo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:padre",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 240024,
+    "modified": "2026-03-14"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.08_Frontal_Izquierdo.png",
+    "fileId": "03.02.03.03.03.04.08_Frontal_Izquierdo",
+    "name": "Frontal Izquierdo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.03_Padre/03.02.03.03.03_Aprobados/03.02.03.03.03.04_Turnaround_Cuerpo/03.02.03.03.03.04.08_Frontal_Izquierdo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "angle:3q_frontal_izquierdo",
       "area:arte",
       "area:universo",
       "char:principal",
@@ -10252,7 +10975,7 @@
       "img:png",
       "obj:personaje"
     ],
-    "size": 277712,
+    "size": 282957,
     "modified": "2026-03-14"
   },
   {
@@ -10505,6 +11228,578 @@
     "modified": "2026-03-13"
   },
   {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Escena_Espejo_V28.png",
+    "fileId": "03.02.03.04.01_Barracuda_Escena_Espejo_V28",
+    "name": "Barracuda Escena Espejo V28",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Escena_Espejo_V28.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 814430,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Escena_Interaccion_V27.png",
+    "fileId": "03.02.03.04.01_Barracuda_Escena_Interaccion_V27",
+    "name": "Barracuda Escena Interaccion V27",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Escena_Interaccion_V27.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 810576,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Escena_V13_Final_SSoT.png",
+    "fileId": "03.02.03.04.01_Barracuda_Escena_V13_Final_SSoT",
+    "name": "Barracuda Escena V13 Final SSoT",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Escena_V13_Final_SSoT.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje",
+      "type:ssot"
+    ],
+    "size": 743002,
+    "modified": "2026-03-17"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Escena_V14_Final_Scale_Position.png",
+    "fileId": "03.02.03.04.01_Barracuda_Escena_V14_Final_Scale_Position",
+    "name": "Barracuda Escena V14 Final Scale Position",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Escena_V14_Final_Scale_Position.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 761632,
+    "modified": "2026-03-17"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Escena_V17_Final_Maestro.png",
+    "fileId": "03.02.03.04.01_Barracuda_Escena_V17_Final_Maestro",
+    "name": "Barracuda Escena V17 Final Maestro",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Escena_V17_Final_Maestro.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 758497,
+    "modified": "2026-03-17"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Exploracion_Detalles_V7.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_Detalles_V7",
+    "name": "Barracuda Exploracion Detalles V7",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Exploracion_Detalles_V7.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 739132,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Exploracion_Pirata_2x2_V6.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_Pirata_2x2_V6",
+    "name": "Barracuda Exploracion Pirata 2x2 V6",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Exploracion_Pirata_2x2_V6.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 586339,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Exploracion_Silueta_V11.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_Silueta_V11",
+    "name": "Barracuda Exploracion Silueta V11",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Exploracion_Silueta_V11.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 524898,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Exploracion_Silueta_V12.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_Silueta_V12",
+    "name": "Barracuda Exploracion Silueta V12",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Exploracion_Silueta_V12.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 603978,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Exploracion_Silueta_V14.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_Silueta_V14",
+    "name": "Barracuda Exploracion Silueta V14",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Exploracion_Silueta_V14.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 587391,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Exploracion_Silueta_V15.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_Silueta_V15",
+    "name": "Barracuda Exploracion Silueta V15",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Exploracion_Silueta_V15.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 546211,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Final_Rostro_V25.png",
+    "fileId": "03.02.03.04.01_Barracuda_Final_Rostro_V25",
+    "name": "Barracuda Final Rostro V25",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Final_Rostro_V25.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 820879,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Master_FullBody_V1.png",
+    "fileId": "03.02.03.04.01_Barracuda_Master_FullBody_V1",
+    "name": "Barracuda Master FullBody V1",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Master_FullBody_V1.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 504596,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Master_FullBody_V2.png",
+    "fileId": "03.02.03.04.01_Barracuda_Master_FullBody_V2",
+    "name": "Barracuda Master FullBody V2",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Master_FullBody_V2.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 519528,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Angulos_V24.png",
+    "fileId": "03.02.03.04.01_Barracuda_Propuesta_Angulos_V24",
+    "name": "Barracuda Propuesta Angulos V24",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Angulos_V24.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 733986,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Colores_Capa_V21.png",
+    "fileId": "03.02.03.04.01_Barracuda_Propuesta_Colores_Capa_V21",
+    "name": "Barracuda Propuesta Colores Capa V21",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Colores_Capa_V21.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 610148,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Final_V20.png",
+    "fileId": "03.02.03.04.01_Barracuda_Propuesta_Final_V20",
+    "name": "Barracuda Propuesta Final V20",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Final_V20.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 639827,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Hibrida_V16.png",
+    "fileId": "03.02.03.04.01_Barracuda_Propuesta_Hibrida_V16",
+    "name": "Barracuda Propuesta Hibrida V16",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Hibrida_V16.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 610202,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Interna_V19.png",
+    "fileId": "03.02.03.04.01_Barracuda_Propuesta_Interna_V19",
+    "name": "Barracuda Propuesta Interna V19",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Interna_V19.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 595451,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Maestra_Obsidiana_V22.png",
+    "fileId": "03.02.03.04.01_Barracuda_Propuesta_Maestra_Obsidiana_V22",
+    "name": "Barracuda Propuesta Maestra Obsidiana V22",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Maestra_Obsidiana_V22.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 496691,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Maestra_V4.png",
+    "fileId": "03.02.03.04.01_Barracuda_Propuesta_Maestra_V4",
+    "name": "Barracuda Propuesta Maestra V4",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Maestra_V4.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 555377,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Pose_Strict_V18.png",
+    "fileId": "03.02.03.04.01_Barracuda_Propuesta_Pose_Strict_V18",
+    "name": "Barracuda Propuesta Pose Strict V18",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Pose_Strict_V18.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 626465,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Ref_Mix_V17.png",
+    "fileId": "03.02.03.04.01_Barracuda_Propuesta_Ref_Mix_V17",
+    "name": "Barracuda Propuesta Ref Mix V17",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Propuesta_Ref_Mix_V17.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 588451,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Rafaga_Facial_V3.png",
+    "fileId": "03.02.03.04.01_Barracuda_Rafaga_Facial_V3",
+    "name": "Barracuda Rafaga Facial V3",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Rafaga_Facial_V3.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 94989,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Referencia_Estilo_Maestra_V26.png",
+    "fileId": "03.02.03.04.01_Barracuda_Referencia_Estilo_Maestra_V26",
+    "name": "Barracuda Referencia Estilo Maestra V26",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Referencia_Estilo_Maestra_V26.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 798879,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Referencia_Maestra_1a1_V33.png",
+    "fileId": "03.02.03.04.01_Barracuda_Referencia_Maestra_1a1_V33",
+    "name": "Barracuda Referencia Maestra 1a1 V33",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Referencia_Maestra_1a1_V33.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 592607,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Referencia_Maestra_Final_V31.png",
+    "fileId": "03.02.03.04.01_Barracuda_Referencia_Maestra_Final_V31",
+    "name": "Barracuda Referencia Maestra Final V31",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Referencia_Maestra_Final_V31.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 656712,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Referencia_Maestra_Identica_V32.png",
+    "fileId": "03.02.03.04.01_Barracuda_Referencia_Maestra_Identica_V32",
+    "name": "Barracuda Referencia Maestra Identica V32",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.01_Barracuda_Referencia_Maestra_Identica_V32.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 558994,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.03.04_Plano_Americano.png",
+    "fileId": "03.02.03.04.03.04_Plano_Americano",
+    "name": "Plano Americano",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.03.04_Plano_Americano.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 717913,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.03.05_Plano_General.png",
+    "fileId": "03.02.03.04.03.05_Plano_General",
+    "name": "Plano General",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/03.02.03.04.03.05_Plano_General.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:actuacion",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 680300,
+    "modified": "2026-03-15"
+  },
+  {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/barracuda_galeon_v12_draft1.png",
     "fileId": "barracuda_galeon_v12_draft1",
     "name": "barracuda galeon v12 draft1",
@@ -10543,6 +11838,466 @@
     "modified": "2026-03-01"
   },
   {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/Gemini_Generated_Image_mrxbwymrxbwymrxb.png",
+    "fileId": "Gemini_Generated_Image_mrxbwymrxbwymrxb",
+    "name": "Gemini Generated Image mrxbwymrxbwymrxb",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/Gemini_Generated_Image_mrxbwymrxbwymrxb.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 5355637,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/Gemini_Generated_Image_mrxbwymrxbwymrxbB.png",
+    "fileId": "Gemini_Generated_Image_mrxbwymrxbwymrxbB",
+    "name": "Gemini Generated Image mrxbwymrxbwymrxbB",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/Gemini_Generated_Image_mrxbwymrxbwymrxbB.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 1747168,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/ref silueta solo para la tela detras.png",
+    "fileId": "ref silueta solo para la tela detras",
+    "name": "ref silueta solo para la tela detras",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/ref silueta solo para la tela detras.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 134801,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/ref silueta.png",
+    "fileId": "ref silueta",
+    "name": "ref silueta",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.01_Proceso/ref silueta.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 113832,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Escena_Final_V29.png",
+    "fileId": "03.02.03.04.01_Barracuda_Escena_Final_V29",
+    "name": "Barracuda Escena Final V29",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Escena_Final_V29.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 784718,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Escena_Sintesis_V30.png",
+    "fileId": "03.02.03.04.01_Barracuda_Escena_Sintesis_V30",
+    "name": "Barracuda Escena Sintesis V30",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Escena_Sintesis_V30.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 802645,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_2x2_V1.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_2x2_V1",
+    "name": "Barracuda Exploracion 2x2 V1",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_2x2_V1.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 576484,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_2x2_V2.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_2x2_V2",
+    "name": "Barracuda Exploracion 2x2 V2",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_2x2_V2.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 605978,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_2x2_V3.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_2x2_V3",
+    "name": "Barracuda Exploracion 2x2 V3",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_2x2_V3.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 714742,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_Detalles_V10.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_Detalles_V10",
+    "name": "Barracuda Exploracion Detalles V10",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_Detalles_V10.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 768375,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_Detalles_V8.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_Detalles_V8",
+    "name": "Barracuda Exploracion Detalles V8",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_Detalles_V8.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 743549,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_Origen_V9.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_Origen_V9",
+    "name": "Barracuda Exploracion Origen V9",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_Origen_V9.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 689469,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_Pirata_2x2_V4.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_Pirata_2x2_V4",
+    "name": "Barracuda Exploracion Pirata 2x2 V4",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_Pirata_2x2_V4.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 625241,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_Pirata_2x2_V5.png",
+    "fileId": "03.02.03.04.01_Barracuda_Exploracion_Pirata_2x2_V5",
+    "name": "Barracuda Exploracion Pirata 2x2 V5",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Exploracion_Pirata_2x2_V5.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 683099,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Master_Concept_V1.png",
+    "fileId": "03.02.03.04.01_Barracuda_Master_Concept_V1",
+    "name": "Barracuda Master Concept V1",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Master_Concept_V1.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 524489,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Master_Finalistas_V13.png",
+    "fileId": "03.02.03.04.01_Barracuda_Master_Finalistas_V13",
+    "name": "Barracuda Master Finalistas V13",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.01_Barracuda_Master_Finalistas_V13.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 678846,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.03.02_Escena_Interaccion_Maestra.png",
+    "fileId": "03.02.03.04.03.02_Escena_Interaccion_Maestra",
+    "name": "Escena Interaccion Maestra",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.03.02_Escena_Interaccion_Maestra.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:pose_referencia",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 802645,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.03.03_Plano_Rostro.png",
+    "fileId": "03.02.03.04.03.03_Plano_Rostro",
+    "name": "Plano Rostro",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.02_Descartados/03.02.03.04.03.03_Plano_Rostro.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:concepto_general",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 808556,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.03_Aprobados/03.02.03.04.03.01_Concepto_Maestro_Definitivo.png",
+    "fileId": "03.02.03.04.03.01_Concepto_Maestro_Definitivo",
+    "name": "Concepto Maestro Definitivo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.03_Aprobados/03.02.03.04.03.01_Concepto_Maestro_Definitivo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:concepto_general",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 656712,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.03_Aprobados/03.02.03.04.03.02_Ref_Cuerpo_Completo.png",
+    "fileId": "03.02.03.04.03.02_Ref_Cuerpo_Completo",
+    "name": "Ref Cuerpo Completo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.03_Aprobados/03.02.03.04.03.02_Ref_Cuerpo_Completo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "content:pose_referencia",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 503510,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.04_Ref_Facial_V1.png",
+    "fileId": "03.02.03.04.04_Ref_Facial_V1",
+    "name": "Ref Facial V1",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.04_Ref_Facial_V1.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 92049,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.05_Referencia_Facial_V2.png",
+    "fileId": "03.02.03.04.05_Referencia_Facial_V2",
+    "name": "Referencia Facial V2",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.04_Capitan_Barracuda/03.02.03.04.05_Referencia_Facial_V2.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:capitan_barracuda",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 52397,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.05_Guardian_del_Eco/03.02.03.05.01_Proceso/Conceptualizacion_V1_Single.png",
+    "fileId": "Conceptualizacion_V1_Single",
+    "name": "Conceptualizacion V1 Single",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.05_Guardian_del_Eco/03.02.03.05.01_Proceso/Conceptualizacion_V1_Single.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:guardian_del_eco",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 980580,
+    "modified": "2026-03-15"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.05_Guardian_del_Eco/03.02.03.05.01_Proceso/Conceptualizacion_V2_Draft_2x2.png",
+    "fileId": "Conceptualizacion_V2_Draft_2x2",
+    "name": "Conceptualizacion V2 Draft 2x2",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.03_Personajes_Principales/03.02.03.05_Guardian_del_Eco/03.02.03.05.01_Proceso/Conceptualizacion_V2_Draft_2x2.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "char:principal",
+      "doc:imagen",
+      "entity:guardian_del_eco",
+      "img:png",
+      "obj:personaje"
+    ],
+    "size": 971772,
+    "modified": "2026-03-15"
+  },
+  {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.04_Personajes_Secundarios/03.02.04.00_SSoT.md",
     "fileId": "03.02.04.00_SSoT",
     "name": "SSoT",
@@ -10559,8 +12314,8 @@
       "txt:md",
       "type:ssot"
     ],
-    "size": 2445,
-    "modified": "2026-03-11"
+    "size": 2488,
+    "modified": "2026-03-18"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.05_Personajes_NPC/03.02.05.00_SSoT.md",
@@ -10579,8 +12334,8 @@
       "txt:md",
       "type:ssot"
     ],
-    "size": 2376,
-    "modified": "2026-03-11"
+    "size": 2419,
+    "modified": "2026-03-18"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.06_Elementos_Utileria/03.02.06.00_SSoT.md",
@@ -10636,6 +12391,159 @@
     ],
     "size": 1850,
     "modified": "2026-03-07"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_jungle_logo.png",
+    "fileId": "03.02.09.01_jungle_logo",
+    "name": "jungle logo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_jungle_logo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:proceso",
+      "img:png"
+    ],
+    "size": 121200,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_kids_logo.png",
+    "fileId": "03.02.09.01_kids_logo",
+    "name": "kids logo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_kids_logo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:proceso",
+      "img:png"
+    ],
+    "size": 53045,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_kids_logo_final.png",
+    "fileId": "03.02.09.01_kids_logo_final",
+    "name": "kids logo final",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_kids_logo_final.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:proceso",
+      "img:png"
+    ],
+    "size": 31312,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_kids_logo_v2.png",
+    "fileId": "03.02.09.01_kids_logo_v2",
+    "name": "kids logo v2",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_kids_logo_v2.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:proceso",
+      "img:png"
+    ],
+    "size": 27438,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_logo.png",
+    "fileId": "03.02.09.01_logo",
+    "name": "logo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_logo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:proceso",
+      "img:png"
+    ],
+    "size": 32729,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_official_logo.png",
+    "fileId": "03.02.09.01_official_logo",
+    "name": "official logo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_official_logo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:proceso",
+      "img:png"
+    ],
+    "size": 77147,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_official_logo_v2.png",
+    "fileId": "03.02.09.01_official_logo_v2",
+    "name": "official logo v2",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_official_logo_v2.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:proceso",
+      "img:png"
+    ],
+    "size": 31040,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_sunset_logo.png",
+    "fileId": "03.02.09.01_sunset_logo",
+    "name": "sunset logo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_sunset_logo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:proceso",
+      "img:png"
+    ],
+    "size": 79715,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_white_paper_logo.png",
+    "fileId": "03.02.09.01_white_paper_logo",
+    "name": "white paper logo",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/03_Universo/03.02_Arte/03.02.09_Identidad/03.02.09.01_Proceso/03.02.09.01_white_paper_logo.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:arte",
+      "area:universo",
+      "doc:imagen",
+      "entity:proceso",
+      "img:png"
+    ],
+    "size": 50168,
+    "modified": "2026-03-18"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.00_SSoT.md",
@@ -10728,6 +12636,21 @@
     ],
     "size": 713732,
     "modified": "2026-03-10"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/docs/Android_WebView_Wrapper.md",
+    "fileId": "Android_WebView_Wrapper",
+    "name": "Android WebView Wrapper",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/docs/Android_WebView_Wrapper.md",
+    "ext": "md",
+    "format": "md",
+    "tags": [
+      "area:proyectos",
+      "doc:texto",
+      "txt:md"
+    ],
+    "size": 2316,
+    "modified": "2026-03-18"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/docs/perfiles/01_Ninos.md",
@@ -10880,6 +12803,36 @@
     "modified": "2026-03-10"
   },
   {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/public/manifest.json",
+    "fileId": "manifest",
+    "name": "manifest",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/public/manifest.json",
+    "ext": "json",
+    "format": "json",
+    "tags": [
+      "area:proyectos",
+      "data:json",
+      "doc:datos"
+    ],
+    "size": 352,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/public/sw.js",
+    "fileId": "sw",
+    "name": "sw",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/public/sw.js",
+    "ext": "js",
+    "format": "js",
+    "tags": [
+      "area:proyectos",
+      "doc:script",
+      "script:js"
+    ],
+    "size": 1299,
+    "modified": "2026-03-18"
+  },
+  {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/README.md",
     "fileId": "README",
     "name": "README",
@@ -10908,6 +12861,21 @@
     ],
     "size": 6241,
     "modified": "2026-03-14"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/scripts/register_alma.js",
+    "fileId": "register_alma",
+    "name": "register alma",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/scripts/register_alma.js",
+    "ext": "js",
+    "format": "js",
+    "tags": [
+      "area:proyectos",
+      "doc:script",
+      "script:js"
+    ],
+    "size": 1320,
+    "modified": "2026-03-18"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/scripts/sync-assets.cjs",
@@ -11071,7 +13039,7 @@
       "doc:script",
       "script:js"
     ],
-    "size": 1633,
+    "size": 1706,
     "modified": "2026-03-14"
   },
   {
@@ -11086,8 +13054,8 @@
       "data:json",
       "doc:datos"
     ],
-    "size": 6122,
-    "modified": "2026-03-14"
+    "size": 5384,
+    "modified": "2026-03-18"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/src/core/i18n.js",
@@ -11116,7 +13084,7 @@
       "data:json",
       "doc:datos"
     ],
-    "size": 430012,
+    "size": 458842,
     "modified": "2026-03-14"
   },
   {
@@ -11131,8 +13099,8 @@
       "doc:script",
       "script:js"
     ],
-    "size": 9187,
-    "modified": "2026-03-14"
+    "size": 10291,
+    "modified": "2026-03-15"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/src/core/supabaseClient.js",
@@ -11176,8 +13144,8 @@
       "doc:script",
       "script:jsx"
     ],
-    "size": 229,
-    "modified": "2026-03-08"
+    "size": 603,
+    "modified": "2026-03-18"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.02_Portal_Unificado/tailwind.config.js",
@@ -11221,8 +13189,263 @@
       "doc:script",
       "script:js"
     ],
-    "size": 302,
+    "size": 274,
     "modified": "2026-03-14"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/ic_launcher-playstore.png",
+    "fileId": "ic_launcher-playstore",
+    "name": "ic launcher-playstore",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/ic_launcher-playstore.png",
+    "ext": "png",
+    "format": "png",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:png"
+    ],
+    "size": 699278,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+    "fileId": "ic_launcher",
+    "name": "ic launcher",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 7796,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.webp",
+    "fileId": "ic_launcher_foreground",
+    "name": "ic launcher foreground",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 49932,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp",
+    "fileId": "ic_launcher_round",
+    "name": "ic launcher round",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 9718,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-mdpi/ic_launcher.webp",
+    "fileId": "ic_launcher",
+    "name": "ic launcher",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-mdpi/ic_launcher.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 4218,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.webp",
+    "fileId": "ic_launcher_foreground",
+    "name": "ic launcher foreground",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 23702,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp",
+    "fileId": "ic_launcher_round",
+    "name": "ic launcher round",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 5006,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xhdpi/ic_launcher.webp",
+    "fileId": "ic_launcher",
+    "name": "ic launcher",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xhdpi/ic_launcher.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 12874,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.webp",
+    "fileId": "ic_launcher_foreground",
+    "name": "ic launcher foreground",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 83688,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp",
+    "fileId": "ic_launcher_round",
+    "name": "ic launcher round",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 15388,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp",
+    "fileId": "ic_launcher",
+    "name": "ic launcher",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 25820,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.webp",
+    "fileId": "ic_launcher_foreground",
+    "name": "ic launcher foreground",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 168792,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp",
+    "fileId": "ic_launcher_round",
+    "name": "ic launcher round",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 29812,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp",
+    "fileId": "ic_launcher",
+    "name": "ic launcher",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 41540,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.webp",
+    "fileId": "ic_launcher_foreground",
+    "name": "ic launcher foreground",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 281284,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp",
+    "fileId": "ic_launcher_round",
+    "name": "ic launcher round",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/04.03_PortalIsla_App/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp",
+    "ext": "webp",
+    "format": "webp",
+    "tags": [
+      "area:proyectos",
+      "doc:imagen",
+      "img:webp"
+    ],
+    "size": 47460,
+    "modified": "2026-03-18"
+  },
+  {
+    "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/exclude.txt",
+    "fileId": "exclude",
+    "name": "exclude",
+    "path": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/04_Proyectos/exclude.txt",
+    "ext": "txt",
+    "format": "txt",
+    "tags": [
+      "area:proyectos",
+      "doc:texto",
+      "txt:txt"
+    ],
+    "size": 26,
+    "modified": "2026-03-18"
   },
   {
     "id": "c:/Users/Ariel Deyá/Documents/Isla de Altos Mares/isla de altos mares 4.0/split_blueprint.py",
