@@ -87,12 +87,24 @@ export const MODULE_REGISTRY = {
     '03.02.03.04': {
         id: '03.02.03.04', name: 'Capitán Barracuda', type: 'Principal', morality: 'negativo', status: 'coming_soon',
         gradient: 'from-cyan-950 via-blue-950 to-teal-900',
-        progress: { narrativa: 100, arte: 0, hd: 0 }, assets: {}
+        progress: { narrativa: 100, arte: 0, hd: 0 },
+        lore: {
+            bio_short: 'Sombra del Padre y carcelero emocional. Personifica el miedo al abandono y la paradoja del sacrificio percibido como falta.',
+            bio_full: 'Barracuda cree estar haciendo lo correcto al imponer la distancia. Refleja el temor del Padre a que su esfuerzo por darles un futuro sea interpretado por sus hijos como un abandono definitivo.',
+            psych_profile: 'Mecanismo de defensa extremo. Herida de abandono activa. Arquetipo: La Sombra / El Sacrificio Malinterpretado.'
+        },
+        assets: {}
     },
     '03.02.03.05': {
         id: '03.02.03.05', name: 'Guardián del Eco', type: 'Principal', morality: 'neutral', status: 'coming_soon',
         gradient: 'from-emerald-950 via-green-950 to-teal-900',
-        progress: { narrativa: 80, arte: 0, hd: 0 }, assets: {}
+        progress: { narrativa: 100, arte: 0, hd: 0 },
+        lore: {
+            bio_short: 'Manifestación subconsciente de la protección del Padre. La armadura que evade la emoción para no quebrarse.',
+            bio_full: 'El Guardián es el impulso puro de proteger. Evita mostrar sentimientos porque cree que la emoción debilita su función de escudo, sirviendo como la armadura que hizo fuerte al Padre en su mayor vulnerabilidad.',
+            psych_profile: 'Respuesta de protección activa. Contención emocional estricta. Arquetipo: El Escudo / La Armadura del Alma.'
+        },
+        assets: {}
     },
 
     // ── SECUNDARIOS — EN DESARROLLO ───────────────────────────────

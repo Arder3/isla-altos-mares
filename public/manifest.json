@@ -1,0 +1,16 @@
+{
+  "name": "Isla de Altos Mares - Portal",
+  "short_name": "IdAM Portal",
+  "description": "Portal Unificado de Isla de Altos Mares",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
