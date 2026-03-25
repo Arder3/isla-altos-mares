@@ -1,0 +1,319 @@
+[
+  {
+    "type": "area_selection",
+    "rect": {
+      "x": 10,
+      "y": 182,
+      "w": 672,
+      "h": 266
+    },
+    "comment": "los elementos que agregaste aqui son parte de una seccion que mefalto por agregar que seria algo asi como galeria donde este imagenes del proceso valiosas para el sistema.",
+    "path": "/",
+    "viewport": {
+      "width": 1366,
+      "height": 607
+    },
+    "id": "acc30481-d766-4149-babe-dac54bf834e5",
+    "timestamp": "2026-03-23T04:36:49.373Z"
+  },
+  {
+    "type": "area_selection",
+    "rect": {
+      "x": 32,
+      "y": 117,
+      "w": 712,
+      "h": 326
+    },
+    "comment": "aqui faltan son 8",
+    "path": "/",
+    "viewport": {
+      "width": 1366,
+      "height": 607
+    },
+    "id": "fd8a6b49-0f0b-4d0f-8be1-257320a9233a",
+    "timestamp": "2026-03-23T04:37:12.566Z"
+  },
+  {
+    "type": "area_selection",
+    "rect": {
+      "x": 44,
+      "y": 196,
+      "w": 829,
+      "h": 293
+    },
+    "comment": "aqui faltan son 8 turn around rostro",
+    "path": "/",
+    "viewport": {
+      "width": 1366,
+      "height": 607
+    },
+    "id": "f2f93d1a-27b4-43df-a962-2fe08f0b582c",
+    "timestamp": "2026-03-23T04:37:27.334Z"
+  },
+  {
+    "type": "area_selection",
+    "rect": {
+      "x": 16,
+      "y": 17,
+      "w": 1310,
+      "h": 360
+    },
+    "comment": "en esta area debio estar presente el hero azul con lineas blancasque ya tenemos",
+    "path": "/",
+    "viewport": {
+      "width": 1366,
+      "height": 607
+    },
+    "id": "dc6930da-249c-4e61-8f26-29a2188cd4bf",
+    "timestamp": "2026-03-23T04:40:21.134Z"
+  },
+  {
+    "type": "area_selection",
+    "rect": {
+      "x": 137,
+      "y": 481,
+      "w": 205,
+      "h": 64
+    },
+    "comment": "Test AI feedback save.",
+    "path": "/",
+    "viewport": {
+      "width": 1366,
+      "height": 641
+    },
+    "id": "66371e6e-901f-4a69-ac5f-ee86d8361f78",
+    "timestamp": "2026-03-23T04:50:40.961Z"
+  },
+  {
+    "type": "area_selection",
+    "rect": {
+      "x": 416,
+      "y": 103,
+      "w": 805,
+      "h": 441
+    },
+    "comment": "Todos los personajes deverian estar aqui",
+    "path": "/",
+    "viewport": {
+      "width": 1366,
+      "height": 607
+    },
+    "id": "05ab57c4-5f5d-4860-98b2-d0252382837d",
+    "timestamp": "2026-03-23T18:25:10.396Z"
+  },
+  {
+    "type": "area_selection",
+    "rect": {
+      "x": 577,
+      "y": 171,
+      "w": 681,
+      "h": 279
+    },
+    "comment": "Deverian estar todas las tajetas de todos los personajes. aunque marquen en proceso",
+    "path": "/",
+    "viewport": {
+      "width": 1366,
+      "height": 607
+    },
+    "id": "1e248dba-9da9-47d7-a3f7-4ebfa7389853",
+    "timestamp": "2026-03-23T18:26:47.721Z"
+  },
+  {
+    "user_id": "4fcb804e-bdcd-4973-b352-4f10b333027c",
+    "user_role": "host",
+    "target_type": "area",
+    "target_data": {
+      "type": "area_selection",
+      "rect": {
+        "x": 65,
+        "y": 38,
+        "w": 196,
+        "h": 32
+      },
+      "viewport": {
+        "width": 1366,
+        "height": 607
+      }
+    },
+    "content": "Aqui deveria esta la ruta seguida por el usuaro Home>Personajes>personaje X asi puede navegarse mas rapidamente\n",
+    "path": "/",
+    "timestamp": "2026-03-23T19:14:35.456Z",
+    "id": "c349ee19-c203-4899-bc9e-19a33e0e7710"
+  },
+  {
+    "user_id": "4fcb804e-bdcd-4973-b352-4f10b333027c",
+    "user_role": "host",
+    "target_type": "area",
+    "target_data": {
+      "type": "area_selection",
+      "rect": {
+        "x": 27,
+        "y": 16,
+        "w": 1311,
+        "h": 390
+      },
+      "viewport": {
+        "width": 1366,
+        "height": 607
+      }
+    },
+    "content": "en esta area tenia que estar el hero como lo hicimos ates en las fichas de personaje 1.0\n",
+    "path": "/",
+    "timestamp": "2026-03-23T19:23:28.797Z",
+    "id": "f78bbbf3-16ad-4adf-94a2-dd8d401f66dd"
+  },
+  {
+    "user_id": "4fcb804e-bdcd-4973-b352-4f10b333027c",
+    "user_role": "host",
+    "target_type": "area",
+    "target_data": {
+      "type": "area_selection",
+      "rect": {
+        "x": 87,
+        "y": 191,
+        "w": 815,
+        "h": 330
+      },
+      "viewport": {
+        "width": 1366,
+        "height": 607
+      }
+    },
+    "content": "tenemos ya las 8 vistas tur around de alma de cuerpo entero pero no estan aqui. por favor cuando agreges todaslas imagenes que sea secuencial o sea que paresca que la camara roto en orden a aus alrededor",
+    "path": "/",
+    "timestamp": "2026-03-24T11:09:54.165Z",
+    "id": "f96c0967-7548-461e-bb0f-d69e9c1a7e4a"
+  },
+  {
+    "user_id": "4fcb804e-bdcd-4973-b352-4f10b333027c",
+    "user_role": "host",
+    "target_type": "area",
+    "target_data": {
+      "type": "area_selection",
+      "rect": {
+        "x": 95,
+        "y": 119,
+        "w": 764,
+        "h": 270
+      },
+      "viewport": {
+        "width": 1366,
+        "height": 607
+      }
+    },
+    "content": "me faltan vistas de turn aroundel rostro de alma. Si alguna imagen falta  creemos una imagen que solo diga en proceso pero que reconosca que es trabajo pendiente . son 8 vistas\n",
+    "path": "/",
+    "timestamp": "2026-03-24T11:11:24.564Z",
+    "id": "f5e2da9a-b224-4f52-bb4c-7c635825c910"
+  },
+  {
+    "user_id": "4fcb804e-bdcd-4973-b352-4f10b333027c",
+    "user_role": "host",
+    "target_type": "area",
+    "target_data": {
+      "type": "area_selection",
+      "rect": {
+        "x": 121,
+        "y": 180,
+        "w": 677,
+        "h": 309
+      },
+      "viewport": {
+        "width": 1366,
+        "height": 607
+      }
+    },
+    "content": "s faltan iagenes debemos rellenar el espacion con una imagen del miso formato , que se repita en todas las ausentes. pero que deje claro que es una imagen que aun no esta lista.esto ayuda a generar una idea de que esperar para los usuarios. esto has que sea escalable a todo lo que es estandar dentro de la presentacion de imagenes de un personaje\n",
+    "path": "/",
+    "timestamp": "2026-03-24T11:13:12.918Z",
+    "id": "202fd51e-e6d4-45ce-bd09-fb2d25809a6f"
+  },
+  {
+    "user_id": "4fcb804e-bdcd-4973-b352-4f10b333027c",
+    "user_role": "host",
+    "target_type": "area",
+    "target_data": {
+      "type": "area_selection",
+      "rect": {
+        "x": 115,
+        "y": 260,
+        "w": 737,
+        "h": 220
+      },
+      "viewport": {
+        "width": 1366,
+        "height": 607
+      }
+    },
+    "content": "acting son 3 areas para todos los personajes. \nexprecion corporal\nexpresion Facial\nexpresion de las manos",
+    "path": "/",
+    "timestamp": "2026-03-24T11:15:05.045Z",
+    "id": "a90cd29d-f4f7-4124-97cd-e271d41341b6"
+  },
+  {
+    "user_id": "4fcb804e-bdcd-4973-b352-4f10b333027c",
+    "user_role": "host",
+    "target_type": "area",
+    "target_data": {
+      "type": "area_selection",
+      "rect": {
+        "x": 1053,
+        "y": 7,
+        "w": 308,
+        "h": 112
+      },
+      "viewport": {
+        "width": 1366,
+        "height": 607
+      }
+    },
+    "content": "esto botones no se adaptaron bien al ligth/dark. ademas estan compartiendo el mismo espaco",
+    "path": "/",
+    "timestamp": "2026-03-25T15:10:49.461Z",
+    "id": "5c434b63-b33a-48fa-95eb-6b883422649c"
+  },
+  {
+    "user_id": "4fcb804e-bdcd-4973-b352-4f10b333027c",
+    "user_role": "host",
+    "target_type": "area",
+    "target_data": {
+      "type": "area_selection",
+      "rect": {
+        "x": 1143,
+        "y": 1,
+        "w": 206,
+        "h": 84
+      },
+      "viewport": {
+        "width": 1366,
+        "height": 607
+      }
+    },
+    "content": "estos botono setan superpuestos con otros y no repetan la logica dark ligth\n",
+    "path": "/",
+    "timestamp": "2026-03-25T15:53:47.500Z",
+    "id": "bf95c2ab-aebe-49ba-9908-c8b1cf0765d5"
+  },
+  {
+    "user_id": "4fcb804e-bdcd-4973-b352-4f10b333027c",
+    "user_role": "host",
+    "target_type": "area",
+    "target_data": {
+      "type": "area_selection",
+      "rect": {
+        "x": 4,
+        "y": 18,
+        "w": 1351,
+        "h": 572
+      },
+      "viewport": {
+        "width": 1366,
+        "height": 607
+      }
+    },
+    "content": "puede que me confundiera y es la ventana commkleta la que no esta repetando dark ligth'\n",
+    "path": "/",
+    "timestamp": "2026-03-25T15:54:23.140Z",
+    "id": "e2fe29d6-4379-4c29-9792-e53f424b7be5"
+  }
+]

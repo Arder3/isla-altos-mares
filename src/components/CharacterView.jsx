@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { resolveAssetUrl } from '../core/AssetResolver';
 import { MODULE_REGISTRY, PROFILE_REGISTRY, LORE_ACCESS } from '../core/registry';
 import galleryManifest from '../core/gallery_manifest.json';
+import posthog from '../core/analytics';
 import { ArrowLeft, Lock, X, ZoomIn, ZoomOut, Image as ImageIcon } from 'lucide-react';
 import { getTranslation as t } from '../core/i18n';
 
@@ -148,6 +149,25 @@ export default function CharacterView({ lang, charId, activeProfile, roleLabel, 
     ];
     const [activeTabKey, setActiveTabKey] = useState(TABS[0].key);
     const [lightboxSrc, setLightboxSrc] = useState(null);
+
+    // ── TRACKING ──
+    useEffect(() => {
+        posthog.capture('change_tab', { 
+            tab: activeTabKey, 
+            character_id: charId,
+            character_name: char.name 
+        });
+    }, [activeTabKey, charId, char.name]);
+
+    useEffect(() => {
+        if (lightboxSrc) {
+            posthog.capture('open_lightbox', { 
+                asset_url: lightboxSrc,
+                character_id: charId,
+                character_name: char.name 
+            });
+        }
+    }, [lightboxSrc, charId, char.name]);
     const [isVertical, setIsVertical] = useState(window.matchMedia('(orientation: portrait)').matches);
     const [isPc, setIsPc] = useState(window.innerWidth > 1024 || window.matchMedia('(pointer: fine)').matches);
 

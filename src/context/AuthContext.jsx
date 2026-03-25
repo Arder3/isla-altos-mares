@@ -29,7 +29,8 @@ export function AuthProvider({ children }) {
 
     useEffect(() => {
         // Check initial session
-        supabase.auth.getSession().then(({ data: { session } }) => {
+        supabase.auth.getSession().then(({ data, error }) => {
+            const session = data?.session;
             setUser(session?.user ?? null);
             if (session?.user) fetchProfile(session.user.id);
             setLoading(false);

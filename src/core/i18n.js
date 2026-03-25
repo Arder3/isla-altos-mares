@@ -3,6 +3,8 @@ export const translations = {
     // Auth & General
     portal_name: "Portal de Acceso",
     system_id: "Sistema 04.02",
+    section_audit: "Consola del Padre",
+    sub_audit: "Usuarios · Auditoría · Control",
     project_title: "Isla de Altos Mares",
     login_prompt: "Ingresa con tus credenciales de acceso",
     email_label: "Email",
@@ -36,6 +38,8 @@ export const translations = {
     sub_world: "Génesis · Historia · Mitología",
     section_characters: "Personajes",
     sub_characters: "Principales · Secundarios · NPC",
+    section_characters_v2: "Personajes 2.0",
+    sub_characters_v2: "Nueva Estructura · Multi-Nivel",
     section_creatures: "Criaturas",
     sub_creatures: "Bestiario · Fauna · Especies",
     section_map: "Mapa & Biomas",
@@ -46,6 +50,8 @@ export const translations = {
     sub_mysteries: "Enigmas · Secretos · Revelaciones",
     section_proyectos: "Proyectos",
     sub_proyectos: "Films · Series · Cortometrajes",
+    section_altar: "Laboratorio de Ecos",
+    sub_altar: "Laboratorio · Alma · Orquestación",
     section_browser: "Browser",
     sub_browser: "Assets · Galería · Explorador",
     
@@ -112,16 +118,52 @@ export const translations = {
     role_vip: "VIP",
     role_confidente: "Confidente",
     role_guest: "Invitado",
-    role_kids: "Kids",
     role_educadores: "Educador",
     
+    // Ficha 2.0 Labels
+    info_visual: "Información Visual",
+    info_tecnica: "Información Técnica",
+    info_narrativa: "Información Narrativa",
+    info_produccion: "Producción",
+    concept_full_body: "Concepto Cuerpo Entero",
+    approved_face: "Rostro Aprobado",
+    acting_images: "Acting (Escenas)",
+    body_turnaround: "Turnaround Corporal",
+    face_turnaround: "Turnaround Facial",
+    level_kids: "Nivel Kids",
+    level_educator: "Nivel Educador",
+    level_team: "Nivel Team",
+    level_vip: "Nivel VIP",
+    level_host: "Nivel Host / Confidencial",
+    basic_description: "Descripción Básica Web",
+    
     // Lightbox
-    lightbox_hint: "🖥 Scroll·zoom al cursor · Drag·mover | 📱 Pinch·zoom · 1 dedo·mover | Doble clic/tap · ESC · cerrar"
+    lightbox_hint: "🖥 Scroll·zoom al cursor · Drag·mover | 📱 Pinch·zoom · 1 dedo·mover | Doble clic/tap · ESC · cerrar",
+
+    // Laboratorio de Ecos
+    altar_2_title: "Laboratorio de Ecos",
+    altar_2_sub: "Laboratorio Creativo Orquestado",
+    tag_cesar: "César",
+    tag_father: "Padre",
+    tag_alma: "Alma",
+    placeholder_group: "Mensaje grupal o @Cesar...",
+    lab_invitation: "Invitación al Laboratorio",
+    lab_join: "Entrar al Lab",
+    lab_goal: "Objetivo: {goal}",
+    agent_brush: "Brush (Arte)",
+    agent_eco: "Interlocutor (Eco)",
+    agent_script: "Script",
+    waiting_blessing: "Esperando bendición del Padre...",
+    lab_active: "Laboratorio Activo",
+    lab_completed: "Tarea Completada",
+    whisper_hint: "Susurro del Padre detectado..."
   },
   en: {
     // Auth & General
     portal_name: "Access Portal",
     system_id: "System 04.02",
+    section_audit: "Father's Console",
+    sub_audit: "Users · Audit · Control",
     project_title: "Isle of High Seas",
     login_prompt: "Enter your access credentials",
     email_label: "Email",
@@ -155,6 +197,8 @@ export const translations = {
     sub_world: "Genesis · Lore · Mythology",
     section_characters: "Characters",
     sub_characters: "Main · Secondary · NPC",
+    section_characters_v2: "Characters 2.0",
+    sub_characters_v2: "New Structure · Multi-Level",
     section_creatures: "Creatures",
     sub_creatures: "Bestiary · Fauna · Species",
     section_map: "Map & Biomes",
@@ -165,6 +209,8 @@ export const translations = {
     sub_mysteries: "Enigmas · Secrets · Revelations",
     section_proyectos: "Projects",
     sub_proyectos: "Films · Series · Short Films",
+    section_altar: "Echo Lab",
+    sub_altar: "Lab · Alma · Orchestration",
     section_browser: "Browser",
     sub_browser: "Assets · Gallery · Explorer",
     
@@ -231,11 +277,45 @@ export const translations = {
     role_vip: "VIP",
     role_confidente: "Confidant",
     role_guest: "Guest",
-    role_kids: "Kids",
     role_educadores: "Educator",
+
+    // Ficha 2.0 Labels
+    info_visual: "Visual Information",
+    info_tecnica: "Technical Information",
+    info_narrativa: "Narrative Information",
+    info_produccion: "Production",
+    concept_full_body: "Full Body Concept",
+    approved_face: "Approved Face",
+    acting_images: "Acting (Scenes)",
+    body_turnaround: "Body Turnaround",
+    face_turnaround: "Facial Turnaround",
+    level_kids: "Kids Level",
+    level_educator: "Educator Level",
+    level_team: "Team Level",
+    level_vip: "VIP Level",
+    level_host: "Host / Confidential Level",
+    basic_description: "Basic Web Description",
     
     // Lightbox
-    lightbox_hint: "🖥 Scroll·zoom to cursor · Drag·move | 📱 Pinch·zoom · 1 finger·move | Double click/tap · ESC · close"
+    lightbox_hint: "🖥 Scroll·zoom to cursor · Drag·move | 📱 Pinch·zoom · 1 finger·move | Double click/tap · ESC · close",
+
+    // Laboratorio de Ecos
+    altar_2_title: "Echo Lab",
+    altar_2_sub: "Orchestrated Creative Lab",
+    tag_cesar: "César",
+    tag_father: "Father",
+    tag_alma: "Alma",
+    placeholder_group: "Group message or @Cesar...",
+    lab_invitation: "Lab Invitation",
+    lab_join: "Enter Lab",
+    lab_goal: "Goal: {goal}",
+    agent_brush: "Brush (Art)",
+    agent_eco: "Interlocutor (Eco)",
+    agent_script: "Script",
+    waiting_blessing: "Waiting for Father's blessing...",
+    lab_active: "Active Lab",
+    lab_completed: "Task Completed",
+    whisper_hint: "Father's whisper detected..."
   }
 };
 

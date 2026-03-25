@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import LoginPage from './components/LoginPage';
 import CharacterView from './components/CharacterView';
+import CharacterViewV2 from './components/CharacterViewV2';
 import BrowserView from './components/BrowserView';
+import HostAuditPanel from './components/HostAuditPanel';
+import AltarEchoes from './components/AltarEchoes';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MODULE_REGISTRY, PROFILE_REGISTRY } from './core/registry';
 import { resolveAssetUrl } from './core/AssetResolver';
@@ -10,6 +13,8 @@ import posthog from './core/analytics';
 import { Eye, LogOut, ArrowLeft, Sun, Moon, ChevronRight, Languages, Bell, BellOff } from 'lucide-react';
 import { getTranslation as t } from './core/i18n';
 import NotificationSystem from './components/NotificationSystem';
+import { FeedbackProvider } from './components/FeedbackSystem';
+import Breadcrumbs from './components/Breadcrumbs';
 
 // ── Role → Profile key ──
 const ROLE_TO_PROFILE = {
@@ -32,12 +37,15 @@ const VIEW_AS_ROLES = [
 const SECTIONS = [
   { id: 'world', label: 'Creación del Mundo', sublabel: 'Génesis · Historia · Mitología', emoji: '🌊', gradient: 'from-blue-950 via-indigo-900 to-blue-900', status: 'coming_soon' },
   { id: 'characters', label: 'Personajes', sublabel: 'Principales · Secundarios · NPC', emoji: '👥', gradient: 'from-stone-900 via-neutral-800 to-stone-900', status: 'active' },
+  { id: 'characters_v2', label: 'Ficha 2.0', sublabel: 'Nueva Estructura · Multi-Nivel', emoji: '💎', gradient: 'from-amber-600 via-orange-500 to-amber-700', status: 'active' },
   { id: 'creatures', label: 'Criaturas', sublabel: 'Bestiario · Fauna · Especies', emoji: '🦎', gradient: 'from-emerald-950 via-green-900 to-teal-900', status: 'coming_soon' },
   { id: 'map', label: 'Mapa & Biomas', sublabel: 'Territorios · Locaciones · Rutas', emoji: '🗺️', gradient: 'from-amber-950 via-yellow-900 to-orange-900', status: 'coming_soon' },
   { id: 'artifacts', label: 'Artefactos', sublabel: 'Objetos · Reliquias · Tecnología', emoji: '⚙️', gradient: 'from-violet-950 via-purple-900 to-fuchsia-900', status: 'coming_soon' },
   { id: 'mysteries', label: 'Misterios', sublabel: 'Enigmas · Secretos · Revelaciones', emoji: '🔮', gradient: 'from-rose-950 via-pink-900 to-red-900', status: 'coming_soon' },
   { id: 'proyectos', label: 'Proyectos', sublabel: 'Films · Series · Cortometrajes', emoji: '🎬', gradient: 'from-sky-950 via-cyan-900 to-blue-900', status: 'coming_soon' },
+  { id: 'altar', label: 'Laboratorio de Ecos', sublabel: 'Génesis · Alma · Orquestación', emoji: '✨', gradient: 'from-indigo-950 via-slate-900 to-indigo-900', status: 'active' },
   { id: 'browser', label: 'Browser', sublabel: 'Assets · Galería · Explorador', emoji: '🖼️', gradient: 'from-slate-900 via-zinc-800 to-slate-900', status: 'active' },
+  { id: 'audit', label: 'Consola del Padre', sublabel: 'Usuarios · Auditoría · Control', emoji: '🛡️', gradient: 'from-zinc-900 via-neutral-800 to-zinc-900', status: 'active', hostOnly: true },
 ];
 
 // ── Progress bars ──
@@ -167,18 +175,31 @@ function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
   const [filterMorality, setFilterMorality] = useState('all');
   const [viewAsId, setViewAsId] = useState(null);
   const [viewAsProfileKey, setViewAsProfileKey] = useState(null);
+  const [auditUser, setAuditUser] = useState(null); // User being impersonated by Host
+  const [useFichaV2, setUseFichaV2] = useState(false);
 
+  // ── TRACKING ──
+  useEffect(() => {
+    if (activeSection) {
+      posthog.capture('view_section', { section: activeSection, role: profile?.rol });
+    }
+  }, [activeSection, profile?.rol]);
 
-  if (loading) return (
-    <div className="min-h-screen bg-[#050505] flex items-center justify-center">
-      <div className="w-8 h-8 border-2 border-white/10 border-t-white rounded-full animate-spin" />
-    </div>
-  );
+  useEffect(() => {
+    if (selectedCharId) {
+      posthog.capture('view_character', { 
+        character_id: selectedCharId, 
+        name: MODULE_REGISTRY[selectedCharId]?.name,
+        role: profile?.rol 
+      });
+    }
+  }, [selectedCharId, profile?.rol]);
 
   const isHost = profile?.rol === 'host';
   const realProfileKey = profile?.rol ? ROLE_TO_PROFILE[profile.rol] || 'producer' : 'producer';
-  const activeProfileKey = isHost && viewAsProfileKey ? viewAsProfileKey : realProfileKey;
-  const activeViewId = viewAsId || (profile?.rol || 'host');
+  // When impersonating, use the audited user's role
+  const activeViewId = auditUser ? auditUser.rol : (viewAsId || (profile?.rol || 'host'));
+  const activeProfileKey = isHost && viewAsProfileKey ? viewAsProfileKey : (auditUser ? (ROLE_TO_PROFILE[auditUser.rol] || 'producer') : realProfileKey);
   const activeRole = VIEW_AS_ROLES.find(r => r.id === activeViewId) || VIEW_AS_ROLES[0];
   const stripeColor = activeRole.bannerColor;
 
@@ -199,35 +220,13 @@ function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
   );
 
   const isCharAccessible = (char) => {
+    if (isHost) return true; // Host sees everything
     const p = PROFILE_REGISTRY[activeProfileKey];
     if (!p) return true;
     return p.access.some(id => char.id === id || char.id.startsWith(id) || id.startsWith(char.id));
   };
 
   const goHome = () => { setActiveSection(null); setSelectedCharId(null); setFilterType('all'); setFilterMorality('all'); };
-
-  // Browser section
-  if (activeSection === 'browser') return (
-    <>
-      {stripeColor && (
-        <motion.div key={activeViewId}
-          initial={{ scaleX: 0 }} animate={{ scaleX: 1 }}
-          transition={{ duration: 0.35 }}
-          style={{ backgroundColor: stripeColor, transformOrigin: 'left' }}
-          className="fixed top-0 left-0 right-0 z-[110] h-[3px]"
-        />
-      )}
-      <GlobalChrome
-        lang={lang} setLang={setLang}
-        viewAsId={activeViewId} setViewAsId={setViewAsId}
-        setViewAsProfileKey={setViewAsProfileKey} signOut={signOut}
-        isLightMode={isLightMode}
-        onToggleTheme={(next) => { setThemeOverride(next); }}
-        isHost={isHost}
-      />
-      <BrowserView lang={lang} onBack={goHome} />
-    </>
-  );
 
   const TYPE_FILTERS = ['all', 'main', 'secondary', 'npc'];
   const MORALITY_FILTERS = ['all', 'positive', 'negative', 'neutral'];
@@ -238,7 +237,6 @@ function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
     const effectiveMoralMatch = filterMorality === 'all' || char.morality === moralKeyMap[filterMorality];
     return typeMatch && effectiveMoralMatch;
   });
-
   return (
     <>
       <NotificationSystem lang={lang} onReview={() => setActiveSection('browser')} />
@@ -254,7 +252,8 @@ function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
 
       <GlobalChrome 
         lang={lang} setLang={setLang}
-        viewAsId={activeViewId} setViewAsId={setViewAsId} 
+        viewAsId={auditUser ? auditUser.rol : activeViewId}
+        setViewAsId={(id) => { setAuditUser(null); setViewAsId(id); }}
         setViewAsProfileKey={setViewAsProfileKey} signOut={signOut} 
         isLightMode={isLightMode} 
         onToggleTheme={(next) => {
@@ -263,103 +262,141 @@ function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
         isHost={isHost}
       />
 
-      <AnimatePresence mode="wait">
-        {selectedCharId ? (
-          <motion.div key="char-view" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="pt-8">
-            <CharacterView lang={lang} charId={selectedCharId} activeProfile={activeProfileKey} roleLabel={activeRole.label} onBack={() => setSelectedCharId(null)} />
-          </motion.div>
-        ) : activeSection === 'characters' ? (
-          <motion.div key="characters" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="p-8 md:p-12 max-w-7xl mx-auto">
-            <div className="mb-12">
-              <button onClick={goHome} className="flex items-center gap-2 text-[var(--text-dim)] hover:text-[var(--text-primary)] transition-colors mb-6 group text-xs font-mono uppercase tracking-widest">
-                <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
-                {t(lang, 'back_to_portal')}
-              </button>
-              <h1 className="text-5xl font-black uppercase tracking-tighter">{t(lang, 'section_characters')}</h1>
-              <p className="text-[var(--text-dim)] font-mono text-xs mt-1 uppercase tracking-widest">{t(lang, 'sub_characters')}</p>
-            </div>
+      {/* Audit impersonation banner */}
+      {auditUser && (
+        <div className="fixed top-0 left-0 right-0 z-[105] bg-amber-500/90 backdrop-blur text-black py-1.5 px-4 flex items-center justify-between text-[10px] font-mono uppercase tracking-widest">
+          <span>🛡️ Modo Auditoría — Viendo como: <strong>{auditUser.nombre_display || auditUser.email}</strong> [{auditUser.rol}]</span>
+          <button onClick={() => { setAuditUser(null); setActiveSection('audit'); }} className="hover:underline">✕ Salir</button>
+        </div>
+      )}
 
-            <div className="flex flex-col gap-4 mb-10">
-              <div className="flex items-center gap-4">
-                <span className="text-[var(--text-dim)] font-mono text-[9px] uppercase tracking-widest w-20">{t(lang, 'importance')}</span>
-                <div className="flex gap-2">
-                  {TYPE_FILTERS.map(f => (
-                    <button key={f} onClick={() => setFilterType(f)} className={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest transition-all ${filterType === f ? 'bg-[var(--accent-primary)] text-[var(--accent-invert)]' : 'border border-[var(--border-secondary)] text-[var(--text-dim)] hover:text-[var(--text-primary)]'}`}>{t(lang, f)}</button>
-                  ))}
+      <FeedbackProvider isHost={isHost} user={user} profile={profile}>
+        <AnimatePresence mode="wait">
+          {activeSection === 'altar' ? (
+            <AltarEchoes lang={lang} onBack={goHome} viewAsRole={auditUser ? auditUser.rol : activeViewId} />
+          ) : activeSection === 'browser' ? (
+            <BrowserView lang={lang} onBack={goHome} />
+          ) : activeSection === 'audit' ? (
+            <HostAuditPanel
+              onBack={goHome}
+              onImpersonate={(u) => { setAuditUser(u); setActiveSection(null); }}
+            />
+          ) : selectedCharId ? (
+            <motion.div key="char-view" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="p-8 md:p-12 max-w-7xl mx-auto pt-8">
+              <Breadcrumbs 
+                activeSection={activeSection} 
+                selectedCharId={selectedCharId} 
+                charName={MODULE_REGISTRY[selectedCharId]?.name} 
+                onNavigate={(id) => {
+                  if (id === 'home') goHome();
+                  if (id === 'section') setSelectedCharId(null);
+                }}
+                lang={lang}
+              />
+              {activeSection === 'characters_v2' || useFichaV2 ? (
+                  <CharacterViewV2 lang={lang} charId={selectedCharId} activeProfile={activeProfileKey} onBack={() => setSelectedCharId(null)} />
+              ) : (
+                  <CharacterView lang={lang} charId={selectedCharId} activeProfile={activeProfileKey} roleLabel={activeRole.label} onBack={() => setSelectedCharId(null)} />
+              )}
+            </motion.div>
+          ) : (activeSection === 'characters' || activeSection === 'characters_v2') ? (
+            <motion.div key="characters" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="p-8 md:p-12 max-w-7xl mx-auto pt-8">
+              <Breadcrumbs 
+                activeSection={activeSection} 
+                onNavigate={(id) => id === 'home' && goHome()} 
+                lang={lang} 
+              />
+              <div className="mb-12">
+                <button onClick={goHome} className="flex items-center gap-2 text-[var(--text-dim)] hover:text-[var(--text-primary)] transition-colors mb-6 group text-xs font-mono uppercase tracking-widest">
+                  <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
+                  {t(lang, 'back_to_portal')}
+                </button>
+                <h1 className="text-5xl font-black uppercase tracking-tighter">{activeSection === 'characters_v2' ? t(lang, 'section_characters_v2') : t(lang, 'section_characters')}</h1>
+                <p className="text-[var(--text-dim)] font-mono text-xs mt-1 uppercase tracking-widest">{activeSection === 'characters_v2' ? t(lang, 'sub_characters_v2') : t(lang, 'sub_characters')}</p>
+              </div>
+
+              <div className="flex flex-col gap-4 mb-10">
+                <div className="flex items-center gap-4">
+                  <span className="text-[var(--text-dim)] font-mono text-[9px] uppercase tracking-widest w-20">{t(lang, 'importance')}</span>
+                  <div className="flex gap-2">
+                    {TYPE_FILTERS.map(f => (
+                      <button key={f} onClick={() => setFilterType(f)} className={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest transition-all ${filterType === f ? 'bg-[var(--accent-primary)] text-[var(--accent-invert)]' : 'border border-[var(--border-secondary)] text-[var(--text-dim)] hover:text-[var(--text-primary)]'}`}>{t(lang, f)}</button>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="text-[var(--text-dim)] font-mono text-[9px] uppercase tracking-widest w-20">{t(lang, 'morality')}</span>
+                  <div className="flex gap-2">
+                    {MORALITY_FILTERS.map(f => (
+                      <button key={f} onClick={() => setFilterMorality(f)} className={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest transition-all ${filterMorality === f ? 'bg-[var(--accent-primary)] text-[var(--accent-invert)]' : 'border border-[var(--border-secondary)] text-[var(--text-dim)] hover:text-[var(--text-primary)]'}`}>{t(lang, f)}</button>
+                    ))}
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <span className="text-[var(--text-dim)] font-mono text-[9px] uppercase tracking-widest w-20">{t(lang, 'morality')}</span>
-                <div className="flex gap-2">
-                  {MORALITY_FILTERS.map(f => (
-                    <button key={f} onClick={() => setFilterMorality(f)} className={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest transition-all ${filterMorality === f ? 'bg-[var(--accent-primary)] text-[var(--accent-invert)]' : 'border border-[var(--border-secondary)] text-[var(--text-dim)] hover:text-[var(--text-primary)]'}`}>{t(lang, f)}</button>
-                  ))}
-                </div>
-              </div>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {filteredChars.map(char => {
-                const isSoon = char.status === 'coming_soon';
-                const accessible = !isSoon && isCharAccessible(char);
-                const concept = !isSoon && char.assets?.concept ? resolveAssetUrl(char.assets.concept, char.name, 'SD') : null;
-                
-                return (
-                  <motion.div key={char.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-                    whileHover={{ scale: accessible ? 1.015 : 1 }} onClick={() => accessible && setSelectedCharId(char.id)}
-                    className={`relative aspect-[1.618/1] rounded-3xl overflow-hidden border transition-all duration-500 group shadow-xl ${accessible ? 'cursor-pointer border-[var(--border-primary)] hover:border-[var(--accent-primary)]' : 'border-[var(--border-secondary)]'}`}>
-                    <div className={`absolute inset-0 bg-gradient-to-br ${char.gradient || 'from-stone-900 to-stone-800'} opacity-40`} />
-                    {concept && <img src={concept} className="absolute inset-0 w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-[var(--bg-primary)]/40 to-transparent" />
-                    
-                    <div className="absolute bottom-0 left-0 right-0 p-6 flex justify-between items-end">
-                      <div>
-                        <h2 className={`text-3xl font-black uppercase tracking-tighter ${accessible ? 'text-[var(--text-primary)]' : 'text-[var(--text-dim)]'}`}>{char.name}</h2>
-                        <p className="text-[var(--text-dim)] font-mono text-[10px] uppercase tracking-widest mt-0.5">{char.type} · {char.id}</p>
-                        <ProgressBars progress={char.progress} dimmed={!accessible} />
-                      </div>
-                      {accessible && (
-                        <div className="w-10 h-10 rounded-full border border-[var(--border-primary)] flex items-center justify-center group-hover:bg-[var(--accent-primary)] group-hover:text-[var(--accent-invert)] transition-all">
-                          <ChevronRight size={18} />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {filteredChars.map(char => {
+                  if (activeSection === 'characters_v2' && char.type !== 'Principal') return null;
+                  const isSoon = char.status === 'coming_soon';
+                  const accessible = isHost || (!isSoon && isCharAccessible(char));
+                  const concept = !isSoon && char.assets?.concept ? resolveAssetUrl(char.assets.concept, char.name, 'SD') : null;
+                  return (
+                    <motion.div key={char.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} whileHover={{ scale: accessible ? 1.015 : 1 }} onClick={() => accessible && setSelectedCharId(char.id)} className={`relative aspect-[1.618/1] rounded-3xl overflow-hidden border transition-all duration-500 group shadow-xl ${accessible ? 'cursor-pointer border-[var(--border-primary)] hover:border-[var(--accent-primary)]' : 'border-[var(--border-secondary)]'}`}>
+                      <div className={`absolute inset-0 bg-gradient-to-br ${char.gradient || 'from-stone-900 to-stone-800'} opacity-40`} />
+                      {concept && <img src={concept} className="absolute inset-0 w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700" />}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-[var(--bg-primary)]/40 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6 flex justify-between items-end">
+                        <div>
+                          <h2 className={`text-3xl font-black uppercase tracking-tighter ${accessible ? 'text-[var(--text-primary)]' : 'text-[var(--text-dim)]'}`}>{char.name}</h2>
+                          <p className="text-[var(--text-dim)] font-mono text-[10px] uppercase tracking-widest mt-0.5">{char.type} · {char.id}</p>
+                          <ProgressBars progress={char.progress} dimmed={!accessible} />
                         </div>
-                      )}
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </motion.div>
-        ) : (
-          <motion.div key="home" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="p-8 md:p-12 max-w-7xl mx-auto">
-            <header className="mb-16 flex justify-between items-start">
-              <div>
-                <h1 className="text-4xl font-black uppercase tracking-tighter">{profile?.nombre_display || t(lang, 'portal_unified')}</h1>
-                <p className="text-[var(--text-dim)] font-mono text-xs mt-1 uppercase tracking-widest">{profile?.rol?.toUpperCase() || 'HOST'} · {t(lang, 'system_id')}</p>
+                        {accessible && (
+                          <div className="w-10 h-10 rounded-full border border-[var(--border-primary)] flex items-center justify-center group-hover:bg-[var(--accent-primary)] group-hover:text-[var(--accent-invert)] transition-all">
+                            <ChevronRight size={18} />
+                          </div>
+                        )}
+                      </div>
+                    </motion.div>
+                  );
+                })}
               </div>
-              {!isHost && <button onClick={signOut} className="bg-[var(--surface-card)] px-6 py-2 rounded-full text-xs font-mono uppercase tracking-widest border border-[var(--border-primary)]">{t(lang, 'exit')}</button>}
-            </header>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {SECTIONS.map((s, i) => {
-                const active = s.status === 'active';
-                return (
-                  <motion.div key={s.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}
-                    onClick={() => active && setActiveSection(s.id)}
-                    className={`relative aspect-[1.618/1] rounded-3xl overflow-hidden border transition-all duration-500 group shadow-lg ${active ? 'cursor-pointer border-[var(--border-primary)] hover:border-[var(--accent-primary)]' : 'border-[var(--border-secondary)] grayscale'}`}>
-                    <div className={`absolute inset-0 bg-gradient-to-br ${s.gradient} ${active ? 'opacity-80' : 'opacity-30'}`} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)]/80 to-transparent" />
-                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                      <span className="text-3xl mb-2">{s.emoji}</span>
-                      <h2 className="text-xl font-black uppercase tracking-tight">{t(lang, `section_${s.id}`)}</h2>
-                      <p className="text-[var(--text-dim)] text-[9px] font-mono uppercase tracking-widest mt-1">{t(lang, `sub_${s.id}`)}</p>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </motion.div>
+          ) : (
+            <motion.div key="home" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="p-8 md:p-12 max-w-7xl mx-auto">
+              <header className="mb-16 flex justify-between items-start">
+                <div>
+                  <h1 className="text-4xl font-black uppercase tracking-tighter">{profile?.nombre_display || t(lang, 'portal_unified')}</h1>
+                  <p className="text-[var(--text-dim)] font-mono text-xs mt-1 uppercase tracking-widest">{profile?.rol?.toUpperCase() || 'HOST'} · {t(lang, 'system_id')}</p>
+                </div>
+                {!isHost && <button onClick={signOut} className="bg-[var(--surface-card)] px-6 py-2 rounded-full text-xs font-mono uppercase tracking-widest border border-[var(--border-primary)]">{t(lang, 'exit')}</button>}
+              </header>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {SECTIONS.map((s, i) => {
+                  const active = s.status === 'active';
+                  // Hide host-only sections from non-hosts
+                  if (s.hostOnly && !isHost) return null;
+                  return (
+                    <motion.div key={s.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }} onClick={() => active && setActiveSection(s.id)} className={`relative aspect-[1.618/1] rounded-3xl overflow-hidden border transition-all duration-500 group shadow-lg ${active ? 'cursor-pointer border-[var(--border-primary)] hover:border-[var(--accent-primary)]' : 'border-[var(--border-secondary)] grayscale'}`}>
+                      <div className={`absolute inset-0 bg-gradient-to-br ${s.gradient} ${active ? 'opacity-80' : 'opacity-30'}`} />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)]/80 to-transparent" />
+                      <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                        <span className="text-3xl mb-2">{s.emoji}</span>
+                        <h2 className="text-xl font-black uppercase tracking-tight">
+                          {t(lang, `section_${s.id}`) !== `section_${s.id}` ? t(lang, `section_${s.id}`) : s.label}
+                        </h2>
+                        <p className="text-[var(--text-dim)] text-[9px] font-mono uppercase tracking-widest mt-1">
+                          {t(lang, `sub_${s.id}`) !== `sub_${s.id}` ? t(lang, `sub_${s.id}`) : s.sublabel}
+                        </p>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </FeedbackProvider>
     </>
   );
 }
