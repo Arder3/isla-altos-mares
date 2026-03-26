@@ -4,10 +4,10 @@ import { Sparkles, Send, ArrowLeft, History, Wand2, X, MessageSquare, Heart, Hel
 import { useAuth } from '../context/AuthContext';
 import { supabase } from '../core/supabaseClient';
 import { getTranslation as t } from '../core/i18n';
-import AltarSubChat from './AltarSubChat';
+import LaboratorioSubChat from './LaboratorioSubChat';
 import { CESAR_ID, processUIMessage, AGENTS } from '../core/CesarOrchestrator';
 
-export default function AltarEchoes({ lang, onBack, viewAsRole }) {
+export default function LaboratorioEcos({ lang, onBack, viewAsRole }) {
     const { user, profile } = useAuth();
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState('');
@@ -145,7 +145,7 @@ export default function AltarEchoes({ lang, onBack, viewAsRole }) {
     };
 
     if (activeSubChatId) {
-        return <AltarSubChat subChatId={activeSubChatId} lang={lang} onExit={() => setActiveSubChatId(null)} />;
+        return <LaboratorioSubChat labId={activeSubChatId} lang={lang} onClose={() => setActiveSubChatId(null)} />;
     }
 
     return (

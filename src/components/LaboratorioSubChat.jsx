@@ -6,7 +6,7 @@ import { getTranslation as t } from '../core/i18n';
 import { AGENTS } from '../core/CesarOrchestrator';
 import { useAuth } from '../context/AuthContext';
 
-export default function AltarSubChat({ subChatId, lang, onExit }) {
+export default function LaboratorioSubChat({ labId, lang, onClose }) {
     const { user, profile } = useAuth();
     const [subChat, setSubChat] = useState(null);
     const [messages, setMessages] = useState([]);
@@ -19,7 +19,7 @@ export default function AltarSubChat({ subChatId, lang, onExit }) {
             const { data, error } = await supabase
                 .from('altar_sub_chats')
                 .select('*')
-                .eq('id', subChatId)
+                .eq('id', labId)
                 .single();
             if (data) {
                 setSubChat(data);
@@ -27,13 +27,13 @@ export default function AltarSubChat({ subChatId, lang, onExit }) {
                 const { data: msgs } = await supabase
                     .from('altar_messages_v2')
                     .select('*')
-                    .eq('sub_chat_id', subChatId)
+                    .eq('sub_chat_id', labId)
                     .order('created_at', { ascending: true });
                 if (msgs) setMessages(msgs);
             }
         };
         fetchSubChat();
-    }, [subChatId]);
+    }, [labId]);
 
     useEffect(() => {
         chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -49,7 +49,7 @@ export default function AltarSubChat({ subChatId, lang, onExit }) {
 
         const senderRole = isHost ? 'host' : 'kids';
         const userMsg = {
-            sub_chat_id: subChatId,
+            sub_chat_id: labId,
             sender_role: senderRole,
             content: input,
             message_type: 'text'
@@ -66,7 +66,7 @@ export default function AltarSubChat({ subChatId, lang, onExit }) {
         if (!isHost) {
             setTimeout(async () => {
                 const response = {
-                    sub_chat_id: subChatId,
+                    sub_chat_id: labId,
                     sender_role: 'agent',
                     agent_persona: agent.name,
                     content: `¡Vaya visión, Alma! Como ${agent.name}, entiendo perfectamente que buscas "${input}". Déjame tejer los primeros hilos para ti...`,
@@ -89,7 +89,7 @@ export default function AltarSubChat({ subChatId, lang, onExit }) {
 
             {/* Header */}
             <header className="relative z-10 p-4 border-b border-indigo-500/20 bg-slate-950/60 backdrop-blur-md flex justify-between items-center">
-                <button onClick={onExit} className="flex items-center gap-2 text-indigo-400 hover:text-white transition-colors">
+                <button onClick={onClose} className="flex items-center gap-2 text-indigo-400 hover:text-white transition-colors">
                     <ArrowLeft size={18} />
                     <span className="text-[10px] uppercase tracking-widest font-mono">Cerrar Laboratorio</span>
                 </button>
