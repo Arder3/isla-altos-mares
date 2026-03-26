@@ -1,16 +1,37 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
-import { Eye, EyeOff, Anchor, Loader2, AlertCircle, Languages, Sun, Moon } from 'lucide-react';
+import { Eye, EyeOff, Anchor, Loader2, AlertCircle, Languages, Sun, Moon, Check } from 'lucide-react';
 import { getTranslation as t } from '../core/i18n';
 
 export default function LoginPage({ lang, setLang, themeOverride, setThemeOverride, isLightMode, onToggleTheme }) {
-    const { signIn } = useAuth();
+    const { signIn, resetPassword } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPass, setShowPass] = useState(false);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const [resetSent, setResetSent] = useState(false);
+
+    const handleResetPassword = async () => {
+        if (!email) {
+            setError(t(lang, 'email_required') || 'Ingresa tu email primero');
+            return;
+        }
+        setLoading(true);
+        const { error: resetErr } = await resetPassword(email);
+        setLoading(false);
+        if (resetErr) {
+            if (resetErr.status === 429) {
+                setError(t(lang, 'rate_limit_warning'));
+            } else {
+                setError(resetErr.message);
+            }
+        } else {
+            setResetSent(true);
+            setError('');
+        }
+    };
 
     return (
         <div className="min-h-screen bg-[var(--bg-primary)] flex items-center justify-center p-6 relative overflow-hidden transition-colors duration-500">
@@ -87,13 +108,22 @@ export default function LoginPage({ lang, setLang, themeOverride, setThemeOverri
 
                         {/* Password */}
                         <div>
-                            <label className="block text-[var(--text-dim)] text-xs font-mono uppercase tracking-widest mb-2">
-                                {t(lang, 'password_label')}
-                            </label>
+                            <div className="flex justify-between items-center mb-2">
+                                <label className="text-[var(--text-dim)] text-xs font-mono uppercase tracking-widest">
+                                    {t(lang, 'password_label')}
+                                </label>
+                                <button 
+                                    type="button"
+                                    onClick={handleResetPassword}
+                                    className="text-[var(--text-secondary)] text-[10px] font-mono uppercase tracking-widest hover:underline"
+                                >
+                                    {t(lang, 'forgot_password')}
+                                </button>
+                            </div>
                             <div className="relative">
                                 <input
                                     type={showPass ? 'text' : 'password'}
-                                    required
+                                    required={!resetSent}
                                     value={password}
                                     onChange={e => setPassword(e.target.value)}
                                     placeholder="••••••••"
@@ -119,7 +149,17 @@ export default function LoginPage({ lang, setLang, themeOverride, setThemeOverri
                                     className="flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-xl px-4 py-3"
                                 >
                                     <AlertCircle size={14} className="text-red-400 flex-shrink-0" />
-                                    <p className="text-red-300 text-xs">{error}</p>
+                                    <p className="text-red-300 text-[10px] leading-tight">{error}</p>
+                                </motion.div>
+                            )}
+                            {resetSent && (
+                                <motion.div
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: 'auto' }}
+                                    className="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-xl px-4 py-3"
+                                >
+                                    <Check size={14} className="text-emerald-400 flex-shrink-0" />
+                                    <p className="text-emerald-300 text-[10px] leading-tight">{t(lang, 'reset_sent')}</p>
                                 </motion.div>
                             )}
                         </AnimatePresence>

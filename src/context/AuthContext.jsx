@@ -60,8 +60,20 @@ export function AuthProvider({ children }) {
         posthog.reset();
     };
 
+    const resetPassword = async (email) => {
+        const { error } = await supabase.auth.resetPasswordForEmail(email, {
+            redirectTo: `${window.location.origin}/dashboard`,
+        });
+        return { error };
+    };
+
+    const updateUserPassword = async (newPassword) => {
+        const { error } = await supabase.auth.updateUser({ password: newPassword });
+        return { error };
+    };
+
     return (
-        <AuthContext.Provider value={{ user, profile, loading, signIn, signOut }}>
+        <AuthContext.Provider value={{ user, profile, loading, signIn, signOut, resetPassword, updateUserPassword }}>
             {children}
         </AuthContext.Provider>
     );

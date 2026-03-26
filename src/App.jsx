@@ -5,7 +5,7 @@ import CharacterView from './components/CharacterView';
 import CharacterViewV2 from './components/CharacterViewV2';
 import BrowserView from './components/BrowserView';
 import HostAuditPanel from './components/HostAuditPanel';
-import AltarEchoes from './components/AltarEchoes';
+import LaboratorioEcos from './components/LaboratorioEcos';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MODULE_REGISTRY, PROFILE_REGISTRY } from './core/registry';
 import { resolveAssetUrl } from './core/AssetResolver';
@@ -15,6 +15,9 @@ import { getTranslation as t } from './core/i18n';
 import NotificationSystem from './components/NotificationSystem';
 import { FeedbackProvider } from './components/FeedbackSystem';
 import Breadcrumbs from './components/Breadcrumbs';
+import SettingsModal from './components/SettingsModal';
+import { supabase } from './core/supabaseClient';
+import { Settings } from 'lucide-react';
 
 // ── Role → Profile key ──
 const ROLE_TO_PROFILE = {
@@ -75,7 +78,7 @@ function ProgressBars({ progress, dimmed }) {
 }
 
 // ── Global Chrome (Visible to all) ──
-function GlobalChrome({ lang, setLang, viewAsId, setViewAsId, setViewAsProfileKey, signOut, isLightMode, onToggleTheme, isHost }) {
+function GlobalChrome({ lang, setLang, viewAsId, setViewAsId, setViewAsProfileKey, signOut, isLightMode, onToggleTheme, isHost, onOpenSettings }) {
   const [open, setOpen] = useState(false);
   const [notificationsEnabled, setNotificationsEnabled] = useState(() => localStorage.getItem('portal_notifications_enabled') !== 'false');
   const active = VIEW_AS_ROLES.find(r => r.id === (viewAsId || 'host')) || VIEW_AS_ROLES[0];
@@ -157,6 +160,16 @@ function GlobalChrome({ lang, setLang, viewAsId, setViewAsId, setViewAsProfileKe
         )}
       </button>
 
+      {/* Settings */}
+      <button onClick={() => setLang(lang === 'es' ? 'en' : 'es')} // Placeholder for real settings trigger below
+        className="hidden">
+      </button>
+
+      <button onClick={() => onOpenSettings()}
+        className="bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title={t(lang, 'change_password')}>
+        <Settings size={13} className="text-[var(--text-dim)]" />
+      </button>
+
       {/* Sign Out */}
       <button onClick={() => { posthog.capture('sign_out'); signOut(); }}
         className="bg-[var(--bg-primary)]/80 backdrop-blur border border-[var(--border-primary)] hover:border-[var(--text-secondary)] p-1.5 rounded-full transition-all" title={t(lang, 'sign_out')}>
@@ -177,6 +190,19 @@ function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
   const [viewAsProfileKey, setViewAsProfileKey] = useState(null);
   const [auditUser, setAuditUser] = useState(null); // User being impersonated by Host
   const [useFichaV2, setUseFichaV2] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [isRecovering, setIsRecovering] = useState(false);
+
+  // Recovery Listener
+  useEffect(() => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
+      if (event === 'PASSWORD_RECOVERY') {
+        setIsRecovering(true);
+        setShowSettings(true);
+      }
+    });
+    return () => subscription.unsubscribe();
+  }, []);
 
   // ── TRACKING ──
   useEffect(() => {
@@ -260,6 +286,17 @@ function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
           setThemeOverride(next);
         }} 
         isHost={isHost}
+        onOpenSettings={() => setShowSettings(true)}
+      />
+
+      <SettingsModal 
+        lang={lang} 
+        isOpen={showSettings} 
+        onClose={() => {
+          setShowSettings(false);
+          setIsRecovering(false);
+        }} 
+        forceReset={isRecovering}
       />
 
       {/* Audit impersonation banner */}
@@ -273,7 +310,7 @@ function Portal({ lang, setLang, themeOverride, setThemeOverride }) {
       <FeedbackProvider isHost={isHost} user={user} profile={profile}>
         <AnimatePresence mode="wait">
           {activeSection === 'altar' ? (
-            <AltarEchoes lang={lang} onBack={goHome} viewAsRole={auditUser ? auditUser.rol : activeViewId} />
+            <LaboratorioEcos lang={lang} onBack={goHome} viewAsRole={auditUser ? auditUser.rol : activeViewId} />
           ) : activeSection === 'browser' ? (
             <BrowserView lang={lang} onBack={goHome} />
           ) : activeSection === 'audit' ? (

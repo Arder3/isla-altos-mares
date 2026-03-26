@@ -156,7 +156,16 @@ export const translations = {
     waiting_blessing: "Esperando bendición del Padre...",
     lab_active: "Laboratorio Activo",
     lab_completed: "Tarea Completada",
-    whisper_hint: "Susurro del Padre detectado..."
+    whisper_hint: "Susurro del Padre detectado...",
+
+    // Password Management
+    forgot_password: "Olvidé mi contraseña",
+    reset_sent: "Correo enviado. Revisa tu bandeja de entrada.",
+    change_password: "Cambiar Contraseña",
+    new_password: "Nueva Contraseña",
+    update_button: "Actualizar",
+    password_updated: "Contraseña actualizada correctamente",
+    rate_limit_warning: "Límite alcanzado (2/hora). Espera 60 min."
   },
   en: {
     // Auth & General
@@ -278,7 +287,7 @@ export const translations = {
     role_confidente: "Confidant",
     role_guest: "Guest",
     role_educadores: "Educator",
-
+    
     // Ficha 2.0 Labels
     info_visual: "Visual Information",
     info_tecnica: "Technical Information",
@@ -315,7 +324,16 @@ export const translations = {
     waiting_blessing: "Waiting for Father's blessing...",
     lab_active: "Active Lab",
     lab_completed: "Task Completed",
-    whisper_hint: "Father's whisper detected..."
+    whisper_hint: "Father's whisper detected...",
+
+    // Password Management
+    forgot_password: "Forgot password",
+    reset_sent: "Email sent. Please check your inbox.",
+    change_password: "Change Password",
+    new_password: "New Password",
+    update_button: "Update",
+    password_updated: "Password updated successfully",
+    rate_limit_warning: "Rate limit reached (2/hr). Wait 60 min."
   }
 };
 
